@@ -35,5 +35,9 @@ $sh ./scripts/XiCon_ETTh2.sh 0 5
 $sh ./scripts/XiCon_Traffic.sh 0 5
 ```
 
+## Reproducibility
+Files ending in a number (e.g., XiCon_Elec_s_revin_e-3) are for lambda hyperparameter tuning.
+
+Files ending in aa(omega=0.99 ; almost AutoCon), half(omega=0.5), or ax(omega=0.01; almost XiCon) (e.g., XiCon_Electricity_s_revin_aa) are for omega hyperparameter tuning.
 
 ## Citations
