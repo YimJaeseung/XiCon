@@ -1,0 +1,8 @@
+export CUDA_VISIBLE_DEVICES=$1
+
+nitr=$2
+
+python -u run.py --XiCon  --multiscales 14 --wnorm ReVIN  --lambda 0.01  --d_model 16 --d_ff 16 --e_layers 4 --target OT --c_out 1 --root_path ./dataset/illness --data_path national_illness.csv --model_id XiCon_exp --model XiCon  --data national_illness --seq_len 104 --label_len 7 --pred_len 14 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 12 --learning_rate 0.005 --feature S --omega 0.5
+python -u run.py --XiCon  --multiscales 28 --wnorm ReVIN  --lambda 1  --d_model 16 --d_ff 16 --e_layers 4 --target OT --c_out 1 --root_path ./dataset/illness --data_path national_illness.csv --model_id XiCon_exp --model XiCon  --data national_illness --seq_len 104 --label_len 7 --pred_len 28 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 12 --learning_rate 0.005 --feature S --omega 0.5
+python -u run.py --XiCon  --multiscales 56 --wnorm ReVIN  --lambda 0.01  --d_model 128 --d_ff 128 --e_layers 3 --target OT --c_out 1 --root_path ./dataset/illness --data_path national_illness.csv --model_id XiCon_exp --model XiCon  --data national_illness --seq_len 104 --label_len 7 --pred_len 56 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 12 --learning_rate 0.005 --feature S --omega 0.5
+python -u run.py --XiCon  --multiscales 112 --wnorm ReVIN  --lambda 0.1  --d_model 128 --d_ff 128 --e_layers 3 --target OT --c_out 1 --root_path ./dataset/illness --data_path national_illness.csv --model_id XiCon_exp --model XiCon  --data national_illness --seq_len 104 --label_len 7 --pred_len 112 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 12 --learning_rate 0.005 --feature S --omega 0.99

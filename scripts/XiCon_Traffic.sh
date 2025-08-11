@@ -1,0 +1,8 @@
+export CUDA_VISIBLE_DEVICES=$1
+
+nitr=$2
+
+python -u run.py --XiCon  --multiscales 96 --wnorm ReVIN  --lambda 0.01  --d_model 16 --d_ff 16 --e_layers 3 --target OT --c_out 1 --root_path ./dataset/traffic  --data_path traffic.csv --model_id XiCon_exp --model XiCon --data traffic --seq_len 336 --label_len 48 --pred_len 96 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.005 --feature S --omega 0.01
+python -u run.py --XiCon  --multiscales 96 --wnorm ReVIN  --lambda 0.001  --d_model 16 --d_ff 16 --e_layers 3 --target OT --c_out 1 --root_path ./dataset/traffic --data_path traffic.csv --model_id XiCon_exp --model XiCon --data traffic --seq_len 336 --label_len 48 --pred_len 720 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.005 --feature S --omega 0.01
+python -u run.py --XiCon  --multiscales 96 --wnorm ReVIN  --lambda 0.1  --d_model 16 --d_ff 16 --e_layers 3 --target OT --c_out 1 --root_path ./dataset/traffic --data_path traffic.csv --model_id XiCon_exp --model XiCon --data traffic --seq_len 336 --label_len 48 --pred_len 1440 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.005 --feature S --omega 0.99
+python -u run.py --XiCon  --multiscales 96 --wnorm ReVIN  --lambda 0.01  --d_model 16 --d_ff 16 --e_layers 3 --target OT --c_out 1 --root_path ./dataset/traffic --data_path traffic.csv --model_id XiCon_exp --model XiCon --data traffic --seq_len 336 --label_len 48 --pred_len 2160 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.005 --feature S --omega 0.5
