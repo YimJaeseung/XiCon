@@ -1,0 +1,3272 @@
+Args in experiment:
+Namespace(wnorm='ReVIN', lambda=0.1, multiscales=[96], train_ratio=0.6, save=False, task_name='long_term_forecast', is_training=1, model_id='XiCon_exp', model='XiCon', data='electricity', root_path='./dataset/electricity', data_path='electricity.csv', features='S', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=336, label_len=48, pred_len=96, seasonal_patterns='Monthly', mask_rate=0.25, anomaly_ratio=0.25, patch_len=16, stride=8, affine=0, subtract_last=0, mixer_kernel_size=8, head_dropout=0.0, top_k=5, num_kernels=6, enc_in=1, dec_in=7, c_out=1, d_model=4, n_heads=8, e_layers=1, d_layers=1, d_ff=4, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itr=5, train_epochs=100, batch_size=64, patience=10, learning_rate=0.001, des='Exp', loss='MSE', lradj='type1', pct_start=0.3, loss_flag=2, use_amp=False, cpu_worker=None, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, omega=0.5, XiCon=True, AutoCon=False)
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:64985
+train 15351
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.0415
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 15351
+val 5167
+test 5165
+	iters: 100, epoch: 1 | loss: 0.8868471
+	speed: 0.0170s/iter; left time: 403.8248s
+	iters: 200, epoch: 1 | loss: 0.8510178
+	speed: 0.0113s/iter; left time: 267.0371s
+Epoch: 1 cost time: 3.288437843322754
+Epoch: 1, Steps: 239 Train Loss: 0.9244 (Forecasting Loss:0.6227 + XiCon Loss:3.0171 x Lambda(0.1)), Vali MSE Loss: 0.3277 Test MSE Loss: 0.4446
+Validation loss decreased (inf --> 0.327728).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.5928953
+	speed: 0.0132s/iter; left time: 310.2933s
+	iters: 200, epoch: 2 | loss: 0.5643206
+	speed: 0.0116s/iter; left time: 271.7001s
+Epoch: 2 cost time: 2.9376296997070312
+Epoch: 2, Steps: 239 Train Loss: 0.6069 (Forecasting Loss:0.3119 + XiCon Loss:2.9504 x Lambda(0.1)), Vali MSE Loss: 0.2072 Test MSE Loss: 0.2795
+Validation loss decreased (0.327728 --> 0.207195).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.5597856
+	speed: 0.0135s/iter; left time: 315.9539s
+	iters: 200, epoch: 3 | loss: 0.5739822
+	speed: 0.0118s/iter; left time: 273.0336s
+Epoch: 3 cost time: 2.9696104526519775
+Epoch: 3, Steps: 239 Train Loss: 0.5630 (Forecasting Loss:0.2728 + XiCon Loss:2.9021 x Lambda(0.1)), Vali MSE Loss: 0.1983 Test MSE Loss: 0.2706
+Validation loss decreased (0.207195 --> 0.198333).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.5397983
+	speed: 0.0131s/iter; left time: 302.6992s
+	iters: 200, epoch: 4 | loss: 0.5400632
+	speed: 0.0109s/iter; left time: 251.3126s
+Epoch: 4 cost time: 2.88655948638916
+Epoch: 4, Steps: 239 Train Loss: 0.5557 (Forecasting Loss:0.2663 + XiCon Loss:2.8940 x Lambda(0.1)), Vali MSE Loss: 0.1966 Test MSE Loss: 0.2674
+Validation loss decreased (0.198333 --> 0.196556).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.5728430
+	speed: 0.0142s/iter; left time: 324.3529s
+	iters: 200, epoch: 5 | loss: 0.5413626
+	speed: 0.0117s/iter; left time: 266.6251s
+Epoch: 5 cost time: 3.0405170917510986
+Epoch: 5, Steps: 239 Train Loss: 0.5522 (Forecasting Loss:0.2633 + XiCon Loss:2.8889 x Lambda(0.1)), Vali MSE Loss: 0.1949 Test MSE Loss: 0.2671
+Validation loss decreased (0.196556 --> 0.194931).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.5435336
+	speed: 0.0130s/iter; left time: 293.0387s
+	iters: 200, epoch: 6 | loss: 0.5425124
+	speed: 0.0107s/iter; left time: 241.8355s
+Epoch: 6 cost time: 2.8872523307800293
+Epoch: 6, Steps: 239 Train Loss: 0.5511 (Forecasting Loss:0.2621 + XiCon Loss:2.8891 x Lambda(0.1)), Vali MSE Loss: 0.1943 Test MSE Loss: 0.2653
+Validation loss decreased (0.194931 --> 0.194299).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.5600374
+	speed: 0.0134s/iter; left time: 298.8826s
+	iters: 200, epoch: 7 | loss: 0.5605000
+	speed: 0.0103s/iter; left time: 228.5730s
+Epoch: 7 cost time: 2.8234925270080566
+Epoch: 7, Steps: 239 Train Loss: 0.5499 (Forecasting Loss:0.2610 + XiCon Loss:2.8886 x Lambda(0.1)), Vali MSE Loss: 0.1939 Test MSE Loss: 0.2650
+Validation loss decreased (0.194299 --> 0.193864).  Saving model ...
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.5036563
+	speed: 0.0134s/iter; left time: 296.9258s
+	iters: 200, epoch: 8 | loss: 0.5461025
+	speed: 0.0103s/iter; left time: 226.0582s
+Epoch: 8 cost time: 2.795551300048828
+Epoch: 8, Steps: 239 Train Loss: 0.5495 (Forecasting Loss:0.2607 + XiCon Loss:2.8877 x Lambda(0.1)), Vali MSE Loss: 0.1940 Test MSE Loss: 0.2647
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.5133553
+	speed: 0.0133s/iter; left time: 291.8043s
+	iters: 200, epoch: 9 | loss: 0.5782295
+	speed: 0.0113s/iter; left time: 245.3213s
+Epoch: 9 cost time: 2.925960063934326
+Epoch: 9, Steps: 239 Train Loss: 0.5496 (Forecasting Loss:0.2608 + XiCon Loss:2.8877 x Lambda(0.1)), Vali MSE Loss: 0.1941 Test MSE Loss: 0.2647
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.5297435
+	speed: 0.0128s/iter; left time: 276.5257s
+	iters: 200, epoch: 10 | loss: 0.5639117
+	speed: 0.0105s/iter; left time: 227.0744s
+Epoch: 10 cost time: 2.8024299144744873
+Epoch: 10, Steps: 239 Train Loss: 0.5489 (Forecasting Loss:0.2602 + XiCon Loss:2.8872 x Lambda(0.1)), Vali MSE Loss: 0.1941 Test MSE Loss: 0.2646
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.5446100
+	speed: 0.0139s/iter; left time: 297.7833s
+	iters: 200, epoch: 11 | loss: 0.5354246
+	speed: 0.0106s/iter; left time: 226.5020s
+Epoch: 11 cost time: 2.921407461166382
+Epoch: 11, Steps: 239 Train Loss: 0.5491 (Forecasting Loss:0.2604 + XiCon Loss:2.8870 x Lambda(0.1)), Vali MSE Loss: 0.1935 Test MSE Loss: 0.2646
+Validation loss decreased (0.193864 --> 0.193475).  Saving model ...
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.5784688
+	speed: 0.0138s/iter; left time: 291.9644s
+	iters: 200, epoch: 12 | loss: 0.5373739
+	speed: 0.0105s/iter; left time: 222.2988s
+Epoch: 12 cost time: 2.8665599822998047
+Epoch: 12, Steps: 239 Train Loss: 0.5493 (Forecasting Loss:0.2606 + XiCon Loss:2.8866 x Lambda(0.1)), Vali MSE Loss: 0.1935 Test MSE Loss: 0.2646
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.5378073
+	speed: 0.0135s/iter; left time: 282.1688s
+	iters: 200, epoch: 13 | loss: 0.5520389
+	speed: 0.0101s/iter; left time: 210.8195s
+Epoch: 13 cost time: 2.793792724609375
+Epoch: 13, Steps: 239 Train Loss: 0.5493 (Forecasting Loss:0.2604 + XiCon Loss:2.8888 x Lambda(0.1)), Vali MSE Loss: 0.1940 Test MSE Loss: 0.2646
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 2.44140625e-07
+	iters: 100, epoch: 14 | loss: 0.5566497
+	speed: 0.0129s/iter; left time: 267.2343s
+	iters: 200, epoch: 14 | loss: 0.5441614
+	speed: 0.0101s/iter; left time: 208.8460s
+Epoch: 14 cost time: 2.8177101612091064
+Epoch: 14, Steps: 239 Train Loss: 0.5493 (Forecasting Loss:0.2605 + XiCon Loss:2.8876 x Lambda(0.1)), Vali MSE Loss: 0.1936 Test MSE Loss: 0.2646
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 1.220703125e-07
+	iters: 100, epoch: 15 | loss: 0.5806425
+	speed: 0.0132s/iter; left time: 269.9237s
+	iters: 200, epoch: 15 | loss: 0.4951052
+	speed: 0.0111s/iter; left time: 225.5682s
+Epoch: 15 cost time: 2.916945457458496
+Epoch: 15, Steps: 239 Train Loss: 0.5494 (Forecasting Loss:0.2608 + XiCon Loss:2.8869 x Lambda(0.1)), Vali MSE Loss: 0.1940 Test MSE Loss: 0.2646
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 6.103515625e-08
+	iters: 100, epoch: 16 | loss: 0.5647863
+	speed: 0.0132s/iter; left time: 267.7369s
+	iters: 200, epoch: 16 | loss: 0.5329667
+	speed: 0.0106s/iter; left time: 213.6396s
+Epoch: 16 cost time: 2.8264191150665283
+Epoch: 16, Steps: 239 Train Loss: 0.5489 (Forecasting Loss:0.2601 + XiCon Loss:2.8881 x Lambda(0.1)), Vali MSE Loss: 0.1936 Test MSE Loss: 0.2646
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 3.0517578125e-08
+	iters: 100, epoch: 17 | loss: 0.5205610
+	speed: 0.0137s/iter; left time: 273.0716s
+	iters: 200, epoch: 17 | loss: 0.5390072
+	speed: 0.0109s/iter; left time: 216.9302s
+Epoch: 17 cost time: 2.9159467220306396
+Epoch: 17, Steps: 239 Train Loss: 0.5489 (Forecasting Loss:0.2602 + XiCon Loss:2.8869 x Lambda(0.1)), Vali MSE Loss: 0.1938 Test MSE Loss: 0.2646
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 1.52587890625e-08
+	iters: 100, epoch: 18 | loss: 0.5446949
+	speed: 0.0133s/iter; left time: 261.9314s
+	iters: 200, epoch: 18 | loss: 0.5643847
+	speed: 0.0104s/iter; left time: 205.1948s
+Epoch: 18 cost time: 2.938526153564453
+Epoch: 18, Steps: 239 Train Loss: 0.5492 (Forecasting Loss:0.2604 + XiCon Loss:2.8883 x Lambda(0.1)), Vali MSE Loss: 0.1938 Test MSE Loss: 0.2646
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 7.62939453125e-09
+	iters: 100, epoch: 19 | loss: 0.5651929
+	speed: 0.0139s/iter; left time: 271.7317s
+	iters: 200, epoch: 19 | loss: 0.5875050
+	speed: 0.0106s/iter; left time: 204.7729s
+Epoch: 19 cost time: 2.8850324153900146
+Epoch: 19, Steps: 239 Train Loss: 0.5492 (Forecasting Loss:0.2604 + XiCon Loss:2.8875 x Lambda(0.1)), Vali MSE Loss: 0.1938 Test MSE Loss: 0.2646
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 3.814697265625e-09
+	iters: 100, epoch: 20 | loss: 0.5608166
+	speed: 0.0134s/iter; left time: 257.1601s
+	iters: 200, epoch: 20 | loss: 0.5692911
+	speed: 0.0110s/iter; left time: 211.0428s
+Epoch: 20 cost time: 2.8897042274475098
+Epoch: 20, Steps: 239 Train Loss: 0.5490 (Forecasting Loss:0.2603 + XiCon Loss:2.8872 x Lambda(0.1)), Vali MSE Loss: 0.1936 Test MSE Loss: 0.2646
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 1.9073486328125e-09
+	iters: 100, epoch: 21 | loss: 0.5518500
+	speed: 0.0139s/iter; left time: 265.1666s
+	iters: 200, epoch: 21 | loss: 0.5317103
+	speed: 0.0109s/iter; left time: 206.1206s
+Epoch: 21 cost time: 2.9342477321624756
+Epoch: 21, Steps: 239 Train Loss: 0.5488 (Forecasting Loss:0.2602 + XiCon Loss:2.8868 x Lambda(0.1)), Vali MSE Loss: 0.1937 Test MSE Loss: 0.2646
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 5165
+test shape: (80, 64, 96, 1) (80, 64, 96, 1)
+test shape: (5120, 96, 1) (5120, 96, 1)
+mse:0.20768742263317108, mae:0.32157081365585327, mape:2.2899398803710938, mspe:2809.293701171875 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:64985
+train 15351
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.0509
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_1>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 15351
+val 5167
+test 5165
+	iters: 100, epoch: 1 | loss: 0.9007542
+	speed: 0.0130s/iter; left time: 310.1232s
+	iters: 200, epoch: 1 | loss: 0.7596517
+	speed: 0.0102s/iter; left time: 242.0519s
+Epoch: 1 cost time: 2.7651312351226807
+Epoch: 1, Steps: 239 Train Loss: 0.9131 (Forecasting Loss:0.6125 + XiCon Loss:3.0059 x Lambda(0.1)), Vali MSE Loss: 0.3224 Test MSE Loss: 0.4350
+Validation loss decreased (inf --> 0.322434).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.6177088
+	speed: 0.0129s/iter; left time: 304.8375s
+	iters: 200, epoch: 2 | loss: 0.5525460
+	speed: 0.0110s/iter; left time: 258.6803s
+Epoch: 2 cost time: 2.874873638153076
+Epoch: 2, Steps: 239 Train Loss: 0.6103 (Forecasting Loss:0.3141 + XiCon Loss:2.9620 x Lambda(0.1)), Vali MSE Loss: 0.2047 Test MSE Loss: 0.2780
+Validation loss decreased (0.322434 --> 0.204653).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.5572377
+	speed: 0.0132s/iter; left time: 308.4091s
+	iters: 200, epoch: 3 | loss: 0.5446533
+	speed: 0.0114s/iter; left time: 264.2764s
+Epoch: 3 cost time: 2.9042205810546875
+Epoch: 3, Steps: 239 Train Loss: 0.5701 (Forecasting Loss:0.2760 + XiCon Loss:2.9412 x Lambda(0.1)), Vali MSE Loss: 0.1963 Test MSE Loss: 0.2694
+Validation loss decreased (0.204653 --> 0.196258).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.5004454
+	speed: 0.0130s/iter; left time: 299.3619s
+	iters: 200, epoch: 4 | loss: 0.5489609
+	speed: 0.0112s/iter; left time: 258.2024s
+Epoch: 4 cost time: 2.851663827896118
+Epoch: 4, Steps: 239 Train Loss: 0.5614 (Forecasting Loss:0.2683 + XiCon Loss:2.9311 x Lambda(0.1)), Vali MSE Loss: 0.1927 Test MSE Loss: 0.2649
+Validation loss decreased (0.196258 --> 0.192736).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.5498892
+	speed: 0.0138s/iter; left time: 314.4830s
+	iters: 200, epoch: 5 | loss: 0.5587087
+	speed: 0.0110s/iter; left time: 250.0054s
+Epoch: 5 cost time: 2.9371042251586914
+Epoch: 5, Steps: 239 Train Loss: 0.5571 (Forecasting Loss:0.2644 + XiCon Loss:2.9271 x Lambda(0.1)), Vali MSE Loss: 0.1916 Test MSE Loss: 0.2637
+Validation loss decreased (0.192736 --> 0.191622).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.5443294
+	speed: 0.0133s/iter; left time: 300.9758s
+	iters: 200, epoch: 6 | loss: 0.5793500
+	speed: 0.0119s/iter; left time: 266.7557s
+Epoch: 6 cost time: 3.036749839782715
+Epoch: 6, Steps: 239 Train Loss: 0.5548 (Forecasting Loss:0.2626 + XiCon Loss:2.9223 x Lambda(0.1)), Vali MSE Loss: 0.1904 Test MSE Loss: 0.2622
+Validation loss decreased (0.191622 --> 0.190367).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.5411307
+	speed: 0.0132s/iter; left time: 294.4380s
+	iters: 200, epoch: 7 | loss: 0.5340756
+	speed: 0.0107s/iter; left time: 238.6472s
+Epoch: 7 cost time: 2.8673083782196045
+Epoch: 7, Steps: 239 Train Loss: 0.5544 (Forecasting Loss:0.2621 + XiCon Loss:2.9232 x Lambda(0.1)), Vali MSE Loss: 0.1904 Test MSE Loss: 0.2620
+Validation loss decreased (0.190367 --> 0.190351).  Saving model ...
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.5334707
+	speed: 0.0132s/iter; left time: 293.0969s
+	iters: 200, epoch: 8 | loss: 0.6069546
+	speed: 0.0111s/iter; left time: 245.0964s
+Epoch: 8 cost time: 2.919121742248535
+Epoch: 8, Steps: 239 Train Loss: 0.5538 (Forecasting Loss:0.2617 + XiCon Loss:2.9216 x Lambda(0.1)), Vali MSE Loss: 0.1896 Test MSE Loss: 0.2620
+Validation loss decreased (0.190351 --> 0.189640).  Saving model ...
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.5680482
+	speed: 0.0144s/iter; left time: 315.2960s
+	iters: 200, epoch: 9 | loss: 0.5685892
+	speed: 0.0106s/iter; left time: 230.7841s
+Epoch: 9 cost time: 2.948561429977417
+Epoch: 9, Steps: 239 Train Loss: 0.5534 (Forecasting Loss:0.2611 + XiCon Loss:2.9233 x Lambda(0.1)), Vali MSE Loss: 0.1897 Test MSE Loss: 0.2618
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.5442218
+	speed: 0.0137s/iter; left time: 295.9105s
+	iters: 200, epoch: 10 | loss: 0.5781204
+	speed: 0.0104s/iter; left time: 224.4241s
+Epoch: 10 cost time: 2.838172197341919
+Epoch: 10, Steps: 239 Train Loss: 0.5535 (Forecasting Loss:0.2614 + XiCon Loss:2.9210 x Lambda(0.1)), Vali MSE Loss: 0.1898 Test MSE Loss: 0.2618
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.5505156
+	speed: 0.0144s/iter; left time: 308.1277s
+	iters: 200, epoch: 11 | loss: 0.5635748
+	speed: 0.0104s/iter; left time: 221.4108s
+Epoch: 11 cost time: 2.9649252891540527
+Epoch: 11, Steps: 239 Train Loss: 0.5532 (Forecasting Loss:0.2613 + XiCon Loss:2.9188 x Lambda(0.1)), Vali MSE Loss: 0.1898 Test MSE Loss: 0.2618
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.5725812
+	speed: 0.0141s/iter; left time: 297.8557s
+	iters: 200, epoch: 12 | loss: 0.5596110
+	speed: 0.0108s/iter; left time: 227.0284s
+Epoch: 12 cost time: 2.9440689086914062
+Epoch: 12, Steps: 239 Train Loss: 0.5530 (Forecasting Loss:0.2610 + XiCon Loss:2.9201 x Lambda(0.1)), Vali MSE Loss: 0.1896 Test MSE Loss: 0.2618
+Validation loss decreased (0.189640 --> 0.189599).  Saving model ...
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.5661874
+	speed: 0.0140s/iter; left time: 293.4976s
+	iters: 200, epoch: 13 | loss: 0.5663707
+	speed: 0.0102s/iter; left time: 211.7191s
+Epoch: 13 cost time: 2.8544013500213623
+Epoch: 13, Steps: 239 Train Loss: 0.5531 (Forecasting Loss:0.2610 + XiCon Loss:2.9211 x Lambda(0.1)), Vali MSE Loss: 0.1895 Test MSE Loss: 0.2618
+Validation loss decreased (0.189599 --> 0.189513).  Saving model ...
+Updating learning rate to 2.44140625e-07
+	iters: 100, epoch: 14 | loss: 0.5576777
+	speed: 0.0135s/iter; left time: 279.9815s
+	iters: 200, epoch: 14 | loss: 0.5612969
+	speed: 0.0115s/iter; left time: 236.3280s
+Epoch: 14 cost time: 2.950916290283203
+Epoch: 14, Steps: 239 Train Loss: 0.5534 (Forecasting Loss:0.2612 + XiCon Loss:2.9216 x Lambda(0.1)), Vali MSE Loss: 0.1898 Test MSE Loss: 0.2618
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 1.220703125e-07
+	iters: 100, epoch: 15 | loss: 0.5789682
+	speed: 0.0134s/iter; left time: 274.1571s
+	iters: 200, epoch: 15 | loss: 0.5449759
+	speed: 0.0107s/iter; left time: 218.0097s
+Epoch: 15 cost time: 2.866507053375244
+Epoch: 15, Steps: 239 Train Loss: 0.5529 (Forecasting Loss:0.2607 + XiCon Loss:2.9219 x Lambda(0.1)), Vali MSE Loss: 0.1895 Test MSE Loss: 0.2618
+Validation loss decreased (0.189513 --> 0.189462).  Saving model ...
+Updating learning rate to 6.103515625e-08
+	iters: 100, epoch: 16 | loss: 0.5464514
+	speed: 0.0131s/iter; left time: 264.9538s
+	iters: 200, epoch: 16 | loss: 0.5602921
+	speed: 0.0114s/iter; left time: 229.9396s
+Epoch: 16 cost time: 2.886167526245117
+Epoch: 16, Steps: 239 Train Loss: 0.5532 (Forecasting Loss:0.2608 + XiCon Loss:2.9234 x Lambda(0.1)), Vali MSE Loss: 0.1898 Test MSE Loss: 0.2618
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 3.0517578125e-08
+	iters: 100, epoch: 17 | loss: 0.5247207
+	speed: 0.0143s/iter; left time: 286.5977s
+	iters: 200, epoch: 17 | loss: 0.5678686
+	speed: 0.0107s/iter; left time: 213.4267s
+Epoch: 17 cost time: 2.952725887298584
+Epoch: 17, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2616 + XiCon Loss:2.9223 x Lambda(0.1)), Vali MSE Loss: 0.1897 Test MSE Loss: 0.2618
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 1.52587890625e-08
+	iters: 100, epoch: 18 | loss: 0.5651265
+	speed: 0.0133s/iter; left time: 261.6216s
+	iters: 200, epoch: 18 | loss: 0.5666676
+	speed: 0.0105s/iter; left time: 205.7192s
+Epoch: 18 cost time: 2.8953919410705566
+Epoch: 18, Steps: 239 Train Loss: 0.5533 (Forecasting Loss:0.2613 + XiCon Loss:2.9201 x Lambda(0.1)), Vali MSE Loss: 0.1895 Test MSE Loss: 0.2618
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 7.62939453125e-09
+	iters: 100, epoch: 19 | loss: 0.5911934
+	speed: 0.0129s/iter; left time: 251.7127s
+	iters: 200, epoch: 19 | loss: 0.5791507
+	speed: 0.0104s/iter; left time: 202.6421s
+Epoch: 19 cost time: 2.765073776245117
+Epoch: 19, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2616 + XiCon Loss:2.9226 x Lambda(0.1)), Vali MSE Loss: 0.1900 Test MSE Loss: 0.2618
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 3.814697265625e-09
+	iters: 100, epoch: 20 | loss: 0.5432097
+	speed: 0.0128s/iter; left time: 247.4843s
+	iters: 200, epoch: 20 | loss: 0.5384606
+	speed: 0.0110s/iter; left time: 211.1708s
+Epoch: 20 cost time: 2.851457118988037
+Epoch: 20, Steps: 239 Train Loss: 0.5537 (Forecasting Loss:0.2615 + XiCon Loss:2.9222 x Lambda(0.1)), Vali MSE Loss: 0.1898 Test MSE Loss: 0.2618
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.9073486328125e-09
+	iters: 100, epoch: 21 | loss: 0.5788002
+	speed: 0.0136s/iter; left time: 258.3729s
+	iters: 200, epoch: 21 | loss: 0.5793328
+	speed: 0.0107s/iter; left time: 203.0482s
+Epoch: 21 cost time: 2.867216110229492
+Epoch: 21, Steps: 239 Train Loss: 0.5536 (Forecasting Loss:0.2613 + XiCon Loss:2.9227 x Lambda(0.1)), Vali MSE Loss: 0.1898 Test MSE Loss: 0.2618
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 9.5367431640625e-10
+	iters: 100, epoch: 22 | loss: 0.5350937
+	speed: 0.0137s/iter; left time: 256.9527s
+	iters: 200, epoch: 22 | loss: 0.5407504
+	speed: 0.0124s/iter; left time: 231.3824s
+Epoch: 22 cost time: 3.03975772857666
+Epoch: 22, Steps: 239 Train Loss: 0.5531 (Forecasting Loss:0.2612 + XiCon Loss:2.9194 x Lambda(0.1)), Vali MSE Loss: 0.1895 Test MSE Loss: 0.2618
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 4.76837158203125e-10
+	iters: 100, epoch: 23 | loss: 0.5448191
+	speed: 0.0136s/iter; left time: 251.8772s
+	iters: 200, epoch: 23 | loss: 0.5802090
+	speed: 0.0103s/iter; left time: 190.1888s
+Epoch: 23 cost time: 2.819730758666992
+Epoch: 23, Steps: 239 Train Loss: 0.5534 (Forecasting Loss:0.2615 + XiCon Loss:2.9194 x Lambda(0.1)), Vali MSE Loss: 0.1900 Test MSE Loss: 0.2618
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 2.384185791015625e-10
+	iters: 100, epoch: 24 | loss: 0.5366351
+	speed: 0.0140s/iter; left time: 256.6718s
+	iters: 200, epoch: 24 | loss: 0.5395377
+	speed: 0.0106s/iter; left time: 193.4179s
+Epoch: 24 cost time: 2.9137277603149414
+Epoch: 24, Steps: 239 Train Loss: 0.5534 (Forecasting Loss:0.2613 + XiCon Loss:2.9204 x Lambda(0.1)), Vali MSE Loss: 0.1898 Test MSE Loss: 0.2618
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 1.1920928955078125e-10
+	iters: 100, epoch: 25 | loss: 0.5729909
+	speed: 0.0131s/iter; left time: 236.3526s
+	iters: 200, epoch: 25 | loss: 0.5425207
+	speed: 0.0100s/iter; left time: 178.9044s
+Epoch: 25 cost time: 2.81996488571167
+Epoch: 25, Steps: 239 Train Loss: 0.5532 (Forecasting Loss:0.2612 + XiCon Loss:2.9206 x Lambda(0.1)), Vali MSE Loss: 0.1895 Test MSE Loss: 0.2618
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 5165
+test shape: (80, 64, 96, 1) (80, 64, 96, 1)
+test shape: (5120, 96, 1) (5120, 96, 1)
+mse:0.20335489511489868, mae:0.32015466690063477, mape:2.506476879119873, mspe:4299.47705078125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:64985
+train 15351
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 4.9961
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_2>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 15351
+val 5167
+test 5165
+	iters: 100, epoch: 1 | loss: 0.8845553
+	speed: 0.0135s/iter; left time: 320.4620s
+	iters: 200, epoch: 1 | loss: 0.9181392
+	speed: 0.0106s/iter; left time: 252.1039s
+Epoch: 1 cost time: 2.8602306842803955
+Epoch: 1, Steps: 239 Train Loss: 0.9516 (Forecasting Loss:0.6443 + XiCon Loss:3.0730 x Lambda(0.1)), Vali MSE Loss: 0.3330 Test MSE Loss: 0.4567
+Validation loss decreased (inf --> 0.332967).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.6191499
+	speed: 0.0136s/iter; left time: 320.1094s
+	iters: 200, epoch: 2 | loss: 0.5907172
+	speed: 0.0107s/iter; left time: 250.1435s
+Epoch: 2 cost time: 2.879579544067383
+Epoch: 2, Steps: 239 Train Loss: 0.6163 (Forecasting Loss:0.3162 + XiCon Loss:3.0012 x Lambda(0.1)), Vali MSE Loss: 0.2073 Test MSE Loss: 0.2853
+Validation loss decreased (0.332967 --> 0.207319).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.5817859
+	speed: 0.0127s/iter; left time: 296.6684s
+	iters: 200, epoch: 3 | loss: 0.5955716
+	speed: 0.0115s/iter; left time: 266.9501s
+Epoch: 3 cost time: 2.9229514598846436
+Epoch: 3, Steps: 239 Train Loss: 0.5698 (Forecasting Loss:0.2771 + XiCon Loss:2.9269 x Lambda(0.1)), Vali MSE Loss: 0.1988 Test MSE Loss: 0.2726
+Validation loss decreased (0.207319 --> 0.198810).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.5774107
+	speed: 0.0132s/iter; left time: 303.7103s
+	iters: 200, epoch: 4 | loss: 0.5620366
+	speed: 0.0106s/iter; left time: 244.0107s
+Epoch: 4 cost time: 2.834315061569214
+Epoch: 4, Steps: 239 Train Loss: 0.5614 (Forecasting Loss:0.2700 + XiCon Loss:2.9141 x Lambda(0.1)), Vali MSE Loss: 0.1959 Test MSE Loss: 0.2701
+Validation loss decreased (0.198810 --> 0.195858).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.5533428
+	speed: 0.0139s/iter; left time: 317.3600s
+	iters: 200, epoch: 5 | loss: 0.5771537
+	speed: 0.0108s/iter; left time: 245.8365s
+Epoch: 5 cost time: 2.9281110763549805
+Epoch: 5, Steps: 239 Train Loss: 0.5579 (Forecasting Loss:0.2671 + XiCon Loss:2.9084 x Lambda(0.1)), Vali MSE Loss: 0.1939 Test MSE Loss: 0.2669
+Validation loss decreased (0.195858 --> 0.193878).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.5631105
+	speed: 0.0147s/iter; left time: 331.6552s
+	iters: 200, epoch: 6 | loss: 0.5293664
+	speed: 0.0111s/iter; left time: 249.1662s
+Epoch: 6 cost time: 3.0027642250061035
+Epoch: 6, Steps: 239 Train Loss: 0.5559 (Forecasting Loss:0.2654 + XiCon Loss:2.9053 x Lambda(0.1)), Vali MSE Loss: 0.1934 Test MSE Loss: 0.2661
+Validation loss decreased (0.193878 --> 0.193369).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.5369179
+	speed: 0.0132s/iter; left time: 294.2030s
+	iters: 200, epoch: 7 | loss: 0.5613731
+	speed: 0.0109s/iter; left time: 242.7146s
+Epoch: 7 cost time: 2.841719627380371
+Epoch: 7, Steps: 239 Train Loss: 0.5553 (Forecasting Loss:0.2647 + XiCon Loss:2.9057 x Lambda(0.1)), Vali MSE Loss: 0.1930 Test MSE Loss: 0.2655
+Validation loss decreased (0.193369 --> 0.193036).  Saving model ...
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.5560237
+	speed: 0.0142s/iter; left time: 314.6474s
+	iters: 200, epoch: 8 | loss: 0.5757706
+	speed: 0.0108s/iter; left time: 237.0018s
+Epoch: 8 cost time: 2.924595594406128
+Epoch: 8, Steps: 239 Train Loss: 0.5547 (Forecasting Loss:0.2641 + XiCon Loss:2.9054 x Lambda(0.1)), Vali MSE Loss: 0.1925 Test MSE Loss: 0.2653
+Validation loss decreased (0.193036 --> 0.192472).  Saving model ...
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.5105369
+	speed: 0.0133s/iter; left time: 291.9249s
+	iters: 200, epoch: 9 | loss: 0.5438486
+	speed: 0.0111s/iter; left time: 242.1479s
+Epoch: 9 cost time: 2.876924514770508
+Epoch: 9, Steps: 239 Train Loss: 0.5543 (Forecasting Loss:0.2639 + XiCon Loss:2.9035 x Lambda(0.1)), Vali MSE Loss: 0.1924 Test MSE Loss: 0.2653
+Validation loss decreased (0.192472 --> 0.192383).  Saving model ...
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.5524420
+	speed: 0.0131s/iter; left time: 283.6534s
+	iters: 200, epoch: 10 | loss: 0.5777714
+	speed: 0.0120s/iter; left time: 259.6213s
+Epoch: 10 cost time: 2.94762921333313
+Epoch: 10, Steps: 239 Train Loss: 0.5542 (Forecasting Loss:0.2636 + XiCon Loss:2.9055 x Lambda(0.1)), Vali MSE Loss: 0.1924 Test MSE Loss: 0.2652
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.5129873
+	speed: 0.0143s/iter; left time: 306.5202s
+	iters: 200, epoch: 11 | loss: 0.5980359
+	speed: 0.0105s/iter; left time: 224.6636s
+Epoch: 11 cost time: 2.9202682971954346
+Epoch: 11, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2635 + XiCon Loss:2.9043 x Lambda(0.1)), Vali MSE Loss: 0.1927 Test MSE Loss: 0.2652
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.5323796
+	speed: 0.0132s/iter; left time: 279.0510s
+	iters: 200, epoch: 12 | loss: 0.5484551
+	speed: 0.0107s/iter; left time: 225.6956s
+Epoch: 12 cost time: 2.8385426998138428
+Epoch: 12, Steps: 239 Train Loss: 0.5543 (Forecasting Loss:0.2638 + XiCon Loss:2.9055 x Lambda(0.1)), Vali MSE Loss: 0.1926 Test MSE Loss: 0.2652
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.5118033
+	speed: 0.0133s/iter; left time: 277.4949s
+	iters: 200, epoch: 13 | loss: 0.5779209
+	speed: 0.0120s/iter; left time: 249.3100s
+Epoch: 13 cost time: 2.973682165145874
+Epoch: 13, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2636 + XiCon Loss:2.9030 x Lambda(0.1)), Vali MSE Loss: 0.1926 Test MSE Loss: 0.2652
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 2.44140625e-07
+	iters: 100, epoch: 14 | loss: 0.5563461
+	speed: 0.0131s/iter; left time: 271.2420s
+	iters: 200, epoch: 14 | loss: 0.5626776
+	speed: 0.0109s/iter; left time: 223.6520s
+Epoch: 14 cost time: 2.8337864875793457
+Epoch: 14, Steps: 239 Train Loss: 0.5541 (Forecasting Loss:0.2637 + XiCon Loss:2.9045 x Lambda(0.1)), Vali MSE Loss: 0.1926 Test MSE Loss: 0.2652
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.220703125e-07
+	iters: 100, epoch: 15 | loss: 0.5420550
+	speed: 0.0127s/iter; left time: 260.1902s
+	iters: 200, epoch: 15 | loss: 0.5622782
+	speed: 0.0102s/iter; left time: 207.2907s
+Epoch: 15 cost time: 2.7259278297424316
+Epoch: 15, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2637 + XiCon Loss:2.9021 x Lambda(0.1)), Vali MSE Loss: 0.1924 Test MSE Loss: 0.2652
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 6.103515625e-08
+	iters: 100, epoch: 16 | loss: 0.5732065
+	speed: 0.0134s/iter; left time: 271.8000s
+	iters: 200, epoch: 16 | loss: 0.5214981
+	speed: 0.0108s/iter; left time: 217.2796s
+Epoch: 16 cost time: 2.868422746658325
+Epoch: 16, Steps: 239 Train Loss: 0.5542 (Forecasting Loss:0.2637 + XiCon Loss:2.9047 x Lambda(0.1)), Vali MSE Loss: 0.1927 Test MSE Loss: 0.2652
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 3.0517578125e-08
+	iters: 100, epoch: 17 | loss: 0.5451339
+	speed: 0.0138s/iter; left time: 276.5198s
+	iters: 200, epoch: 17 | loss: 0.5582256
+	speed: 0.0113s/iter; left time: 224.2906s
+Epoch: 17 cost time: 2.9994723796844482
+Epoch: 17, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2637 + XiCon Loss:2.9021 x Lambda(0.1)), Vali MSE Loss: 0.1927 Test MSE Loss: 0.2652
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.52587890625e-08
+	iters: 100, epoch: 18 | loss: 0.5498537
+	speed: 0.0127s/iter; left time: 251.4260s
+	iters: 200, epoch: 18 | loss: 0.5885308
+	speed: 0.0117s/iter; left time: 230.4808s
+Epoch: 18 cost time: 2.8810970783233643
+Epoch: 18, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2636 + XiCon Loss:2.9029 x Lambda(0.1)), Vali MSE Loss: 0.1925 Test MSE Loss: 0.2652
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 7.62939453125e-09
+	iters: 100, epoch: 19 | loss: 0.5495147
+	speed: 0.0128s/iter; left time: 249.3239s
+	iters: 200, epoch: 19 | loss: 0.5471424
+	speed: 0.0110s/iter; left time: 212.8195s
+Epoch: 19 cost time: 2.809603214263916
+Epoch: 19, Steps: 239 Train Loss: 0.5544 (Forecasting Loss:0.2638 + XiCon Loss:2.9062 x Lambda(0.1)), Vali MSE Loss: 0.1924 Test MSE Loss: 0.2652
+Validation loss decreased (0.192383 --> 0.192363).  Saving model ...
+Updating learning rate to 3.814697265625e-09
+	iters: 100, epoch: 20 | loss: 0.5641309
+	speed: 0.0148s/iter; left time: 285.3619s
+	iters: 200, epoch: 20 | loss: 0.5458316
+	speed: 0.0107s/iter; left time: 204.6827s
+Epoch: 20 cost time: 2.9711427688598633
+Epoch: 20, Steps: 239 Train Loss: 0.5544 (Forecasting Loss:0.2640 + XiCon Loss:2.9040 x Lambda(0.1)), Vali MSE Loss: 0.1924 Test MSE Loss: 0.2652
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 1.9073486328125e-09
+	iters: 100, epoch: 21 | loss: 0.5357908
+	speed: 0.0140s/iter; left time: 266.2549s
+	iters: 200, epoch: 21 | loss: 0.5717688
+	speed: 0.0111s/iter; left time: 209.1449s
+Epoch: 21 cost time: 2.945413589477539
+Epoch: 21, Steps: 239 Train Loss: 0.5544 (Forecasting Loss:0.2640 + XiCon Loss:2.9038 x Lambda(0.1)), Vali MSE Loss: 0.1925 Test MSE Loss: 0.2652
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 9.5367431640625e-10
+	iters: 100, epoch: 22 | loss: 0.5647099
+	speed: 0.0137s/iter; left time: 256.4857s
+	iters: 200, epoch: 22 | loss: 0.5592619
+	speed: 0.0111s/iter; left time: 207.5528s
+Epoch: 22 cost time: 2.9109816551208496
+Epoch: 22, Steps: 239 Train Loss: 0.5544 (Forecasting Loss:0.2638 + XiCon Loss:2.9057 x Lambda(0.1)), Vali MSE Loss: 0.1925 Test MSE Loss: 0.2652
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 4.76837158203125e-10
+	iters: 100, epoch: 23 | loss: 0.5451391
+	speed: 0.0146s/iter; left time: 271.0532s
+	iters: 200, epoch: 23 | loss: 0.5614383
+	speed: 0.0114s/iter; left time: 209.6599s
+Epoch: 23 cost time: 3.0538384914398193
+Epoch: 23, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2634 + XiCon Loss:2.9046 x Lambda(0.1)), Vali MSE Loss: 0.1927 Test MSE Loss: 0.2652
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 2.384185791015625e-10
+	iters: 100, epoch: 24 | loss: 0.5509503
+	speed: 0.0139s/iter; left time: 255.3105s
+	iters: 200, epoch: 24 | loss: 0.5539892
+	speed: 0.0109s/iter; left time: 199.2073s
+Epoch: 24 cost time: 2.9869632720947266
+Epoch: 24, Steps: 239 Train Loss: 0.5549 (Forecasting Loss:0.2641 + XiCon Loss:2.9080 x Lambda(0.1)), Vali MSE Loss: 0.1928 Test MSE Loss: 0.2652
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.1920928955078125e-10
+	iters: 100, epoch: 25 | loss: 0.5587808
+	speed: 0.0133s/iter; left time: 240.8032s
+	iters: 200, epoch: 25 | loss: 0.5935122
+	speed: 0.0105s/iter; left time: 188.5422s
+Epoch: 25 cost time: 2.816675901412964
+Epoch: 25, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2636 + XiCon Loss:2.9022 x Lambda(0.1)), Vali MSE Loss: 0.1925 Test MSE Loss: 0.2652
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 5.960464477539063e-11
+	iters: 100, epoch: 26 | loss: 0.5630188
+	speed: 0.0132s/iter; left time: 234.8317s
+	iters: 200, epoch: 26 | loss: 0.5111698
+	speed: 0.0104s/iter; left time: 184.2527s
+Epoch: 26 cost time: 2.8163251876831055
+Epoch: 26, Steps: 239 Train Loss: 0.5542 (Forecasting Loss:0.2639 + XiCon Loss:2.9021 x Lambda(0.1)), Vali MSE Loss: 0.1928 Test MSE Loss: 0.2652
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 2.980232238769531e-11
+	iters: 100, epoch: 27 | loss: 0.5552115
+	speed: 0.0140s/iter; left time: 245.6492s
+	iters: 200, epoch: 27 | loss: 0.5476564
+	speed: 0.0114s/iter; left time: 199.7206s
+Epoch: 27 cost time: 3.018500566482544
+Epoch: 27, Steps: 239 Train Loss: 0.5541 (Forecasting Loss:0.2639 + XiCon Loss:2.9018 x Lambda(0.1)), Vali MSE Loss: 0.1926 Test MSE Loss: 0.2652
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.4901161193847657e-11
+	iters: 100, epoch: 28 | loss: 0.5841782
+	speed: 0.0133s/iter; left time: 231.1967s
+	iters: 200, epoch: 28 | loss: 0.5378305
+	speed: 0.0103s/iter; left time: 176.8766s
+Epoch: 28 cost time: 2.8021085262298584
+Epoch: 28, Steps: 239 Train Loss: 0.5537 (Forecasting Loss:0.2633 + XiCon Loss:2.9044 x Lambda(0.1)), Vali MSE Loss: 0.1926 Test MSE Loss: 0.2652
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 7.450580596923828e-12
+	iters: 100, epoch: 29 | loss: 0.5049137
+	speed: 0.0126s/iter; left time: 215.0794s
+	iters: 200, epoch: 29 | loss: 0.5584079
+	speed: 0.0109s/iter; left time: 185.8844s
+Epoch: 29 cost time: 2.7891576290130615
+Epoch: 29, Steps: 239 Train Loss: 0.5544 (Forecasting Loss:0.2639 + XiCon Loss:2.9053 x Lambda(0.1)), Vali MSE Loss: 0.1927 Test MSE Loss: 0.2652
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 5165
+test shape: (80, 64, 96, 1) (80, 64, 96, 1)
+test shape: (5120, 96, 1) (5120, 96, 1)
+mse:0.20819547772407532, mae:0.32219693064689636, mape:2.4122536182403564, mspe:3342.45703125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:64985
+train 15351
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.2129
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_3>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 15351
+val 5167
+test 5165
+	iters: 100, epoch: 1 | loss: 0.9278983
+	speed: 0.0136s/iter; left time: 324.8135s
+	iters: 200, epoch: 1 | loss: 0.8706740
+	speed: 0.0104s/iter; left time: 247.3342s
+Epoch: 1 cost time: 2.842515230178833
+Epoch: 1, Steps: 239 Train Loss: 0.9165 (Forecasting Loss:0.6177 + XiCon Loss:2.9880 x Lambda(0.1)), Vali MSE Loss: 0.3185 Test MSE Loss: 0.4341
+Validation loss decreased (inf --> 0.318483).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.6141137
+	speed: 0.0137s/iter; left time: 323.0385s
+	iters: 200, epoch: 2 | loss: 0.5877239
+	speed: 0.0103s/iter; left time: 241.2989s
+Epoch: 2 cost time: 2.837787628173828
+Epoch: 2, Steps: 239 Train Loss: 0.6097 (Forecasting Loss:0.3142 + XiCon Loss:2.9551 x Lambda(0.1)), Vali MSE Loss: 0.2075 Test MSE Loss: 0.2832
+Validation loss decreased (0.318483 --> 0.207514).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.5705708
+	speed: 0.0136s/iter; left time: 316.9160s
+	iters: 200, epoch: 3 | loss: 0.5914750
+	speed: 0.0110s/iter; left time: 255.0780s
+Epoch: 3 cost time: 2.8938772678375244
+Epoch: 3, Steps: 239 Train Loss: 0.5697 (Forecasting Loss:0.2777 + XiCon Loss:2.9195 x Lambda(0.1)), Vali MSE Loss: 0.2038 Test MSE Loss: 0.2769
+Validation loss decreased (0.207514 --> 0.203807).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.5341709
+	speed: 0.0134s/iter; left time: 308.2645s
+	iters: 200, epoch: 4 | loss: 0.6158499
+	speed: 0.0102s/iter; left time: 235.4877s
+Epoch: 4 cost time: 2.8047561645507812
+Epoch: 4, Steps: 239 Train Loss: 0.5610 (Forecasting Loss:0.2706 + XiCon Loss:2.9040 x Lambda(0.1)), Vali MSE Loss: 0.1961 Test MSE Loss: 0.2688
+Validation loss decreased (0.203807 --> 0.196087).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.5624601
+	speed: 0.0130s/iter; left time: 297.2892s
+	iters: 200, epoch: 5 | loss: 0.5431722
+	speed: 0.0111s/iter; left time: 251.5942s
+Epoch: 5 cost time: 2.845505475997925
+Epoch: 5, Steps: 239 Train Loss: 0.5570 (Forecasting Loss:0.2671 + XiCon Loss:2.8986 x Lambda(0.1)), Vali MSE Loss: 0.1963 Test MSE Loss: 0.2686
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.5693035
+	speed: 0.0137s/iter; left time: 309.4382s
+	iters: 200, epoch: 6 | loss: 0.5510688
+	speed: 0.0108s/iter; left time: 242.6053s
+Epoch: 6 cost time: 2.895322799682617
+Epoch: 6, Steps: 239 Train Loss: 0.5548 (Forecasting Loss:0.2653 + XiCon Loss:2.8953 x Lambda(0.1)), Vali MSE Loss: 0.1968 Test MSE Loss: 0.2681
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.5522325
+	speed: 0.0131s/iter; left time: 292.2510s
+	iters: 200, epoch: 7 | loss: 0.5149063
+	speed: 0.0110s/iter; left time: 244.5209s
+Epoch: 7 cost time: 2.8445353507995605
+Epoch: 7, Steps: 239 Train Loss: 0.5541 (Forecasting Loss:0.2646 + XiCon Loss:2.8951 x Lambda(0.1)), Vali MSE Loss: 0.1958 Test MSE Loss: 0.2672
+Validation loss decreased (0.196087 --> 0.195843).  Saving model ...
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.5227894
+	speed: 0.0137s/iter; left time: 302.8834s
+	iters: 200, epoch: 8 | loss: 0.5385545
+	speed: 0.0107s/iter; left time: 235.5484s
+Epoch: 8 cost time: 2.902794599533081
+Epoch: 8, Steps: 239 Train Loss: 0.5539 (Forecasting Loss:0.2641 + XiCon Loss:2.8980 x Lambda(0.1)), Vali MSE Loss: 0.1959 Test MSE Loss: 0.2671
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.5577350
+	speed: 0.0129s/iter; left time: 281.6205s
+	iters: 200, epoch: 9 | loss: 0.5586183
+	speed: 0.0111s/iter; left time: 242.5702s
+Epoch: 9 cost time: 2.8324429988861084
+Epoch: 9, Steps: 239 Train Loss: 0.5533 (Forecasting Loss:0.2638 + XiCon Loss:2.8949 x Lambda(0.1)), Vali MSE Loss: 0.1956 Test MSE Loss: 0.2669
+Validation loss decreased (0.195843 --> 0.195620).  Saving model ...
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.5679381
+	speed: 0.0134s/iter; left time: 289.5054s
+	iters: 200, epoch: 10 | loss: 0.5644920
+	speed: 0.0104s/iter; left time: 223.5609s
+Epoch: 10 cost time: 2.8212409019470215
+Epoch: 10, Steps: 239 Train Loss: 0.5529 (Forecasting Loss:0.2635 + XiCon Loss:2.8945 x Lambda(0.1)), Vali MSE Loss: 0.1957 Test MSE Loss: 0.2669
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.5823657
+	speed: 0.0130s/iter; left time: 278.8626s
+	iters: 200, epoch: 11 | loss: 0.5602098
+	speed: 0.0109s/iter; left time: 231.7586s
+Epoch: 11 cost time: 2.8297460079193115
+Epoch: 11, Steps: 239 Train Loss: 0.5533 (Forecasting Loss:0.2636 + XiCon Loss:2.8975 x Lambda(0.1)), Vali MSE Loss: 0.1956 Test MSE Loss: 0.2668
+Validation loss decreased (0.195620 --> 0.195600).  Saving model ...
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.5907361
+	speed: 0.0132s/iter; left time: 279.6738s
+	iters: 200, epoch: 12 | loss: 0.5219705
+	speed: 0.0107s/iter; left time: 225.8630s
+Epoch: 12 cost time: 2.865630865097046
+Epoch: 12, Steps: 239 Train Loss: 0.5533 (Forecasting Loss:0.2634 + XiCon Loss:2.8983 x Lambda(0.1)), Vali MSE Loss: 0.1953 Test MSE Loss: 0.2668
+Validation loss decreased (0.195600 --> 0.195292).  Saving model ...
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.5509435
+	speed: 0.0132s/iter; left time: 276.8804s
+	iters: 200, epoch: 13 | loss: 0.5370677
+	speed: 0.0108s/iter; left time: 223.9724s
+Epoch: 13 cost time: 2.9006597995758057
+Epoch: 13, Steps: 239 Train Loss: 0.5527 (Forecasting Loss:0.2633 + XiCon Loss:2.8941 x Lambda(0.1)), Vali MSE Loss: 0.1958 Test MSE Loss: 0.2668
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 2.44140625e-07
+	iters: 100, epoch: 14 | loss: 0.5292419
+	speed: 0.0129s/iter; left time: 266.3949s
+	iters: 200, epoch: 14 | loss: 0.5719541
+	speed: 0.0104s/iter; left time: 214.4748s
+Epoch: 14 cost time: 2.7937190532684326
+Epoch: 14, Steps: 239 Train Loss: 0.5531 (Forecasting Loss:0.2634 + XiCon Loss:2.8971 x Lambda(0.1)), Vali MSE Loss: 0.1954 Test MSE Loss: 0.2668
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 1.220703125e-07
+	iters: 100, epoch: 15 | loss: 0.5343893
+	speed: 0.0135s/iter; left time: 276.4665s
+	iters: 200, epoch: 15 | loss: 0.5443674
+	speed: 0.0112s/iter; left time: 227.6136s
+Epoch: 15 cost time: 2.9044978618621826
+Epoch: 15, Steps: 239 Train Loss: 0.5531 (Forecasting Loss:0.2637 + XiCon Loss:2.8941 x Lambda(0.1)), Vali MSE Loss: 0.1954 Test MSE Loss: 0.2668
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 6.103515625e-08
+	iters: 100, epoch: 16 | loss: 0.5248313
+	speed: 0.0138s/iter; left time: 279.0742s
+	iters: 200, epoch: 16 | loss: 0.5589123
+	speed: 0.0109s/iter; left time: 220.1807s
+Epoch: 16 cost time: 2.9702396392822266
+Epoch: 16, Steps: 239 Train Loss: 0.5530 (Forecasting Loss:0.2634 + XiCon Loss:2.8960 x Lambda(0.1)), Vali MSE Loss: 0.1954 Test MSE Loss: 0.2668
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 3.0517578125e-08
+	iters: 100, epoch: 17 | loss: 0.5546561
+	speed: 0.0135s/iter; left time: 270.3734s
+	iters: 200, epoch: 17 | loss: 0.5375648
+	speed: 0.0121s/iter; left time: 241.1944s
+Epoch: 17 cost time: 3.0778748989105225
+Epoch: 17, Steps: 239 Train Loss: 0.5534 (Forecasting Loss:0.2640 + XiCon Loss:2.8940 x Lambda(0.1)), Vali MSE Loss: 0.1953 Test MSE Loss: 0.2668
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.52587890625e-08
+	iters: 100, epoch: 18 | loss: 0.5453800
+	speed: 0.0128s/iter; left time: 252.8096s
+	iters: 200, epoch: 18 | loss: 0.5591376
+	speed: 0.0121s/iter; left time: 236.6978s
+Epoch: 18 cost time: 2.9286959171295166
+Epoch: 18, Steps: 239 Train Loss: 0.5531 (Forecasting Loss:0.2636 + XiCon Loss:2.8954 x Lambda(0.1)), Vali MSE Loss: 0.1953 Test MSE Loss: 0.2668
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 7.62939453125e-09
+	iters: 100, epoch: 19 | loss: 0.5412889
+	speed: 0.0131s/iter; left time: 256.3728s
+	iters: 200, epoch: 19 | loss: 0.5635915
+	speed: 0.0104s/iter; left time: 202.5461s
+Epoch: 19 cost time: 2.8069396018981934
+Epoch: 19, Steps: 239 Train Loss: 0.5534 (Forecasting Loss:0.2636 + XiCon Loss:2.8980 x Lambda(0.1)), Vali MSE Loss: 0.1956 Test MSE Loss: 0.2668
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 3.814697265625e-09
+	iters: 100, epoch: 20 | loss: 0.5731439
+	speed: 0.0129s/iter; left time: 247.7364s
+	iters: 200, epoch: 20 | loss: 0.5518310
+	speed: 0.0119s/iter; left time: 227.3410s
+Epoch: 20 cost time: 2.915923833847046
+Epoch: 20, Steps: 239 Train Loss: 0.5534 (Forecasting Loss:0.2637 + XiCon Loss:2.8971 x Lambda(0.1)), Vali MSE Loss: 0.1955 Test MSE Loss: 0.2668
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.9073486328125e-09
+	iters: 100, epoch: 21 | loss: 0.5494891
+	speed: 0.0131s/iter; left time: 249.6410s
+	iters: 200, epoch: 21 | loss: 0.5809321
+	speed: 0.0104s/iter; left time: 196.7286s
+Epoch: 21 cost time: 2.7960305213928223
+Epoch: 21, Steps: 239 Train Loss: 0.5531 (Forecasting Loss:0.2635 + XiCon Loss:2.8963 x Lambda(0.1)), Vali MSE Loss: 0.1957 Test MSE Loss: 0.2668
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 9.5367431640625e-10
+	iters: 100, epoch: 22 | loss: 0.5664394
+	speed: 0.0137s/iter; left time: 256.9696s
+	iters: 200, epoch: 22 | loss: 0.5651348
+	speed: 0.0109s/iter; left time: 203.3393s
+Epoch: 22 cost time: 2.922480344772339
+Epoch: 22, Steps: 239 Train Loss: 0.5529 (Forecasting Loss:0.2634 + XiCon Loss:2.8947 x Lambda(0.1)), Vali MSE Loss: 0.1955 Test MSE Loss: 0.2668
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 5165
+test shape: (80, 64, 96, 1) (80, 64, 96, 1)
+test shape: (5120, 96, 1) (5120, 96, 1)
+mse:0.2095150649547577, mae:0.3241412043571472, mape:2.602320671081543, mspe:4931.056640625 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:64985
+train 15351
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.0855
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_4>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 15351
+val 5167
+test 5165
+	iters: 100, epoch: 1 | loss: 0.9083682
+	speed: 0.0131s/iter; left time: 311.4414s
+	iters: 200, epoch: 1 | loss: 0.7908179
+	speed: 0.0109s/iter; left time: 258.1273s
+Epoch: 1 cost time: 2.8647472858428955
+Epoch: 1, Steps: 239 Train Loss: 0.9332 (Forecasting Loss:0.6333 + XiCon Loss:2.9992 x Lambda(0.1)), Vali MSE Loss: 0.3280 Test MSE Loss: 0.4372
+Validation loss decreased (inf --> 0.328012).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.6217872
+	speed: 0.0133s/iter; left time: 313.1562s
+	iters: 200, epoch: 2 | loss: 0.5711086
+	speed: 0.0111s/iter; left time: 259.6571s
+Epoch: 2 cost time: 2.9067537784576416
+Epoch: 2, Steps: 239 Train Loss: 0.6147 (Forecasting Loss:0.3179 + XiCon Loss:2.9682 x Lambda(0.1)), Vali MSE Loss: 0.2074 Test MSE Loss: 0.2854
+Validation loss decreased (0.328012 --> 0.207419).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.5830152
+	speed: 0.0131s/iter; left time: 304.5364s
+	iters: 200, epoch: 3 | loss: 0.5779006
+	speed: 0.0101s/iter; left time: 235.6789s
+Epoch: 3 cost time: 2.7803571224212646
+Epoch: 3, Steps: 239 Train Loss: 0.5712 (Forecasting Loss:0.2784 + XiCon Loss:2.9279 x Lambda(0.1)), Vali MSE Loss: 0.1977 Test MSE Loss: 0.2701
+Validation loss decreased (0.207419 --> 0.197691).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.5556741
+	speed: 0.0129s/iter; left time: 298.6555s
+	iters: 200, epoch: 4 | loss: 0.5897683
+	speed: 0.0106s/iter; left time: 243.4798s
+Epoch: 4 cost time: 2.8253650665283203
+Epoch: 4, Steps: 239 Train Loss: 0.5610 (Forecasting Loss:0.2697 + XiCon Loss:2.9135 x Lambda(0.1)), Vali MSE Loss: 0.1947 Test MSE Loss: 0.2661
+Validation loss decreased (0.197691 --> 0.194699).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.5954088
+	speed: 0.0137s/iter; left time: 313.1379s
+	iters: 200, epoch: 5 | loss: 0.5031783
+	speed: 0.0103s/iter; left time: 233.5366s
+Epoch: 5 cost time: 2.8738598823547363
+Epoch: 5, Steps: 239 Train Loss: 0.5568 (Forecasting Loss:0.2662 + XiCon Loss:2.9060 x Lambda(0.1)), Vali MSE Loss: 0.1943 Test MSE Loss: 0.2633
+Validation loss decreased (0.194699 --> 0.194323).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.5736738
+	speed: 0.0130s/iter; left time: 293.5118s
+	iters: 200, epoch: 6 | loss: 0.5522346
+	speed: 0.0101s/iter; left time: 226.2090s
+Epoch: 6 cost time: 2.7130017280578613
+Epoch: 6, Steps: 239 Train Loss: 0.5551 (Forecasting Loss:0.2645 + XiCon Loss:2.9058 x Lambda(0.1)), Vali MSE Loss: 0.1933 Test MSE Loss: 0.2629
+Validation loss decreased (0.194323 --> 0.193333).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.5448684
+	speed: 0.0129s/iter; left time: 287.7933s
+	iters: 200, epoch: 7 | loss: 0.5494710
+	speed: 0.0111s/iter; left time: 247.9714s
+Epoch: 7 cost time: 2.864589214324951
+Epoch: 7, Steps: 239 Train Loss: 0.5534 (Forecasting Loss:0.2632 + XiCon Loss:2.9023 x Lambda(0.1)), Vali MSE Loss: 0.1931 Test MSE Loss: 0.2632
+Validation loss decreased (0.193333 --> 0.193067).  Saving model ...
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.5296519
+	speed: 0.0136s/iter; left time: 300.1396s
+	iters: 200, epoch: 8 | loss: 0.5560641
+	speed: 0.0115s/iter; left time: 253.8071s
+Epoch: 8 cost time: 2.9380571842193604
+Epoch: 8, Steps: 239 Train Loss: 0.5533 (Forecasting Loss:0.2629 + XiCon Loss:2.9037 x Lambda(0.1)), Vali MSE Loss: 0.1927 Test MSE Loss: 0.2625
+Validation loss decreased (0.193067 --> 0.192716).  Saving model ...
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.5641795
+	speed: 0.0130s/iter; left time: 284.8460s
+	iters: 200, epoch: 9 | loss: 0.5227193
+	speed: 0.0101s/iter; left time: 219.3091s
+Epoch: 9 cost time: 2.7468104362487793
+Epoch: 9, Steps: 239 Train Loss: 0.5528 (Forecasting Loss:0.2625 + XiCon Loss:2.9035 x Lambda(0.1)), Vali MSE Loss: 0.1928 Test MSE Loss: 0.2623
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.5564348
+	speed: 0.0138s/iter; left time: 298.3506s
+	iters: 200, epoch: 10 | loss: 0.5754620
+	speed: 0.0111s/iter; left time: 239.5493s
+Epoch: 10 cost time: 2.929903745651245
+Epoch: 10, Steps: 239 Train Loss: 0.5528 (Forecasting Loss:0.2625 + XiCon Loss:2.9037 x Lambda(0.1)), Vali MSE Loss: 0.1923 Test MSE Loss: 0.2623
+Validation loss decreased (0.192716 --> 0.192312).  Saving model ...
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.5459533
+	speed: 0.0131s/iter; left time: 281.1782s
+	iters: 200, epoch: 11 | loss: 0.5648616
+	speed: 0.0105s/iter; left time: 224.6311s
+Epoch: 11 cost time: 2.82238507270813
+Epoch: 11, Steps: 239 Train Loss: 0.5525 (Forecasting Loss:0.2623 + XiCon Loss:2.9022 x Lambda(0.1)), Vali MSE Loss: 0.1930 Test MSE Loss: 0.2623
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.5197593
+	speed: 0.0140s/iter; left time: 295.3946s
+	iters: 200, epoch: 12 | loss: 0.5232604
+	speed: 0.0106s/iter; left time: 222.7520s
+Epoch: 12 cost time: 2.878852605819702
+Epoch: 12, Steps: 239 Train Loss: 0.5528 (Forecasting Loss:0.2624 + XiCon Loss:2.9046 x Lambda(0.1)), Vali MSE Loss: 0.1925 Test MSE Loss: 0.2623
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.5497801
+	speed: 0.0137s/iter; left time: 287.1872s
+	iters: 200, epoch: 13 | loss: 0.5749162
+	speed: 0.0106s/iter; left time: 221.1976s
+Epoch: 13 cost time: 2.914754629135132
+Epoch: 13, Steps: 239 Train Loss: 0.5526 (Forecasting Loss:0.2624 + XiCon Loss:2.9021 x Lambda(0.1)), Vali MSE Loss: 0.1925 Test MSE Loss: 0.2623
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 2.44140625e-07
+	iters: 100, epoch: 14 | loss: 0.5769463
+	speed: 0.0130s/iter; left time: 269.2715s
+	iters: 200, epoch: 14 | loss: 0.5693076
+	speed: 0.0122s/iter; left time: 251.5370s
+Epoch: 14 cost time: 3.028095006942749
+Epoch: 14, Steps: 239 Train Loss: 0.5524 (Forecasting Loss:0.2622 + XiCon Loss:2.9023 x Lambda(0.1)), Vali MSE Loss: 0.1925 Test MSE Loss: 0.2623
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 1.220703125e-07
+	iters: 100, epoch: 15 | loss: 0.5672235
+	speed: 0.0142s/iter; left time: 290.9374s
+	iters: 200, epoch: 15 | loss: 0.5893617
+	speed: 0.0107s/iter; left time: 218.1773s
+Epoch: 15 cost time: 2.9354872703552246
+Epoch: 15, Steps: 239 Train Loss: 0.5524 (Forecasting Loss:0.2624 + XiCon Loss:2.8997 x Lambda(0.1)), Vali MSE Loss: 0.1926 Test MSE Loss: 0.2623
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 6.103515625e-08
+	iters: 100, epoch: 16 | loss: 0.5756192
+	speed: 0.0142s/iter; left time: 286.6906s
+	iters: 200, epoch: 16 | loss: 0.5101300
+	speed: 0.0106s/iter; left time: 213.7440s
+Epoch: 16 cost time: 3.0090653896331787
+Epoch: 16, Steps: 239 Train Loss: 0.5528 (Forecasting Loss:0.2625 + XiCon Loss:2.9029 x Lambda(0.1)), Vali MSE Loss: 0.1927 Test MSE Loss: 0.2623
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 3.0517578125e-08
+	iters: 100, epoch: 17 | loss: 0.5494697
+	speed: 0.0131s/iter; left time: 260.7748s
+	iters: 200, epoch: 17 | loss: 0.5264888
+	speed: 0.0105s/iter; left time: 209.6808s
+Epoch: 17 cost time: 2.834219455718994
+Epoch: 17, Steps: 239 Train Loss: 0.5527 (Forecasting Loss:0.2624 + XiCon Loss:2.9030 x Lambda(0.1)), Vali MSE Loss: 0.1930 Test MSE Loss: 0.2623
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 1.52587890625e-08
+	iters: 100, epoch: 18 | loss: 0.5229788
+	speed: 0.0134s/iter; left time: 264.6104s
+	iters: 200, epoch: 18 | loss: 0.5257075
+	speed: 0.0106s/iter; left time: 208.1204s
+Epoch: 18 cost time: 2.829078197479248
+Epoch: 18, Steps: 239 Train Loss: 0.5525 (Forecasting Loss:0.2624 + XiCon Loss:2.9014 x Lambda(0.1)), Vali MSE Loss: 0.1924 Test MSE Loss: 0.2623
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 7.62939453125e-09
+	iters: 100, epoch: 19 | loss: 0.5212677
+	speed: 0.0132s/iter; left time: 256.8217s
+	iters: 200, epoch: 19 | loss: 0.5457454
+	speed: 0.0111s/iter; left time: 215.1165s
+Epoch: 19 cost time: 2.8914618492126465
+Epoch: 19, Steps: 239 Train Loss: 0.5528 (Forecasting Loss:0.2623 + XiCon Loss:2.9049 x Lambda(0.1)), Vali MSE Loss: 0.1926 Test MSE Loss: 0.2623
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 3.814697265625e-09
+	iters: 100, epoch: 20 | loss: 0.5621325
+	speed: 0.0134s/iter; left time: 257.9403s
+	iters: 200, epoch: 20 | loss: 0.5493211
+	speed: 0.0115s/iter; left time: 219.4687s
+Epoch: 20 cost time: 2.9681897163391113
+Epoch: 20, Steps: 239 Train Loss: 0.5528 (Forecasting Loss:0.2626 + XiCon Loss:2.9021 x Lambda(0.1)), Vali MSE Loss: 0.1928 Test MSE Loss: 0.2623
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl96_dm4_nh8_el1_dl1_df4_fc1_ebtimeF_dtTrue_Exp_4<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 5165
+test shape: (80, 64, 96, 1) (80, 64, 96, 1)
+test shape: (5120, 96, 1) (5120, 96, 1)
+mse:0.20464815199375153, mae:0.31991055607795715, mape:2.2901105880737305, mspe:2757.7861328125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+MSE:0.2067+-0.00320, MAE:0.3216+-0.00213, MAPE:2.4202+-0.16953, MSPE:3628.0142+-1187.38485, SHAPEDTW:0.0000+-0.00000, TEMPDTW:0.0000+-0.00000
+Args in experiment:
+Namespace(wnorm='ReVIN', lambda=0.1, multiscales=[336], train_ratio=0.6, save=False, task_name='long_term_forecast', is_training=1, model_id='XiCon_exp', model='XiCon', data='electricity', root_path='./dataset/electricity', data_path='electricity.csv', features='S', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=336, label_len=48, pred_len=720, seasonal_patterns='Monthly', mask_rate=0.25, anomaly_ratio=0.25, patch_len=16, stride=8, affine=0, subtract_last=0, mixer_kernel_size=8, head_dropout=0.0, top_k=5, num_kernels=6, enc_in=1, dec_in=7, c_out=1, d_model=8, n_heads=8, e_layers=2, d_layers=1, d_ff=8, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itr=5, train_epochs=100, batch_size=64, patience=10, learning_rate=0.001, des='Exp', loss='MSE', lradj='type1', pct_start=0.3, loss_flag=2, use_amp=False, cpu_worker=None, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, omega=0.5, XiCon=True, AutoCon=False)
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:486689
+train 14727
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 4.9868
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14727
+val 4543
+test 4541
+	iters: 100, epoch: 1 | loss: 1.0525469
+	speed: 0.0193s/iter; left time: 441.2904s
+	iters: 200, epoch: 1 | loss: 0.9234408
+	speed: 0.0124s/iter; left time: 283.1391s
+Epoch: 1 cost time: 3.6088953018188477
+Epoch: 1, Steps: 230 Train Loss: 1.0172 (Forecasting Loss:0.7223 + XiCon Loss:2.9489 x Lambda(0.1)), Vali MSE Loss: 0.3308 Test MSE Loss: 0.5294
+Validation loss decreased (inf --> 0.330821).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.6712119
+	speed: 0.0159s/iter; left time: 360.4952s
+	iters: 200, epoch: 2 | loss: 0.6621116
+	speed: 0.0128s/iter; left time: 288.3803s
+Epoch: 2 cost time: 3.2774858474731445
+Epoch: 2, Steps: 230 Train Loss: 0.7017 (Forecasting Loss:0.4113 + XiCon Loss:2.9036 x Lambda(0.1)), Vali MSE Loss: 0.2118 Test MSE Loss: 0.3809
+Validation loss decreased (0.330821 --> 0.211757).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.6245107
+	speed: 0.0150s/iter; left time: 335.6148s
+	iters: 200, epoch: 3 | loss: 0.6764075
+	speed: 0.0126s/iter; left time: 280.9716s
+Epoch: 3 cost time: 3.1475143432617188
+Epoch: 3, Steps: 230 Train Loss: 0.6444 (Forecasting Loss:0.3591 + XiCon Loss:2.8529 x Lambda(0.1)), Vali MSE Loss: 0.2058 Test MSE Loss: 0.3752
+Validation loss decreased (0.211757 --> 0.205850).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.6227906
+	speed: 0.0157s/iter; left time: 348.1146s
+	iters: 200, epoch: 4 | loss: 0.6459970
+	speed: 0.0134s/iter; left time: 295.6308s
+Epoch: 4 cost time: 3.3265457153320312
+Epoch: 4, Steps: 230 Train Loss: 0.6301 (Forecasting Loss:0.3461 + XiCon Loss:2.8405 x Lambda(0.1)), Vali MSE Loss: 0.2108 Test MSE Loss: 0.3860
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.6638176
+	speed: 0.0154s/iter; left time: 337.5403s
+	iters: 200, epoch: 5 | loss: 0.6176929
+	speed: 0.0133s/iter; left time: 290.2014s
+Epoch: 5 cost time: 3.269327402114868
+Epoch: 5, Steps: 230 Train Loss: 0.6253 (Forecasting Loss:0.3416 + XiCon Loss:2.8379 x Lambda(0.1)), Vali MSE Loss: 0.2100 Test MSE Loss: 0.3892
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6336021
+	speed: 0.0152s/iter; left time: 330.0338s
+	iters: 200, epoch: 6 | loss: 0.6573437
+	speed: 0.0135s/iter; left time: 291.2638s
+Epoch: 6 cost time: 3.317033052444458
+Epoch: 6, Steps: 230 Train Loss: 0.6228 (Forecasting Loss:0.3391 + XiCon Loss:2.8368 x Lambda(0.1)), Vali MSE Loss: 0.2092 Test MSE Loss: 0.3782
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6525592
+	speed: 0.0151s/iter; left time: 326.0226s
+	iters: 200, epoch: 7 | loss: 0.6172665
+	speed: 0.0130s/iter; left time: 278.9705s
+Epoch: 7 cost time: 3.2154479026794434
+Epoch: 7, Steps: 230 Train Loss: 0.6221 (Forecasting Loss:0.3386 + XiCon Loss:2.8359 x Lambda(0.1)), Vali MSE Loss: 0.2084 Test MSE Loss: 0.3777
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6291603
+	speed: 0.0145s/iter; left time: 309.1381s
+	iters: 200, epoch: 8 | loss: 0.6424741
+	speed: 0.0137s/iter; left time: 289.8612s
+Epoch: 8 cost time: 3.2645351886749268
+Epoch: 8, Steps: 230 Train Loss: 0.6214 (Forecasting Loss:0.3376 + XiCon Loss:2.8380 x Lambda(0.1)), Vali MSE Loss: 0.2084 Test MSE Loss: 0.3782
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6217644
+	speed: 0.0156s/iter; left time: 329.1632s
+	iters: 200, epoch: 9 | loss: 0.6345093
+	speed: 0.0134s/iter; left time: 280.7216s
+Epoch: 9 cost time: 3.33689284324646
+Epoch: 9, Steps: 230 Train Loss: 0.6208 (Forecasting Loss:0.3373 + XiCon Loss:2.8349 x Lambda(0.1)), Vali MSE Loss: 0.2095 Test MSE Loss: 0.3787
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6209217
+	speed: 0.0153s/iter; left time: 319.6872s
+	iters: 200, epoch: 10 | loss: 0.6454804
+	speed: 0.0139s/iter; left time: 288.9409s
+Epoch: 10 cost time: 3.349515914916992
+Epoch: 10, Steps: 230 Train Loss: 0.6204 (Forecasting Loss:0.3369 + XiCon Loss:2.8346 x Lambda(0.1)), Vali MSE Loss: 0.2096 Test MSE Loss: 0.3789
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6150061
+	speed: 0.0162s/iter; left time: 333.2198s
+	iters: 200, epoch: 11 | loss: 0.5950204
+	speed: 0.0128s/iter; left time: 263.3189s
+Epoch: 11 cost time: 3.3048486709594727
+Epoch: 11, Steps: 230 Train Loss: 0.6203 (Forecasting Loss:0.3370 + XiCon Loss:2.8328 x Lambda(0.1)), Vali MSE Loss: 0.2091 Test MSE Loss: 0.3781
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6127579
+	speed: 0.0152s/iter; left time: 308.7251s
+	iters: 200, epoch: 12 | loss: 0.6281143
+	speed: 0.0138s/iter; left time: 279.5083s
+Epoch: 12 cost time: 3.311326265335083
+Epoch: 12, Steps: 230 Train Loss: 0.6207 (Forecasting Loss:0.3371 + XiCon Loss:2.8366 x Lambda(0.1)), Vali MSE Loss: 0.2091 Test MSE Loss: 0.3785
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.6179174
+	speed: 0.0152s/iter; left time: 305.3199s
+	iters: 200, epoch: 13 | loss: 0.5798966
+	speed: 0.0124s/iter; left time: 247.8986s
+Epoch: 13 cost time: 3.1384236812591553
+Epoch: 13, Steps: 230 Train Loss: 0.6201 (Forecasting Loss:0.3369 + XiCon Loss:2.8319 x Lambda(0.1)), Vali MSE Loss: 0.2091 Test MSE Loss: 0.3785
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 4541
+test shape: (70, 64, 720, 1) (70, 64, 720, 1)
+test shape: (4480, 720, 1) (4480, 720, 1)
+mse:0.32749778032302856, mae:0.42286550998687744, mape:3.857093572616577, mspe:18689.98046875 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:486689
+train 14727
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.0831
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_1>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14727
+val 4543
+test 4541
+	iters: 100, epoch: 1 | loss: 0.9757240
+	speed: 0.0158s/iter; left time: 361.6846s
+	iters: 200, epoch: 1 | loss: 0.8613875
+	speed: 0.0133s/iter; left time: 302.5454s
+Epoch: 1 cost time: 3.3110179901123047
+Epoch: 1, Steps: 230 Train Loss: 1.0155 (Forecasting Loss:0.7165 + XiCon Loss:2.9895 x Lambda(0.1)), Vali MSE Loss: 0.3260 Test MSE Loss: 0.5217
+Validation loss decreased (inf --> 0.325975).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.6796750
+	speed: 0.0152s/iter; left time: 345.4044s
+	iters: 200, epoch: 2 | loss: 0.6846120
+	speed: 0.0129s/iter; left time: 292.0384s
+Epoch: 2 cost time: 3.2413980960845947
+Epoch: 2, Steps: 230 Train Loss: 0.6988 (Forecasting Loss:0.4083 + XiCon Loss:2.9059 x Lambda(0.1)), Vali MSE Loss: 0.2108 Test MSE Loss: 0.3744
+Validation loss decreased (0.325975 --> 0.210830).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.7088633
+	speed: 0.0156s/iter; left time: 349.8883s
+	iters: 200, epoch: 3 | loss: 0.6300532
+	speed: 0.0127s/iter; left time: 283.7573s
+Epoch: 3 cost time: 3.233729600906372
+Epoch: 3, Steps: 230 Train Loss: 0.6501 (Forecasting Loss:0.3653 + XiCon Loss:2.8472 x Lambda(0.1)), Vali MSE Loss: 0.2054 Test MSE Loss: 0.3671
+Validation loss decreased (0.210830 --> 0.205354).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.6526208
+	speed: 0.0153s/iter; left time: 340.2980s
+	iters: 200, epoch: 4 | loss: 0.5988288
+	speed: 0.0131s/iter; left time: 289.6118s
+Epoch: 4 cost time: 3.2584316730499268
+Epoch: 4, Steps: 230 Train Loss: 0.6385 (Forecasting Loss:0.3560 + XiCon Loss:2.8252 x Lambda(0.1)), Vali MSE Loss: 0.2033 Test MSE Loss: 0.3623
+Validation loss decreased (0.205354 --> 0.203267).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.6633071
+	speed: 0.0163s/iter; left time: 358.8562s
+	iters: 200, epoch: 5 | loss: 0.6367468
+	speed: 0.0140s/iter; left time: 307.3047s
+Epoch: 5 cost time: 3.4478707313537598
+Epoch: 5, Steps: 230 Train Loss: 0.6340 (Forecasting Loss:0.3519 + XiCon Loss:2.8213 x Lambda(0.1)), Vali MSE Loss: 0.2026 Test MSE Loss: 0.3631
+Validation loss decreased (0.203267 --> 0.202565).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6480705
+	speed: 0.0161s/iter; left time: 350.7741s
+	iters: 200, epoch: 6 | loss: 0.6468349
+	speed: 0.0132s/iter; left time: 286.5515s
+Epoch: 6 cost time: 3.3553502559661865
+Epoch: 6, Steps: 230 Train Loss: 0.6313 (Forecasting Loss:0.3495 + XiCon Loss:2.8178 x Lambda(0.1)), Vali MSE Loss: 0.2020 Test MSE Loss: 0.3617
+Validation loss decreased (0.202565 --> 0.201951).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6162831
+	speed: 0.0149s/iter; left time: 319.6334s
+	iters: 200, epoch: 7 | loss: 0.6076564
+	speed: 0.0129s/iter; left time: 276.1269s
+Epoch: 7 cost time: 3.2230536937713623
+Epoch: 7, Steps: 230 Train Loss: 0.6305 (Forecasting Loss:0.3488 + XiCon Loss:2.8166 x Lambda(0.1)), Vali MSE Loss: 0.2016 Test MSE Loss: 0.3609
+Validation loss decreased (0.201951 --> 0.201592).  Saving model ...
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6404564
+	speed: 0.0159s/iter; left time: 339.2973s
+	iters: 200, epoch: 8 | loss: 0.6052138
+	speed: 0.0131s/iter; left time: 277.0478s
+Epoch: 8 cost time: 3.3521785736083984
+Epoch: 8, Steps: 230 Train Loss: 0.6299 (Forecasting Loss:0.3484 + XiCon Loss:2.8153 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3604
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6722584
+	speed: 0.0153s/iter; left time: 321.2051s
+	iters: 200, epoch: 9 | loss: 0.6348560
+	speed: 0.0142s/iter; left time: 297.7724s
+Epoch: 9 cost time: 3.369436740875244
+Epoch: 9, Steps: 230 Train Loss: 0.6296 (Forecasting Loss:0.3480 + XiCon Loss:2.8165 x Lambda(0.1)), Vali MSE Loss: 0.2019 Test MSE Loss: 0.3605
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6474348
+	speed: 0.0149s/iter; left time: 310.9971s
+	iters: 200, epoch: 10 | loss: 0.6258471
+	speed: 0.0133s/iter; left time: 275.3692s
+Epoch: 10 cost time: 3.272700309753418
+Epoch: 10, Steps: 230 Train Loss: 0.6294 (Forecasting Loss:0.3475 + XiCon Loss:2.8186 x Lambda(0.1)), Vali MSE Loss: 0.2018 Test MSE Loss: 0.3605
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6342105
+	speed: 0.0152s/iter; left time: 312.6807s
+	iters: 200, epoch: 11 | loss: 0.6257771
+	speed: 0.0126s/iter; left time: 258.2710s
+Epoch: 11 cost time: 3.2147903442382812
+Epoch: 11, Steps: 230 Train Loss: 0.6297 (Forecasting Loss:0.3477 + XiCon Loss:2.8197 x Lambda(0.1)), Vali MSE Loss: 0.2018 Test MSE Loss: 0.3605
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6278647
+	speed: 0.0155s/iter; left time: 315.7079s
+	iters: 200, epoch: 12 | loss: 0.6166168
+	speed: 0.0128s/iter; left time: 259.3266s
+Epoch: 12 cost time: 3.236537218093872
+Epoch: 12, Steps: 230 Train Loss: 0.6299 (Forecasting Loss:0.3479 + XiCon Loss:2.8194 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.6501989
+	speed: 0.0150s/iter; left time: 301.1338s
+	iters: 200, epoch: 13 | loss: 0.6266340
+	speed: 0.0132s/iter; left time: 265.2588s
+Epoch: 13 cost time: 3.2621572017669678
+Epoch: 13, Steps: 230 Train Loss: 0.6298 (Forecasting Loss:0.3479 + XiCon Loss:2.8196 x Lambda(0.1)), Vali MSE Loss: 0.2016 Test MSE Loss: 0.3605
+Validation loss decreased (0.201592 --> 0.201585).  Saving model ...
+Updating learning rate to 2.44140625e-07
+	iters: 100, epoch: 14 | loss: 0.6338607
+	speed: 0.0157s/iter; left time: 313.2966s
+	iters: 200, epoch: 14 | loss: 0.6424558
+	speed: 0.0125s/iter; left time: 247.8298s
+Epoch: 14 cost time: 3.2234649658203125
+Epoch: 14, Steps: 230 Train Loss: 0.6294 (Forecasting Loss:0.3476 + XiCon Loss:2.8187 x Lambda(0.1)), Vali MSE Loss: 0.2016 Test MSE Loss: 0.3605
+Validation loss decreased (0.201585 --> 0.201561).  Saving model ...
+Updating learning rate to 1.220703125e-07
+	iters: 100, epoch: 15 | loss: 0.6270052
+	speed: 0.0165s/iter; left time: 323.9179s
+	iters: 200, epoch: 15 | loss: 0.6094912
+	speed: 0.0137s/iter; left time: 268.3040s
+Epoch: 15 cost time: 3.466792106628418
+Epoch: 15, Steps: 230 Train Loss: 0.6295 (Forecasting Loss:0.3476 + XiCon Loss:2.8190 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 6.103515625e-08
+	iters: 100, epoch: 16 | loss: 0.6154382
+	speed: 0.0160s/iter; left time: 311.3346s
+	iters: 200, epoch: 16 | loss: 0.5943236
+	speed: 0.0126s/iter; left time: 243.8855s
+Epoch: 16 cost time: 3.2976107597351074
+Epoch: 16, Steps: 230 Train Loss: 0.6290 (Forecasting Loss:0.3473 + XiCon Loss:2.8171 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 3.0517578125e-08
+	iters: 100, epoch: 17 | loss: 0.5864436
+	speed: 0.0151s/iter; left time: 290.1944s
+	iters: 200, epoch: 17 | loss: 0.6275752
+	speed: 0.0135s/iter; left time: 258.0007s
+Epoch: 17 cost time: 3.3166308403015137
+Epoch: 17, Steps: 230 Train Loss: 0.6294 (Forecasting Loss:0.3480 + XiCon Loss:2.8140 x Lambda(0.1)), Vali MSE Loss: 0.2016 Test MSE Loss: 0.3605
+Validation loss decreased (0.201561 --> 0.201558).  Saving model ...
+Updating learning rate to 1.52587890625e-08
+	iters: 100, epoch: 18 | loss: 0.6520466
+	speed: 0.0157s/iter; left time: 297.5626s
+	iters: 200, epoch: 18 | loss: 0.6199658
+	speed: 0.0128s/iter; left time: 241.8818s
+Epoch: 18 cost time: 3.277411937713623
+Epoch: 18, Steps: 230 Train Loss: 0.6292 (Forecasting Loss:0.3476 + XiCon Loss:2.8160 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 7.62939453125e-09
+	iters: 100, epoch: 19 | loss: 0.6204779
+	speed: 0.0154s/iter; left time: 289.6335s
+	iters: 200, epoch: 19 | loss: 0.6347151
+	speed: 0.0131s/iter; left time: 244.1531s
+Epoch: 19 cost time: 3.2788968086242676
+Epoch: 19, Steps: 230 Train Loss: 0.6293 (Forecasting Loss:0.3476 + XiCon Loss:2.8165 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 3.814697265625e-09
+	iters: 100, epoch: 20 | loss: 0.6301805
+	speed: 0.0160s/iter; left time: 296.2019s
+	iters: 200, epoch: 20 | loss: 0.6396755
+	speed: 0.0132s/iter; left time: 242.8659s
+Epoch: 20 cost time: 3.333895683288574
+Epoch: 20, Steps: 230 Train Loss: 0.6296 (Forecasting Loss:0.3478 + XiCon Loss:2.8178 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 1.9073486328125e-09
+	iters: 100, epoch: 21 | loss: 0.6368400
+	speed: 0.0161s/iter; left time: 294.8633s
+	iters: 200, epoch: 21 | loss: 0.6292361
+	speed: 0.0126s/iter; left time: 229.3844s
+Epoch: 21 cost time: 3.2923412322998047
+Epoch: 21, Steps: 230 Train Loss: 0.6289 (Forecasting Loss:0.3473 + XiCon Loss:2.8169 x Lambda(0.1)), Vali MSE Loss: 0.2016 Test MSE Loss: 0.3605
+Validation loss decreased (0.201558 --> 0.201553).  Saving model ...
+Updating learning rate to 9.5367431640625e-10
+	iters: 100, epoch: 22 | loss: 0.6588398
+	speed: 0.0150s/iter; left time: 270.3410s
+	iters: 200, epoch: 22 | loss: 0.6574100
+	speed: 0.0131s/iter; left time: 235.2367s
+Epoch: 22 cost time: 3.246124505996704
+Epoch: 22, Steps: 230 Train Loss: 0.6291 (Forecasting Loss:0.3472 + XiCon Loss:2.8186 x Lambda(0.1)), Vali MSE Loss: 0.2018 Test MSE Loss: 0.3605
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 4.76837158203125e-10
+	iters: 100, epoch: 23 | loss: 0.6388990
+	speed: 0.0153s/iter; left time: 273.3817s
+	iters: 200, epoch: 23 | loss: 0.5880636
+	speed: 0.0136s/iter; left time: 241.2449s
+Epoch: 23 cost time: 3.3647429943084717
+Epoch: 23, Steps: 230 Train Loss: 0.6293 (Forecasting Loss:0.3475 + XiCon Loss:2.8180 x Lambda(0.1)), Vali MSE Loss: 0.2015 Test MSE Loss: 0.3605
+Validation loss decreased (0.201553 --> 0.201509).  Saving model ...
+Updating learning rate to 2.384185791015625e-10
+	iters: 100, epoch: 24 | loss: 0.6081641
+	speed: 0.0153s/iter; left time: 269.8712s
+	iters: 200, epoch: 24 | loss: 0.6312392
+	speed: 0.0125s/iter; left time: 219.3379s
+Epoch: 24 cost time: 3.1842217445373535
+Epoch: 24, Steps: 230 Train Loss: 0.6289 (Forecasting Loss:0.3475 + XiCon Loss:2.8146 x Lambda(0.1)), Vali MSE Loss: 0.2019 Test MSE Loss: 0.3605
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 1.1920928955078125e-10
+	iters: 100, epoch: 25 | loss: 0.6622849
+	speed: 0.0149s/iter; left time: 258.1212s
+	iters: 200, epoch: 25 | loss: 0.6326777
+	speed: 0.0125s/iter; left time: 215.6141s
+Epoch: 25 cost time: 3.128169536590576
+Epoch: 25, Steps: 230 Train Loss: 0.6290 (Forecasting Loss:0.3475 + XiCon Loss:2.8150 x Lambda(0.1)), Vali MSE Loss: 0.2014 Test MSE Loss: 0.3605
+Validation loss decreased (0.201509 --> 0.201358).  Saving model ...
+Updating learning rate to 5.960464477539063e-11
+	iters: 100, epoch: 26 | loss: 0.6384056
+	speed: 0.0151s/iter; left time: 259.4698s
+	iters: 200, epoch: 26 | loss: 0.6491736
+	speed: 0.0129s/iter; left time: 219.4470s
+Epoch: 26 cost time: 3.2393386363983154
+Epoch: 26, Steps: 230 Train Loss: 0.6294 (Forecasting Loss:0.3476 + XiCon Loss:2.8184 x Lambda(0.1)), Vali MSE Loss: 0.2016 Test MSE Loss: 0.3605
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 2.980232238769531e-11
+	iters: 100, epoch: 27 | loss: 0.6276514
+	speed: 0.0148s/iter; left time: 250.3343s
+	iters: 200, epoch: 27 | loss: 0.6494094
+	speed: 0.0138s/iter; left time: 232.6519s
+Epoch: 27 cost time: 3.2973618507385254
+Epoch: 27, Steps: 230 Train Loss: 0.6290 (Forecasting Loss:0.3474 + XiCon Loss:2.8161 x Lambda(0.1)), Vali MSE Loss: 0.2018 Test MSE Loss: 0.3605
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 1.4901161193847657e-11
+	iters: 100, epoch: 28 | loss: 0.6346148
+	speed: 0.0148s/iter; left time: 246.3540s
+	iters: 200, epoch: 28 | loss: 0.6240633
+	speed: 0.0124s/iter; left time: 206.1484s
+Epoch: 28 cost time: 3.1542396545410156
+Epoch: 28, Steps: 230 Train Loss: 0.6287 (Forecasting Loss:0.3472 + XiCon Loss:2.8156 x Lambda(0.1)), Vali MSE Loss: 0.2016 Test MSE Loss: 0.3605
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 7.450580596923828e-12
+	iters: 100, epoch: 29 | loss: 0.6084149
+	speed: 0.0161s/iter; left time: 265.6996s
+	iters: 200, epoch: 29 | loss: 0.6233267
+	speed: 0.0137s/iter; left time: 224.5493s
+Epoch: 29 cost time: 3.403979539871216
+Epoch: 29, Steps: 230 Train Loss: 0.6293 (Forecasting Loss:0.3474 + XiCon Loss:2.8181 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 3.725290298461914e-12
+	iters: 100, epoch: 30 | loss: 0.6170887
+	speed: 0.0162s/iter; left time: 262.4255s
+	iters: 200, epoch: 30 | loss: 0.6166798
+	speed: 0.0132s/iter; left time: 213.0576s
+Epoch: 30 cost time: 3.357105016708374
+Epoch: 30, Steps: 230 Train Loss: 0.6296 (Forecasting Loss:0.3478 + XiCon Loss:2.8185 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.862645149230957e-12
+	iters: 100, epoch: 31 | loss: 0.5991777
+	speed: 0.0158s/iter; left time: 252.4188s
+	iters: 200, epoch: 31 | loss: 0.6307483
+	speed: 0.0131s/iter; left time: 207.5684s
+Epoch: 31 cost time: 3.3085944652557373
+Epoch: 31, Steps: 230 Train Loss: 0.6289 (Forecasting Loss:0.3473 + XiCon Loss:2.8161 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 9.313225746154785e-13
+	iters: 100, epoch: 32 | loss: 0.6430980
+	speed: 0.0158s/iter; left time: 248.6065s
+	iters: 200, epoch: 32 | loss: 0.6191730
+	speed: 0.0128s/iter; left time: 200.8503s
+Epoch: 32 cost time: 3.2914559841156006
+Epoch: 32, Steps: 230 Train Loss: 0.6294 (Forecasting Loss:0.3475 + XiCon Loss:2.8187 x Lambda(0.1)), Vali MSE Loss: 0.2015 Test MSE Loss: 0.3605
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 4.656612873077393e-13
+	iters: 100, epoch: 33 | loss: 0.6168299
+	speed: 0.0152s/iter; left time: 236.8941s
+	iters: 200, epoch: 33 | loss: 0.6093007
+	speed: 0.0132s/iter; left time: 204.5230s
+Epoch: 33 cost time: 3.2801413536071777
+Epoch: 33, Steps: 230 Train Loss: 0.6294 (Forecasting Loss:0.3476 + XiCon Loss:2.8182 x Lambda(0.1)), Vali MSE Loss: 0.2017 Test MSE Loss: 0.3605
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 2.3283064365386963e-13
+	iters: 100, epoch: 34 | loss: 0.5972162
+	speed: 0.0157s/iter; left time: 240.4305s
+	iters: 200, epoch: 34 | loss: 0.6281092
+	speed: 0.0135s/iter; left time: 205.3364s
+Epoch: 34 cost time: 3.3295867443084717
+Epoch: 34, Steps: 230 Train Loss: 0.6292 (Forecasting Loss:0.3474 + XiCon Loss:2.8175 x Lambda(0.1)), Vali MSE Loss: 0.2016 Test MSE Loss: 0.3605
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 1.1641532182693482e-13
+	iters: 100, epoch: 35 | loss: 0.6211779
+	speed: 0.0153s/iter; left time: 231.3885s
+	iters: 200, epoch: 35 | loss: 0.6439142
+	speed: 0.0129s/iter; left time: 192.6578s
+Epoch: 35 cost time: 3.2439703941345215
+Epoch: 35, Steps: 230 Train Loss: 0.6291 (Forecasting Loss:0.3475 + XiCon Loss:2.8164 x Lambda(0.1)), Vali MSE Loss: 0.2014 Test MSE Loss: 0.3605
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 4541
+test shape: (70, 64, 720, 1) (70, 64, 720, 1)
+test shape: (4480, 720, 1) (4480, 720, 1)
+mse:0.31071117520332336, mae:0.41028958559036255, mape:4.1652936935424805, mspe:28300.380859375 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:486689
+train 14727
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.0051
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_2>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14727
+val 4543
+test 4541
+	iters: 100, epoch: 1 | loss: 0.9830542
+	speed: 0.0158s/iter; left time: 362.3996s
+	iters: 200, epoch: 1 | loss: 0.9441197
+	speed: 0.0131s/iter; left time: 298.8631s
+Epoch: 1 cost time: 3.318861961364746
+Epoch: 1, Steps: 230 Train Loss: 1.0280 (Forecasting Loss:0.7314 + XiCon Loss:2.9658 x Lambda(0.1)), Vali MSE Loss: 0.3349 Test MSE Loss: 0.5455
+Validation loss decreased (inf --> 0.334864).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.6723376
+	speed: 0.0159s/iter; left time: 359.7132s
+	iters: 200, epoch: 2 | loss: 0.6523879
+	speed: 0.0131s/iter; left time: 294.7599s
+Epoch: 2 cost time: 3.307438850402832
+Epoch: 2, Steps: 230 Train Loss: 0.7099 (Forecasting Loss:0.4216 + XiCon Loss:2.8828 x Lambda(0.1)), Vali MSE Loss: 0.2179 Test MSE Loss: 0.3596
+Validation loss decreased (0.334864 --> 0.217948).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.6564294
+	speed: 0.0153s/iter; left time: 342.9752s
+	iters: 200, epoch: 3 | loss: 0.6225566
+	speed: 0.0128s/iter; left time: 286.1262s
+Epoch: 3 cost time: 3.208580732345581
+Epoch: 3, Steps: 230 Train Loss: 0.6478 (Forecasting Loss:0.3658 + XiCon Loss:2.8203 x Lambda(0.1)), Vali MSE Loss: 0.2126 Test MSE Loss: 0.3550
+Validation loss decreased (0.217948 --> 0.212588).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.5961556
+	speed: 0.0149s/iter; left time: 331.8433s
+	iters: 200, epoch: 4 | loss: 0.6053692
+	speed: 0.0125s/iter; left time: 277.3860s
+Epoch: 4 cost time: 3.159308671951294
+Epoch: 4, Steps: 230 Train Loss: 0.6370 (Forecasting Loss:0.3563 + XiCon Loss:2.8076 x Lambda(0.1)), Vali MSE Loss: 0.2139 Test MSE Loss: 0.3650
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.6247925
+	speed: 0.0152s/iter; left time: 335.1186s
+	iters: 200, epoch: 5 | loss: 0.6263417
+	speed: 0.0137s/iter; left time: 299.6834s
+Epoch: 5 cost time: 3.322803497314453
+Epoch: 5, Steps: 230 Train Loss: 0.6326 (Forecasting Loss:0.3515 + XiCon Loss:2.8114 x Lambda(0.1)), Vali MSE Loss: 0.2121 Test MSE Loss: 0.3678
+Validation loss decreased (0.212588 --> 0.212090).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6153042
+	speed: 0.0170s/iter; left time: 368.9272s
+	iters: 200, epoch: 6 | loss: 0.6084718
+	speed: 0.0138s/iter; left time: 299.4097s
+Epoch: 6 cost time: 3.530515432357788
+Epoch: 6, Steps: 230 Train Loss: 0.6318 (Forecasting Loss:0.3498 + XiCon Loss:2.8197 x Lambda(0.1)), Vali MSE Loss: 0.2104 Test MSE Loss: 0.3630
+Validation loss decreased (0.212090 --> 0.210430).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6103251
+	speed: 0.0152s/iter; left time: 327.3601s
+	iters: 200, epoch: 7 | loss: 0.6460786
+	speed: 0.0132s/iter; left time: 282.1069s
+Epoch: 7 cost time: 3.2445223331451416
+Epoch: 7, Steps: 230 Train Loss: 0.6305 (Forecasting Loss:0.3487 + XiCon Loss:2.8180 x Lambda(0.1)), Vali MSE Loss: 0.2103 Test MSE Loss: 0.3644
+Validation loss decreased (0.210430 --> 0.210289).  Saving model ...
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6484269
+	speed: 0.0160s/iter; left time: 341.6114s
+	iters: 200, epoch: 8 | loss: 0.6513470
+	speed: 0.0127s/iter; left time: 269.0090s
+Epoch: 8 cost time: 3.287014961242676
+Epoch: 8, Steps: 230 Train Loss: 0.6304 (Forecasting Loss:0.3489 + XiCon Loss:2.8158 x Lambda(0.1)), Vali MSE Loss: 0.2094 Test MSE Loss: 0.3624
+Validation loss decreased (0.210289 --> 0.209426).  Saving model ...
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6173604
+	speed: 0.0151s/iter; left time: 319.0598s
+	iters: 200, epoch: 9 | loss: 0.6304219
+	speed: 0.0127s/iter; left time: 266.2581s
+Epoch: 9 cost time: 3.190523147583008
+Epoch: 9, Steps: 230 Train Loss: 0.6299 (Forecasting Loss:0.3481 + XiCon Loss:2.8185 x Lambda(0.1)), Vali MSE Loss: 0.2091 Test MSE Loss: 0.3624
+Validation loss decreased (0.209426 --> 0.209148).  Saving model ...
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6265296
+	speed: 0.0158s/iter; left time: 329.2066s
+	iters: 200, epoch: 10 | loss: 0.6180019
+	speed: 0.0134s/iter; left time: 277.1811s
+Epoch: 10 cost time: 3.39920711517334
+Epoch: 10, Steps: 230 Train Loss: 0.6295 (Forecasting Loss:0.3478 + XiCon Loss:2.8168 x Lambda(0.1)), Vali MSE Loss: 0.2091 Test MSE Loss: 0.3623
+Validation loss decreased (0.209148 --> 0.209132).  Saving model ...
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6474186
+	speed: 0.0154s/iter; left time: 316.4259s
+	iters: 200, epoch: 11 | loss: 0.6242498
+	speed: 0.0138s/iter; left time: 282.7681s
+Epoch: 11 cost time: 3.3207638263702393
+Epoch: 11, Steps: 230 Train Loss: 0.6300 (Forecasting Loss:0.3482 + XiCon Loss:2.8177 x Lambda(0.1)), Vali MSE Loss: 0.2090 Test MSE Loss: 0.3625
+Validation loss decreased (0.209132 --> 0.209030).  Saving model ...
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6453917
+	speed: 0.0155s/iter; left time: 315.4602s
+	iters: 200, epoch: 12 | loss: 0.6205087
+	speed: 0.0139s/iter; left time: 282.6416s
+Epoch: 12 cost time: 3.396660566329956
+Epoch: 12, Steps: 230 Train Loss: 0.6298 (Forecasting Loss:0.3479 + XiCon Loss:2.8188 x Lambda(0.1)), Vali MSE Loss: 0.2092 Test MSE Loss: 0.3626
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.6603099
+	speed: 0.0153s/iter; left time: 307.8704s
+	iters: 200, epoch: 13 | loss: 0.6196783
+	speed: 0.0128s/iter; left time: 256.3299s
+Epoch: 13 cost time: 3.2139039039611816
+Epoch: 13, Steps: 230 Train Loss: 0.6300 (Forecasting Loss:0.3482 + XiCon Loss:2.8181 x Lambda(0.1)), Vali MSE Loss: 0.2093 Test MSE Loss: 0.3625
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 2.44140625e-07
+	iters: 100, epoch: 14 | loss: 0.6083789
+	speed: 0.0155s/iter; left time: 309.3505s
+	iters: 200, epoch: 14 | loss: 0.6457455
+	speed: 0.0123s/iter; left time: 243.5100s
+Epoch: 14 cost time: 3.1995508670806885
+Epoch: 14, Steps: 230 Train Loss: 0.6291 (Forecasting Loss:0.3474 + XiCon Loss:2.8162 x Lambda(0.1)), Vali MSE Loss: 0.2091 Test MSE Loss: 0.3625
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 1.220703125e-07
+	iters: 100, epoch: 15 | loss: 0.6071534
+	speed: 0.0157s/iter; left time: 309.0531s
+	iters: 200, epoch: 15 | loss: 0.6345741
+	speed: 0.0131s/iter; left time: 256.3616s
+Epoch: 15 cost time: 3.265854835510254
+Epoch: 15, Steps: 230 Train Loss: 0.6293 (Forecasting Loss:0.3478 + XiCon Loss:2.8154 x Lambda(0.1)), Vali MSE Loss: 0.2093 Test MSE Loss: 0.3625
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 6.103515625e-08
+	iters: 100, epoch: 16 | loss: 0.6158948
+	speed: 0.0154s/iter; left time: 299.2056s
+	iters: 200, epoch: 16 | loss: 0.6330169
+	speed: 0.0126s/iter; left time: 242.9013s
+Epoch: 16 cost time: 3.2070765495300293
+Epoch: 16, Steps: 230 Train Loss: 0.6297 (Forecasting Loss:0.3478 + XiCon Loss:2.8195 x Lambda(0.1)), Vali MSE Loss: 0.2089 Test MSE Loss: 0.3625
+Validation loss decreased (0.209030 --> 0.208886).  Saving model ...
+Updating learning rate to 3.0517578125e-08
+	iters: 100, epoch: 17 | loss: 0.6274847
+	speed: 0.0154s/iter; left time: 296.8559s
+	iters: 200, epoch: 17 | loss: 0.6273049
+	speed: 0.0137s/iter; left time: 262.2554s
+Epoch: 17 cost time: 3.3479809761047363
+Epoch: 17, Steps: 230 Train Loss: 0.6296 (Forecasting Loss:0.3478 + XiCon Loss:2.8185 x Lambda(0.1)), Vali MSE Loss: 0.2092 Test MSE Loss: 0.3625
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 1.52587890625e-08
+	iters: 100, epoch: 18 | loss: 0.6269513
+	speed: 0.0160s/iter; left time: 304.5030s
+	iters: 200, epoch: 18 | loss: 0.6467673
+	speed: 0.0122s/iter; left time: 229.6948s
+Epoch: 18 cost time: 3.2501890659332275
+Epoch: 18, Steps: 230 Train Loss: 0.6295 (Forecasting Loss:0.3476 + XiCon Loss:2.8190 x Lambda(0.1)), Vali MSE Loss: 0.2094 Test MSE Loss: 0.3625
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 7.62939453125e-09
+	iters: 100, epoch: 19 | loss: 0.6629037
+	speed: 0.0155s/iter; left time: 290.0645s
+	iters: 200, epoch: 19 | loss: 0.6026492
+	speed: 0.0134s/iter; left time: 249.5967s
+Epoch: 19 cost time: 3.3049466609954834
+Epoch: 19, Steps: 230 Train Loss: 0.6291 (Forecasting Loss:0.3475 + XiCon Loss:2.8161 x Lambda(0.1)), Vali MSE Loss: 0.2090 Test MSE Loss: 0.3625
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 3.814697265625e-09
+	iters: 100, epoch: 20 | loss: 0.6397218
+	speed: 0.0153s/iter; left time: 284.3434s
+	iters: 200, epoch: 20 | loss: 0.6159315
+	speed: 0.0128s/iter; left time: 236.7968s
+Epoch: 20 cost time: 3.2522709369659424
+Epoch: 20, Steps: 230 Train Loss: 0.6299 (Forecasting Loss:0.3478 + XiCon Loss:2.8207 x Lambda(0.1)), Vali MSE Loss: 0.2092 Test MSE Loss: 0.3625
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 1.9073486328125e-09
+	iters: 100, epoch: 21 | loss: 0.6602804
+	speed: 0.0155s/iter; left time: 283.0811s
+	iters: 200, epoch: 21 | loss: 0.6631538
+	speed: 0.0130s/iter; left time: 236.8787s
+Epoch: 21 cost time: 3.253894090652466
+Epoch: 21, Steps: 230 Train Loss: 0.6299 (Forecasting Loss:0.3483 + XiCon Loss:2.8163 x Lambda(0.1)), Vali MSE Loss: 0.2092 Test MSE Loss: 0.3625
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 9.5367431640625e-10
+	iters: 100, epoch: 22 | loss: 0.6264646
+	speed: 0.0150s/iter; left time: 271.2813s
+	iters: 200, epoch: 22 | loss: 0.6270266
+	speed: 0.0125s/iter; left time: 224.9984s
+Epoch: 22 cost time: 3.156881809234619
+Epoch: 22, Steps: 230 Train Loss: 0.6297 (Forecasting Loss:0.3478 + XiCon Loss:2.8187 x Lambda(0.1)), Vali MSE Loss: 0.2092 Test MSE Loss: 0.3625
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 4.76837158203125e-10
+	iters: 100, epoch: 23 | loss: 0.6668705
+	speed: 0.0153s/iter; left time: 273.8178s
+	iters: 200, epoch: 23 | loss: 0.6551063
+	speed: 0.0129s/iter; left time: 229.1678s
+Epoch: 23 cost time: 3.269643545150757
+Epoch: 23, Steps: 230 Train Loss: 0.6295 (Forecasting Loss:0.3477 + XiCon Loss:2.8178 x Lambda(0.1)), Vali MSE Loss: 0.2091 Test MSE Loss: 0.3625
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 2.384185791015625e-10
+	iters: 100, epoch: 24 | loss: 0.6086249
+	speed: 0.0155s/iter; left time: 273.0554s
+	iters: 200, epoch: 24 | loss: 0.6036540
+	speed: 0.0127s/iter; left time: 222.1217s
+Epoch: 24 cost time: 3.2546277046203613
+Epoch: 24, Steps: 230 Train Loss: 0.6291 (Forecasting Loss:0.3478 + XiCon Loss:2.8136 x Lambda(0.1)), Vali MSE Loss: 0.2092 Test MSE Loss: 0.3625
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.1920928955078125e-10
+	iters: 100, epoch: 25 | loss: 0.6311046
+	speed: 0.0155s/iter; left time: 269.1857s
+	iters: 200, epoch: 25 | loss: 0.6117454
+	speed: 0.0142s/iter; left time: 244.6564s
+Epoch: 25 cost time: 3.3921186923980713
+Epoch: 25, Steps: 230 Train Loss: 0.6297 (Forecasting Loss:0.3479 + XiCon Loss:2.8183 x Lambda(0.1)), Vali MSE Loss: 0.2092 Test MSE Loss: 0.3625
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 5.960464477539063e-11
+	iters: 100, epoch: 26 | loss: 0.5968947
+	speed: 0.0154s/iter; left time: 264.3200s
+	iters: 200, epoch: 26 | loss: 0.6158038
+	speed: 0.0137s/iter; left time: 234.3588s
+Epoch: 26 cost time: 3.38431978225708
+Epoch: 26, Steps: 230 Train Loss: 0.6301 (Forecasting Loss:0.3481 + XiCon Loss:2.8196 x Lambda(0.1)), Vali MSE Loss: 0.2090 Test MSE Loss: 0.3625
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 4541
+test shape: (70, 64, 720, 1) (70, 64, 720, 1)
+test shape: (4480, 720, 1) (4480, 720, 1)
+mse:0.3095443546772003, mae:0.41553324460983276, mape:3.297391414642334, mspe:9469.7548828125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:486689
+train 14727
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.2381
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_3>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14727
+val 4543
+test 4541
+	iters: 100, epoch: 1 | loss: 1.0563034
+	speed: 0.0152s/iter; left time: 347.8989s
+	iters: 200, epoch: 1 | loss: 0.8927786
+	speed: 0.0129s/iter; left time: 294.7680s
+Epoch: 1 cost time: 3.2295162677764893
+Epoch: 1, Steps: 230 Train Loss: 1.0377 (Forecasting Loss:0.7398 + XiCon Loss:2.9791 x Lambda(0.1)), Vali MSE Loss: 0.3374 Test MSE Loss: 0.5565
+Validation loss decreased (inf --> 0.337415).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.6614086
+	speed: 0.0150s/iter; left time: 340.6160s
+	iters: 200, epoch: 2 | loss: 0.6676692
+	speed: 0.0138s/iter; left time: 311.3558s
+Epoch: 2 cost time: 3.3081295490264893
+Epoch: 2, Steps: 230 Train Loss: 0.7024 (Forecasting Loss:0.4134 + XiCon Loss:2.8898 x Lambda(0.1)), Vali MSE Loss: 0.2524 Test MSE Loss: 0.3649
+Validation loss decreased (0.337415 --> 0.252442).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.6646307
+	speed: 0.0158s/iter; left time: 354.1057s
+	iters: 200, epoch: 3 | loss: 0.5934360
+	speed: 0.0133s/iter; left time: 298.1030s
+Epoch: 3 cost time: 3.3507556915283203
+Epoch: 3, Steps: 230 Train Loss: 0.6471 (Forecasting Loss:0.3649 + XiCon Loss:2.8223 x Lambda(0.1)), Vali MSE Loss: 0.3373 Test MSE Loss: 0.4019
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.6084481
+	speed: 0.0164s/iter; left time: 363.9507s
+	iters: 200, epoch: 4 | loss: 0.6244963
+	speed: 0.0143s/iter; left time: 315.9677s
+Epoch: 4 cost time: 3.5178182125091553
+Epoch: 4, Steps: 230 Train Loss: 0.6350 (Forecasting Loss:0.3545 + XiCon Loss:2.8044 x Lambda(0.1)), Vali MSE Loss: 0.3823 Test MSE Loss: 0.4187
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.6521014
+	speed: 0.0172s/iter; left time: 376.9851s
+	iters: 200, epoch: 5 | loss: 0.6059880
+	speed: 0.0138s/iter; left time: 302.4511s
+Epoch: 5 cost time: 3.5403597354888916
+Epoch: 5, Steps: 230 Train Loss: 0.6284 (Forecasting Loss:0.3490 + XiCon Loss:2.7946 x Lambda(0.1)), Vali MSE Loss: 0.3909 Test MSE Loss: 0.4163
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6223968
+	speed: 0.0172s/iter; left time: 374.2570s
+	iters: 200, epoch: 6 | loss: 0.6619830
+	speed: 0.0144s/iter; left time: 310.9669s
+Epoch: 6 cost time: 3.6039369106292725
+Epoch: 6, Steps: 230 Train Loss: 0.6251 (Forecasting Loss:0.3461 + XiCon Loss:2.7898 x Lambda(0.1)), Vali MSE Loss: 0.4110 Test MSE Loss: 0.4137
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6127223
+	speed: 0.0164s/iter; left time: 353.6853s
+	iters: 200, epoch: 7 | loss: 0.6394488
+	speed: 0.0141s/iter; left time: 301.6275s
+Epoch: 7 cost time: 3.500415325164795
+Epoch: 7, Steps: 230 Train Loss: 0.6232 (Forecasting Loss:0.3448 + XiCon Loss:2.7834 x Lambda(0.1)), Vali MSE Loss: 0.4135 Test MSE Loss: 0.4136
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6368070
+	speed: 0.0170s/iter; left time: 361.6247s
+	iters: 200, epoch: 8 | loss: 0.6452794
+	speed: 0.0141s/iter; left time: 298.8587s
+Epoch: 8 cost time: 3.549466848373413
+Epoch: 8, Steps: 230 Train Loss: 0.6228 (Forecasting Loss:0.3441 + XiCon Loss:2.7875 x Lambda(0.1)), Vali MSE Loss: 0.4204 Test MSE Loss: 0.4176
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6372331
+	speed: 0.0157s/iter; left time: 330.0521s
+	iters: 200, epoch: 9 | loss: 0.6543449
+	speed: 0.0144s/iter; left time: 302.2424s
+Epoch: 9 cost time: 3.486950635910034
+Epoch: 9, Steps: 230 Train Loss: 0.6224 (Forecasting Loss:0.3438 + XiCon Loss:2.7861 x Lambda(0.1)), Vali MSE Loss: 0.4223 Test MSE Loss: 0.4206
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6016912
+	speed: 0.0172s/iter; left time: 357.6980s
+	iters: 200, epoch: 10 | loss: 0.5948805
+	speed: 0.0143s/iter; left time: 296.1903s
+Epoch: 10 cost time: 3.5789291858673096
+Epoch: 10, Steps: 230 Train Loss: 0.6221 (Forecasting Loss:0.3435 + XiCon Loss:2.7862 x Lambda(0.1)), Vali MSE Loss: 0.4237 Test MSE Loss: 0.4214
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6074640
+	speed: 0.0169s/iter; left time: 348.8388s
+	iters: 200, epoch: 11 | loss: 0.6196665
+	speed: 0.0143s/iter; left time: 292.4439s
+Epoch: 11 cost time: 3.575014114379883
+Epoch: 11, Steps: 230 Train Loss: 0.6220 (Forecasting Loss:0.3436 + XiCon Loss:2.7843 x Lambda(0.1)), Vali MSE Loss: 0.4241 Test MSE Loss: 0.4215
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6000069
+	speed: 0.0176s/iter; left time: 358.1311s
+	iters: 200, epoch: 12 | loss: 0.6190022
+	speed: 0.0140s/iter; left time: 282.9624s
+Epoch: 12 cost time: 3.6297192573547363
+Epoch: 12, Steps: 230 Train Loss: 0.6215 (Forecasting Loss:0.3431 + XiCon Loss:2.7831 x Lambda(0.1)), Vali MSE Loss: 0.4248 Test MSE Loss: 0.4214
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 4541
+test shape: (70, 64, 720, 1) (70, 64, 720, 1)
+test shape: (4480, 720, 1) (4480, 720, 1)
+mse:0.3130744397640228, mae:0.4166289269924164, mape:3.2509591579437256, mspe:8650.498046875 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:486689
+train 14727
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.1006
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_4>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14727
+val 4543
+test 4541
+	iters: 100, epoch: 1 | loss: 1.1122103
+	speed: 0.0161s/iter; left time: 369.8052s
+	iters: 200, epoch: 1 | loss: 0.8388271
+	speed: 0.0124s/iter; left time: 282.9038s
+Epoch: 1 cost time: 3.2966670989990234
+Epoch: 1, Steps: 230 Train Loss: 1.0183 (Forecasting Loss:0.7224 + XiCon Loss:2.9600 x Lambda(0.1)), Vali MSE Loss: 0.3271 Test MSE Loss: 0.5206
+Validation loss decreased (inf --> 0.327140).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.7297193
+	speed: 0.0149s/iter; left time: 337.2846s
+	iters: 200, epoch: 2 | loss: 0.6541977
+	speed: 0.0124s/iter; left time: 280.8693s
+Epoch: 2 cost time: 3.1511454582214355
+Epoch: 2, Steps: 230 Train Loss: 0.6926 (Forecasting Loss:0.4037 + XiCon Loss:2.8887 x Lambda(0.1)), Vali MSE Loss: 0.2152 Test MSE Loss: 0.3786
+Validation loss decreased (0.327140 --> 0.215181).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.6754665
+	speed: 0.0153s/iter; left time: 344.4226s
+	iters: 200, epoch: 3 | loss: 0.6253669
+	speed: 0.0131s/iter; left time: 291.9625s
+Epoch: 3 cost time: 3.2624855041503906
+Epoch: 3, Steps: 230 Train Loss: 0.6469 (Forecasting Loss:0.3633 + XiCon Loss:2.8361 x Lambda(0.1)), Vali MSE Loss: 0.2082 Test MSE Loss: 0.3669
+Validation loss decreased (0.215181 --> 0.208199).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.6515136
+	speed: 0.0150s/iter; left time: 333.3128s
+	iters: 200, epoch: 4 | loss: 0.6301878
+	speed: 0.0135s/iter; left time: 297.4714s
+Epoch: 4 cost time: 3.258427619934082
+Epoch: 4, Steps: 230 Train Loss: 0.6365 (Forecasting Loss:0.3544 + XiCon Loss:2.8210 x Lambda(0.1)), Vali MSE Loss: 0.2108 Test MSE Loss: 0.3735
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.6757313
+	speed: 0.0152s/iter; left time: 334.2910s
+	iters: 200, epoch: 5 | loss: 0.6331848
+	speed: 0.0121s/iter; left time: 264.2307s
+Epoch: 5 cost time: 3.131817579269409
+Epoch: 5, Steps: 230 Train Loss: 0.6309 (Forecasting Loss:0.3490 + XiCon Loss:2.8191 x Lambda(0.1)), Vali MSE Loss: 0.2079 Test MSE Loss: 0.3750
+Validation loss decreased (0.208199 --> 0.207877).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6163346
+	speed: 0.0150s/iter; left time: 325.2749s
+	iters: 200, epoch: 6 | loss: 0.6705185
+	speed: 0.0125s/iter; left time: 270.2038s
+Epoch: 6 cost time: 3.1872925758361816
+Epoch: 6, Steps: 230 Train Loss: 0.6282 (Forecasting Loss:0.3467 + XiCon Loss:2.8153 x Lambda(0.1)), Vali MSE Loss: 0.2087 Test MSE Loss: 0.3765
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6447227
+	speed: 0.0159s/iter; left time: 342.3762s
+	iters: 200, epoch: 7 | loss: 0.6343639
+	speed: 0.0143s/iter; left time: 306.6492s
+Epoch: 7 cost time: 3.4373438358306885
+Epoch: 7, Steps: 230 Train Loss: 0.6270 (Forecasting Loss:0.3454 + XiCon Loss:2.8157 x Lambda(0.1)), Vali MSE Loss: 0.2090 Test MSE Loss: 0.3803
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6106820
+	speed: 0.0155s/iter; left time: 331.0459s
+	iters: 200, epoch: 8 | loss: 0.6648356
+	speed: 0.0135s/iter; left time: 285.7113s
+Epoch: 8 cost time: 3.3567845821380615
+Epoch: 8, Steps: 230 Train Loss: 0.6257 (Forecasting Loss:0.3442 + XiCon Loss:2.8145 x Lambda(0.1)), Vali MSE Loss: 0.2081 Test MSE Loss: 0.3780
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6478977
+	speed: 0.0156s/iter; left time: 328.8870s
+	iters: 200, epoch: 9 | loss: 0.5965277
+	speed: 0.0126s/iter; left time: 263.8081s
+Epoch: 9 cost time: 3.231379270553589
+Epoch: 9, Steps: 230 Train Loss: 0.6254 (Forecasting Loss:0.3438 + XiCon Loss:2.8153 x Lambda(0.1)), Vali MSE Loss: 0.2083 Test MSE Loss: 0.3791
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6277935
+	speed: 0.0151s/iter; left time: 315.2323s
+	iters: 200, epoch: 10 | loss: 0.6271750
+	speed: 0.0134s/iter; left time: 277.8185s
+Epoch: 10 cost time: 3.274205207824707
+Epoch: 10, Steps: 230 Train Loss: 0.6255 (Forecasting Loss:0.3439 + XiCon Loss:2.8166 x Lambda(0.1)), Vali MSE Loss: 0.2086 Test MSE Loss: 0.3798
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6360019
+	speed: 0.0159s/iter; left time: 327.5033s
+	iters: 200, epoch: 11 | loss: 0.6075917
+	speed: 0.0128s/iter; left time: 262.0830s
+Epoch: 11 cost time: 3.2705492973327637
+Epoch: 11, Steps: 230 Train Loss: 0.6254 (Forecasting Loss:0.3439 + XiCon Loss:2.8147 x Lambda(0.1)), Vali MSE Loss: 0.2088 Test MSE Loss: 0.3799
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6376542
+	speed: 0.0151s/iter; left time: 307.5036s
+	iters: 200, epoch: 12 | loss: 0.6368006
+	speed: 0.0129s/iter; left time: 261.5524s
+Epoch: 12 cost time: 3.2322423458099365
+Epoch: 12, Steps: 230 Train Loss: 0.6254 (Forecasting Loss:0.3438 + XiCon Loss:2.8155 x Lambda(0.1)), Vali MSE Loss: 0.2085 Test MSE Loss: 0.3799
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.6185030
+	speed: 0.0160s/iter; left time: 323.0558s
+	iters: 200, epoch: 13 | loss: 0.6136976
+	speed: 0.0133s/iter; left time: 267.0132s
+Epoch: 13 cost time: 3.345527172088623
+Epoch: 13, Steps: 230 Train Loss: 0.6251 (Forecasting Loss:0.3435 + XiCon Loss:2.8156 x Lambda(0.1)), Vali MSE Loss: 0.2086 Test MSE Loss: 0.3801
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 2.44140625e-07
+	iters: 100, epoch: 14 | loss: 0.6272182
+	speed: 0.0156s/iter; left time: 311.0592s
+	iters: 200, epoch: 14 | loss: 0.6321294
+	speed: 0.0126s/iter; left time: 249.3218s
+Epoch: 14 cost time: 3.260082483291626
+Epoch: 14, Steps: 230 Train Loss: 0.6252 (Forecasting Loss:0.3437 + XiCon Loss:2.8145 x Lambda(0.1)), Vali MSE Loss: 0.2087 Test MSE Loss: 0.3800
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 1.220703125e-07
+	iters: 100, epoch: 15 | loss: 0.6230124
+	speed: 0.0160s/iter; left time: 314.9309s
+	iters: 200, epoch: 15 | loss: 0.6272130
+	speed: 0.0128s/iter; left time: 251.5512s
+Epoch: 15 cost time: 3.2862539291381836
+Epoch: 15, Steps: 230 Train Loss: 0.6255 (Forecasting Loss:0.3437 + XiCon Loss:2.8174 x Lambda(0.1)), Vali MSE Loss: 0.2083 Test MSE Loss: 0.3800
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl720_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_4<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 4541
+test shape: (70, 64, 720, 1) (70, 64, 720, 1)
+test shape: (4480, 720, 1) (4480, 720, 1)
+mse:0.32895585894584656, mae:0.4209551215171814, mape:3.9140796661376953, mspe:19616.921875 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+MSE:0.3180+-0.01176, MAE:0.4173+-0.00612, MAPE:3.6970+-0.50080, MSPE:16945.5059+-10083.63518, SHAPEDTW:0.0000+-0.00000, TEMPDTW:0.0000+-0.00000
+Args in experiment:
+Namespace(wnorm='ReVIN', lambda=0.1, multiscales=[336], train_ratio=0.6, save=False, task_name='long_term_forecast', is_training=1, model_id='XiCon_exp', model='XiCon', data='electricity', root_path='./dataset/electricity', data_path='electricity.csv', features='S', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=336, label_len=48, pred_len=1440, seasonal_patterns='Monthly', mask_rate=0.25, anomaly_ratio=0.25, patch_len=16, stride=8, affine=0, subtract_last=0, mixer_kernel_size=8, head_dropout=0.0, top_k=5, num_kernels=6, enc_in=1, dec_in=7, c_out=1, d_model=16, n_heads=8, e_layers=2, d_layers=1, d_ff=16, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itr=5, train_epochs=100, batch_size=64, patience=10, learning_rate=0.001, des='Exp', loss='MSE', lradj='type1', pct_start=0.3, loss_flag=2, use_amp=False, cpu_worker=None, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, omega=0.5, XiCon=True, AutoCon=False)
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:975937
+train 14007
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.1244
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14007
+val 3823
+test 3821
+	iters: 100, epoch: 1 | loss: 1.0680528
+	speed: 0.0267s/iter; left time: 579.4256s
+	iters: 200, epoch: 1 | loss: 1.0635018
+	speed: 0.0208s/iter; left time: 450.1440s
+Epoch: 1 cost time: 5.142223119735718
+Epoch: 1, Steps: 218 Train Loss: 1.1341 (Forecasting Loss:0.8371 + XiCon Loss:2.9701 x Lambda(0.1)), Vali MSE Loss: 0.3364 Test MSE Loss: 0.6842
+Validation loss decreased (inf --> 0.336382).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.7650040
+	speed: 0.0229s/iter; left time: 491.8135s
+	iters: 200, epoch: 2 | loss: 0.7204553
+	speed: 0.0210s/iter; left time: 448.3030s
+Epoch: 2 cost time: 4.801620960235596
+Epoch: 2, Steps: 218 Train Loss: 0.7615 (Forecasting Loss:0.4723 + XiCon Loss:2.8928 x Lambda(0.1)), Vali MSE Loss: 0.2170 Test MSE Loss: 0.4231
+Validation loss decreased (0.336382 --> 0.216993).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.6763039
+	speed: 0.0239s/iter; left time: 507.9776s
+	iters: 200, epoch: 3 | loss: 0.6438196
+	speed: 0.0212s/iter; left time: 449.3991s
+Epoch: 3 cost time: 4.900031805038452
+Epoch: 3, Steps: 218 Train Loss: 0.6862 (Forecasting Loss:0.4016 + XiCon Loss:2.8464 x Lambda(0.1)), Vali MSE Loss: 0.2177 Test MSE Loss: 0.4387
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.6943066
+	speed: 0.0231s/iter; left time: 485.4846s
+	iters: 200, epoch: 4 | loss: 0.6676197
+	speed: 0.0216s/iter; left time: 452.0903s
+Epoch: 4 cost time: 4.8538734912872314
+Epoch: 4, Steps: 218 Train Loss: 0.6621 (Forecasting Loss:0.3791 + XiCon Loss:2.8301 x Lambda(0.1)), Vali MSE Loss: 0.2279 Test MSE Loss: 0.4329
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.7009435
+	speed: 0.0230s/iter; left time: 479.3659s
+	iters: 200, epoch: 5 | loss: 0.6269034
+	speed: 0.0207s/iter; left time: 429.3613s
+Epoch: 5 cost time: 4.749784469604492
+Epoch: 5, Steps: 218 Train Loss: 0.6529 (Forecasting Loss:0.3706 + XiCon Loss:2.8232 x Lambda(0.1)), Vali MSE Loss: 0.2259 Test MSE Loss: 0.4447
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6411486
+	speed: 0.0228s/iter; left time: 469.9152s
+	iters: 200, epoch: 6 | loss: 0.6637039
+	speed: 0.0209s/iter; left time: 428.5003s
+Epoch: 6 cost time: 4.770707845687866
+Epoch: 6, Steps: 218 Train Loss: 0.6486 (Forecasting Loss:0.3667 + XiCon Loss:2.8187 x Lambda(0.1)), Vali MSE Loss: 0.2273 Test MSE Loss: 0.4196
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6349751
+	speed: 0.0225s/iter; left time: 459.6466s
+	iters: 200, epoch: 7 | loss: 0.6292386
+	speed: 0.0213s/iter; left time: 433.0416s
+Epoch: 7 cost time: 4.785754919052124
+Epoch: 7, Steps: 218 Train Loss: 0.6469 (Forecasting Loss:0.3651 + XiCon Loss:2.8183 x Lambda(0.1)), Vali MSE Loss: 0.2281 Test MSE Loss: 0.4228
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6303008
+	speed: 0.0236s/iter; left time: 476.0003s
+	iters: 200, epoch: 8 | loss: 0.6180836
+	speed: 0.0208s/iter; left time: 418.1951s
+Epoch: 8 cost time: 4.824236869812012
+Epoch: 8, Steps: 218 Train Loss: 0.6462 (Forecasting Loss:0.3644 + XiCon Loss:2.8173 x Lambda(0.1)), Vali MSE Loss: 0.2268 Test MSE Loss: 0.4281
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6329420
+	speed: 0.0237s/iter; left time: 473.4919s
+	iters: 200, epoch: 9 | loss: 0.6372025
+	speed: 0.0213s/iter; left time: 423.3922s
+Epoch: 9 cost time: 4.915079593658447
+Epoch: 9, Steps: 218 Train Loss: 0.6458 (Forecasting Loss:0.3641 + XiCon Loss:2.8172 x Lambda(0.1)), Vali MSE Loss: 0.2292 Test MSE Loss: 0.4215
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6679633
+	speed: 0.0232s/iter; left time: 457.8100s
+	iters: 200, epoch: 10 | loss: 0.6871349
+	speed: 0.0206s/iter; left time: 405.2486s
+Epoch: 10 cost time: 4.744574546813965
+Epoch: 10, Steps: 218 Train Loss: 0.6454 (Forecasting Loss:0.3639 + XiCon Loss:2.8146 x Lambda(0.1)), Vali MSE Loss: 0.2287 Test MSE Loss: 0.4214
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6517181
+	speed: 0.0226s/iter; left time: 440.8551s
+	iters: 200, epoch: 11 | loss: 0.6886119
+	speed: 0.0203s/iter; left time: 393.4142s
+Epoch: 11 cost time: 4.65236234664917
+Epoch: 11, Steps: 218 Train Loss: 0.6454 (Forecasting Loss:0.3636 + XiCon Loss:2.8190 x Lambda(0.1)), Vali MSE Loss: 0.2287 Test MSE Loss: 0.4228
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6480848
+	speed: 0.0234s/iter; left time: 452.2054s
+	iters: 200, epoch: 12 | loss: 0.6297777
+	speed: 0.0211s/iter; left time: 405.8628s
+Epoch: 12 cost time: 4.847946405410767
+Epoch: 12, Steps: 218 Train Loss: 0.6456 (Forecasting Loss:0.3640 + XiCon Loss:2.8162 x Lambda(0.1)), Vali MSE Loss: 0.2289 Test MSE Loss: 0.4227
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3821
+test shape: (59, 64, 1440, 1) (59, 64, 1440, 1)
+test shape: (3776, 1440, 1) (3776, 1440, 1)
+mse:0.3763626217842102, mae:0.4698043167591095, mape:5.9380598068237305, mspe:97018.3828125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:975937
+train 14007
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.1828
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_1>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14007
+val 3823
+test 3821
+	iters: 100, epoch: 1 | loss: 1.1328223
+	speed: 0.0237s/iter; left time: 514.4421s
+	iters: 200, epoch: 1 | loss: 1.0730704
+	speed: 0.0207s/iter; left time: 447.9544s
+Epoch: 1 cost time: 4.861156463623047
+Epoch: 1, Steps: 218 Train Loss: 1.1274 (Forecasting Loss:0.8322 + XiCon Loss:2.9519 x Lambda(0.1)), Vali MSE Loss: 0.3338 Test MSE Loss: 0.6597
+Validation loss decreased (inf --> 0.333760).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.7466421
+	speed: 0.0233s/iter; left time: 499.7497s
+	iters: 200, epoch: 2 | loss: 0.7122284
+	speed: 0.0210s/iter; left time: 449.5320s
+Epoch: 2 cost time: 4.8146796226501465
+Epoch: 2, Steps: 218 Train Loss: 0.7811 (Forecasting Loss:0.4937 + XiCon Loss:2.8747 x Lambda(0.1)), Vali MSE Loss: 0.2177 Test MSE Loss: 0.4525
+Validation loss decreased (0.333760 --> 0.217659).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.6664639
+	speed: 0.0236s/iter; left time: 501.0454s
+	iters: 200, epoch: 3 | loss: 0.6664338
+	speed: 0.0215s/iter; left time: 455.2822s
+Epoch: 3 cost time: 4.914406776428223
+Epoch: 3, Steps: 218 Train Loss: 0.6855 (Forecasting Loss:0.4006 + XiCon Loss:2.8481 x Lambda(0.1)), Vali MSE Loss: 0.2233 Test MSE Loss: 0.3999
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.6330237
+	speed: 0.0233s/iter; left time: 490.9260s
+	iters: 200, epoch: 4 | loss: 0.6815233
+	speed: 0.0212s/iter; left time: 443.4666s
+Epoch: 4 cost time: 4.839420318603516
+Epoch: 4, Steps: 218 Train Loss: 0.6583 (Forecasting Loss:0.3755 + XiCon Loss:2.8285 x Lambda(0.1)), Vali MSE Loss: 0.2441 Test MSE Loss: 0.3935
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.6640003
+	speed: 0.0239s/iter; left time: 497.9654s
+	iters: 200, epoch: 5 | loss: 0.6533944
+	speed: 0.0210s/iter; left time: 435.9109s
+Epoch: 5 cost time: 4.877000570297241
+Epoch: 5, Steps: 218 Train Loss: 0.6506 (Forecasting Loss:0.3682 + XiCon Loss:2.8237 x Lambda(0.1)), Vali MSE Loss: 0.2505 Test MSE Loss: 0.4054
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6886582
+	speed: 0.0234s/iter; left time: 482.7572s
+	iters: 200, epoch: 6 | loss: 0.6350590
+	speed: 0.0206s/iter; left time: 422.4386s
+Epoch: 6 cost time: 4.794693946838379
+Epoch: 6, Steps: 218 Train Loss: 0.6468 (Forecasting Loss:0.3646 + XiCon Loss:2.8216 x Lambda(0.1)), Vali MSE Loss: 0.2444 Test MSE Loss: 0.3860
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6209551
+	speed: 0.0236s/iter; left time: 482.0207s
+	iters: 200, epoch: 7 | loss: 0.5920826
+	speed: 0.0203s/iter; left time: 412.9514s
+Epoch: 7 cost time: 4.782556056976318
+Epoch: 7, Steps: 218 Train Loss: 0.6449 (Forecasting Loss:0.3630 + XiCon Loss:2.8189 x Lambda(0.1)), Vali MSE Loss: 0.2409 Test MSE Loss: 0.3830
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6414510
+	speed: 0.0233s/iter; left time: 471.0678s
+	iters: 200, epoch: 8 | loss: 0.5921032
+	speed: 0.0212s/iter; left time: 426.4037s
+Epoch: 8 cost time: 4.849897146224976
+Epoch: 8, Steps: 218 Train Loss: 0.6444 (Forecasting Loss:0.3624 + XiCon Loss:2.8198 x Lambda(0.1)), Vali MSE Loss: 0.2478 Test MSE Loss: 0.3874
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6504111
+	speed: 0.0233s/iter; left time: 464.1499s
+	iters: 200, epoch: 9 | loss: 0.6358215
+	speed: 0.0207s/iter; left time: 411.1751s
+Epoch: 9 cost time: 4.817928314208984
+Epoch: 9, Steps: 218 Train Loss: 0.6437 (Forecasting Loss:0.3618 + XiCon Loss:2.8194 x Lambda(0.1)), Vali MSE Loss: 0.2472 Test MSE Loss: 0.3869
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6577756
+	speed: 0.0227s/iter; left time: 447.5736s
+	iters: 200, epoch: 10 | loss: 0.6578259
+	speed: 0.0223s/iter; left time: 438.3453s
+Epoch: 10 cost time: 4.928030967712402
+Epoch: 10, Steps: 218 Train Loss: 0.6436 (Forecasting Loss:0.3617 + XiCon Loss:2.8190 x Lambda(0.1)), Vali MSE Loss: 0.2464 Test MSE Loss: 0.3863
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6723613
+	speed: 0.0229s/iter; left time: 447.1733s
+	iters: 200, epoch: 11 | loss: 0.6464098
+	speed: 0.0207s/iter; left time: 402.1368s
+Epoch: 11 cost time: 4.750131130218506
+Epoch: 11, Steps: 218 Train Loss: 0.6435 (Forecasting Loss:0.3616 + XiCon Loss:2.8190 x Lambda(0.1)), Vali MSE Loss: 0.2476 Test MSE Loss: 0.3875
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6754265
+	speed: 0.0231s/iter; left time: 445.8261s
+	iters: 200, epoch: 12 | loss: 0.6528416
+	speed: 0.0214s/iter; left time: 411.0076s
+Epoch: 12 cost time: 4.846752166748047
+Epoch: 12, Steps: 218 Train Loss: 0.6435 (Forecasting Loss:0.3616 + XiCon Loss:2.8187 x Lambda(0.1)), Vali MSE Loss: 0.2479 Test MSE Loss: 0.3868
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3821
+test shape: (59, 64, 1440, 1) (59, 64, 1440, 1)
+test shape: (3776, 1440, 1) (3776, 1440, 1)
+mse:0.41124227643013, mae:0.4936774969100952, mape:5.823248386383057, mspe:82730.5390625 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:975937
+train 14007
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.0301
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_2>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14007
+val 3823
+test 3821
+	iters: 100, epoch: 1 | loss: 1.1727829
+	speed: 0.0241s/iter; left time: 523.4317s
+	iters: 200, epoch: 1 | loss: 1.0998082
+	speed: 0.0206s/iter; left time: 445.9538s
+Epoch: 1 cost time: 4.845887660980225
+Epoch: 1, Steps: 218 Train Loss: 1.1374 (Forecasting Loss:0.8426 + XiCon Loss:2.9478 x Lambda(0.1)), Vali MSE Loss: 0.3399 Test MSE Loss: 0.6950
+Validation loss decreased (inf --> 0.339935).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.7867478
+	speed: 0.0233s/iter; left time: 500.3506s
+	iters: 200, epoch: 2 | loss: 0.7073222
+	speed: 0.0211s/iter; left time: 450.1292s
+Epoch: 2 cost time: 4.838816404342651
+Epoch: 2, Steps: 218 Train Loss: 0.7629 (Forecasting Loss:0.4777 + XiCon Loss:2.8523 x Lambda(0.1)), Vali MSE Loss: 0.3208 Test MSE Loss: 0.5397
+Validation loss decreased (0.339935 --> 0.320755).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.6562886
+	speed: 0.0239s/iter; left time: 507.2773s
+	iters: 200, epoch: 3 | loss: 0.6628222
+	speed: 0.0209s/iter; left time: 442.7154s
+Epoch: 3 cost time: 4.903777122497559
+Epoch: 3, Steps: 218 Train Loss: 0.6621 (Forecasting Loss:0.3772 + XiCon Loss:2.8486 x Lambda(0.1)), Vali MSE Loss: 0.2936 Test MSE Loss: 0.6082
+Validation loss decreased (0.320755 --> 0.293583).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.6284965
+	speed: 0.0237s/iter; left time: 499.0155s
+	iters: 200, epoch: 4 | loss: 0.6164255
+	speed: 0.0216s/iter; left time: 453.3172s
+Epoch: 4 cost time: 4.987124681472778
+Epoch: 4, Steps: 218 Train Loss: 0.6461 (Forecasting Loss:0.3580 + XiCon Loss:2.8809 x Lambda(0.1)), Vali MSE Loss: 0.2914 Test MSE Loss: 0.5995
+Validation loss decreased (0.293583 --> 0.291412).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.6316644
+	speed: 0.0250s/iter; left time: 520.5696s
+	iters: 200, epoch: 5 | loss: 0.6262977
+	speed: 0.0227s/iter; left time: 471.5210s
+Epoch: 5 cost time: 5.196753263473511
+Epoch: 5, Steps: 218 Train Loss: 0.6397 (Forecasting Loss:0.3514 + XiCon Loss:2.8834 x Lambda(0.1)), Vali MSE Loss: 0.2847 Test MSE Loss: 0.5633
+Validation loss decreased (0.291412 --> 0.284742).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6332293
+	speed: 0.0249s/iter; left time: 512.9595s
+	iters: 200, epoch: 6 | loss: 0.6524870
+	speed: 0.0230s/iter; left time: 470.8493s
+Epoch: 6 cost time: 5.205754041671753
+Epoch: 6, Steps: 218 Train Loss: 0.6365 (Forecasting Loss:0.3483 + XiCon Loss:2.8824 x Lambda(0.1)), Vali MSE Loss: 0.2677 Test MSE Loss: 0.5630
+Validation loss decreased (0.284742 --> 0.267663).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6502780
+	speed: 0.0252s/iter; left time: 514.0953s
+	iters: 200, epoch: 7 | loss: 0.6196439
+	speed: 0.0234s/iter; left time: 474.1508s
+Epoch: 7 cost time: 5.294473171234131
+Epoch: 7, Steps: 218 Train Loss: 0.6352 (Forecasting Loss:0.3469 + XiCon Loss:2.8834 x Lambda(0.1)), Vali MSE Loss: 0.2681 Test MSE Loss: 0.5684
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6208810
+	speed: 0.0253s/iter; left time: 510.3816s
+	iters: 200, epoch: 8 | loss: 0.6789068
+	speed: 0.0227s/iter; left time: 455.7599s
+Epoch: 8 cost time: 5.239931583404541
+Epoch: 8, Steps: 218 Train Loss: 0.6347 (Forecasting Loss:0.3462 + XiCon Loss:2.8849 x Lambda(0.1)), Vali MSE Loss: 0.2690 Test MSE Loss: 0.5695
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6337276
+	speed: 0.0256s/iter; left time: 510.3436s
+	iters: 200, epoch: 9 | loss: 0.6073853
+	speed: 0.0239s/iter; left time: 474.0064s
+Epoch: 9 cost time: 5.361333131790161
+Epoch: 9, Steps: 218 Train Loss: 0.6342 (Forecasting Loss:0.3456 + XiCon Loss:2.8852 x Lambda(0.1)), Vali MSE Loss: 0.2690 Test MSE Loss: 0.5610
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6363161
+	speed: 0.0248s/iter; left time: 489.2220s
+	iters: 200, epoch: 10 | loss: 0.6108991
+	speed: 0.0223s/iter; left time: 437.2857s
+Epoch: 10 cost time: 5.139840602874756
+Epoch: 10, Steps: 218 Train Loss: 0.6340 (Forecasting Loss:0.3456 + XiCon Loss:2.8842 x Lambda(0.1)), Vali MSE Loss: 0.2673 Test MSE Loss: 0.5675
+Validation loss decreased (0.267663 --> 0.267330).  Saving model ...
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6509347
+	speed: 0.0249s/iter; left time: 486.2109s
+	iters: 200, epoch: 11 | loss: 0.6181116
+	speed: 0.0244s/iter; left time: 473.3958s
+Epoch: 11 cost time: 5.351330280303955
+Epoch: 11, Steps: 218 Train Loss: 0.6338 (Forecasting Loss:0.3456 + XiCon Loss:2.8819 x Lambda(0.1)), Vali MSE Loss: 0.2672 Test MSE Loss: 0.5668
+Validation loss decreased (0.267330 --> 0.267169).  Saving model ...
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6260921
+	speed: 0.0252s/iter; left time: 487.0251s
+	iters: 200, epoch: 12 | loss: 0.6305255
+	speed: 0.0235s/iter; left time: 451.9412s
+Epoch: 12 cost time: 5.2922682762146
+Epoch: 12, Steps: 218 Train Loss: 0.6337 (Forecasting Loss:0.3453 + XiCon Loss:2.8838 x Lambda(0.1)), Vali MSE Loss: 0.2668 Test MSE Loss: 0.5666
+Validation loss decreased (0.267169 --> 0.266846).  Saving model ...
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.6466025
+	speed: 0.0244s/iter; left time: 466.4522s
+	iters: 200, epoch: 13 | loss: 0.6326689
+	speed: 0.0230s/iter; left time: 437.5945s
+Epoch: 13 cost time: 5.164336442947388
+Epoch: 13, Steps: 218 Train Loss: 0.6339 (Forecasting Loss:0.3453 + XiCon Loss:2.8860 x Lambda(0.1)), Vali MSE Loss: 0.2674 Test MSE Loss: 0.5659
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 2.44140625e-07
+	iters: 100, epoch: 14 | loss: 0.6465828
+	speed: 0.0245s/iter; left time: 463.1601s
+	iters: 200, epoch: 14 | loss: 0.6399461
+	speed: 0.0234s/iter; left time: 438.8548s
+Epoch: 14 cost time: 5.211694240570068
+Epoch: 14, Steps: 218 Train Loss: 0.6336 (Forecasting Loss:0.3453 + XiCon Loss:2.8836 x Lambda(0.1)), Vali MSE Loss: 0.2673 Test MSE Loss: 0.5658
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 1.220703125e-07
+	iters: 100, epoch: 15 | loss: 0.6402832
+	speed: 0.0250s/iter; left time: 466.3209s
+	iters: 200, epoch: 15 | loss: 0.6287479
+	speed: 0.0226s/iter; left time: 418.7997s
+Epoch: 15 cost time: 5.208329200744629
+Epoch: 15, Steps: 218 Train Loss: 0.6344 (Forecasting Loss:0.3456 + XiCon Loss:2.8875 x Lambda(0.1)), Vali MSE Loss: 0.2673 Test MSE Loss: 0.5659
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 6.103515625e-08
+	iters: 100, epoch: 16 | loss: 0.6485275
+	speed: 0.0255s/iter; left time: 469.9206s
+	iters: 200, epoch: 16 | loss: 0.6177881
+	speed: 0.0235s/iter; left time: 431.4785s
+Epoch: 16 cost time: 5.334655046463013
+Epoch: 16, Steps: 218 Train Loss: 0.6341 (Forecasting Loss:0.3453 + XiCon Loss:2.8883 x Lambda(0.1)), Vali MSE Loss: 0.2671 Test MSE Loss: 0.5659
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 3.0517578125e-08
+	iters: 100, epoch: 17 | loss: 0.6533383
+	speed: 0.0252s/iter; left time: 458.3151s
+	iters: 200, epoch: 17 | loss: 0.6411786
+	speed: 0.0240s/iter; left time: 435.5974s
+Epoch: 17 cost time: 5.332369804382324
+Epoch: 17, Steps: 218 Train Loss: 0.6341 (Forecasting Loss:0.3455 + XiCon Loss:2.8866 x Lambda(0.1)), Vali MSE Loss: 0.2672 Test MSE Loss: 0.5659
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.52587890625e-08
+	iters: 100, epoch: 18 | loss: 0.6317971
+	speed: 0.0260s/iter; left time: 468.6545s
+	iters: 200, epoch: 18 | loss: 0.6299902
+	speed: 0.0228s/iter; left time: 407.5403s
+Epoch: 18 cost time: 5.325671911239624
+Epoch: 18, Steps: 218 Train Loss: 0.6337 (Forecasting Loss:0.3454 + XiCon Loss:2.8830 x Lambda(0.1)), Vali MSE Loss: 0.2672 Test MSE Loss: 0.5659
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 7.62939453125e-09
+	iters: 100, epoch: 19 | loss: 0.6256251
+	speed: 0.0252s/iter; left time: 448.3705s
+	iters: 200, epoch: 19 | loss: 0.6304322
+	speed: 0.0234s/iter; left time: 414.1488s
+Epoch: 19 cost time: 5.307734251022339
+Epoch: 19, Steps: 218 Train Loss: 0.6339 (Forecasting Loss:0.3455 + XiCon Loss:2.8842 x Lambda(0.1)), Vali MSE Loss: 0.2675 Test MSE Loss: 0.5659
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 3.814697265625e-09
+	iters: 100, epoch: 20 | loss: 0.6190026
+	speed: 0.0252s/iter; left time: 441.8655s
+	iters: 200, epoch: 20 | loss: 0.6308134
+	speed: 0.0232s/iter; left time: 404.5555s
+Epoch: 20 cost time: 5.250765085220337
+Epoch: 20, Steps: 218 Train Loss: 0.6342 (Forecasting Loss:0.3456 + XiCon Loss:2.8853 x Lambda(0.1)), Vali MSE Loss: 0.2672 Test MSE Loss: 0.5659
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.9073486328125e-09
+	iters: 100, epoch: 21 | loss: 0.6346817
+	speed: 0.0247s/iter; left time: 428.2382s
+	iters: 200, epoch: 21 | loss: 0.6258665
+	speed: 0.0233s/iter; left time: 402.1964s
+Epoch: 21 cost time: 5.229615688323975
+Epoch: 21, Steps: 218 Train Loss: 0.6336 (Forecasting Loss:0.3454 + XiCon Loss:2.8824 x Lambda(0.1)), Vali MSE Loss: 0.2673 Test MSE Loss: 0.5659
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 9.5367431640625e-10
+	iters: 100, epoch: 22 | loss: 0.6532178
+	speed: 0.0255s/iter; left time: 436.7435s
+	iters: 200, epoch: 22 | loss: 0.6555830
+	speed: 0.0219s/iter; left time: 373.2339s
+Epoch: 22 cost time: 5.169553756713867
+Epoch: 22, Steps: 218 Train Loss: 0.6339 (Forecasting Loss:0.3455 + XiCon Loss:2.8841 x Lambda(0.1)), Vali MSE Loss: 0.2670 Test MSE Loss: 0.5659
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3821
+test shape: (59, 64, 1440, 1) (59, 64, 1440, 1)
+test shape: (3776, 1440, 1) (3776, 1440, 1)
+mse:0.5546651482582092, mae:0.5785337686538696, mape:3.871389150619507, mspe:9365.6455078125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:975937
+train 14007
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.1988
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_3>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14007
+val 3823
+test 3821
+	iters: 100, epoch: 1 | loss: 1.1022891
+	speed: 0.0234s/iter; left time: 508.6512s
+	iters: 200, epoch: 1 | loss: 1.0755198
+	speed: 0.0209s/iter; left time: 450.9486s
+Epoch: 1 cost time: 4.835079908370972
+Epoch: 1, Steps: 218 Train Loss: 1.1364 (Forecasting Loss:0.8409 + XiCon Loss:2.9543 x Lambda(0.1)), Vali MSE Loss: 0.3387 Test MSE Loss: 0.6859
+Validation loss decreased (inf --> 0.338657).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.7418880
+	speed: 0.0235s/iter; left time: 505.2788s
+	iters: 200, epoch: 2 | loss: 0.7333131
+	speed: 0.0211s/iter; left time: 450.3054s
+Epoch: 2 cost time: 4.847134351730347
+Epoch: 2, Steps: 218 Train Loss: 0.7669 (Forecasting Loss:0.4766 + XiCon Loss:2.9033 x Lambda(0.1)), Vali MSE Loss: 0.2255 Test MSE Loss: 0.4693
+Validation loss decreased (0.338657 --> 0.225506).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.7037314
+	speed: 0.0229s/iter; left time: 486.0890s
+	iters: 200, epoch: 3 | loss: 0.6706926
+	speed: 0.0209s/iter; left time: 443.1819s
+Epoch: 3 cost time: 4.782476425170898
+Epoch: 3, Steps: 218 Train Loss: 0.6924 (Forecasting Loss:0.4051 + XiCon Loss:2.8735 x Lambda(0.1)), Vali MSE Loss: 0.2162 Test MSE Loss: 0.4674
+Validation loss decreased (0.225506 --> 0.216234).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.6878000
+	speed: 0.0228s/iter; left time: 480.1096s
+	iters: 200, epoch: 4 | loss: 0.6801895
+	speed: 0.0206s/iter; left time: 432.1669s
+Epoch: 4 cost time: 4.752442121505737
+Epoch: 4, Steps: 218 Train Loss: 0.6713 (Forecasting Loss:0.3857 + XiCon Loss:2.8566 x Lambda(0.1)), Vali MSE Loss: 0.2180 Test MSE Loss: 0.4540
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.6377464
+	speed: 0.0233s/iter; left time: 485.6003s
+	iters: 200, epoch: 5 | loss: 0.6592984
+	speed: 0.0213s/iter; left time: 441.2192s
+Epoch: 5 cost time: 4.861335039138794
+Epoch: 5, Steps: 218 Train Loss: 0.6619 (Forecasting Loss:0.3773 + XiCon Loss:2.8468 x Lambda(0.1)), Vali MSE Loss: 0.2213 Test MSE Loss: 0.4524
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6467380
+	speed: 0.0235s/iter; left time: 484.2487s
+	iters: 200, epoch: 6 | loss: 0.6767933
+	speed: 0.0208s/iter; left time: 426.2511s
+Epoch: 6 cost time: 4.835344552993774
+Epoch: 6, Steps: 218 Train Loss: 0.6572 (Forecasting Loss:0.3729 + XiCon Loss:2.8421 x Lambda(0.1)), Vali MSE Loss: 0.2230 Test MSE Loss: 0.4451
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6342833
+	speed: 0.0230s/iter; left time: 469.1679s
+	iters: 200, epoch: 7 | loss: 0.6993971
+	speed: 0.0212s/iter; left time: 430.3869s
+Epoch: 7 cost time: 4.8540730476379395
+Epoch: 7, Steps: 218 Train Loss: 0.6549 (Forecasting Loss:0.3708 + XiCon Loss:2.8409 x Lambda(0.1)), Vali MSE Loss: 0.2238 Test MSE Loss: 0.4380
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6633183
+	speed: 0.0238s/iter; left time: 479.7121s
+	iters: 200, epoch: 8 | loss: 0.6591411
+	speed: 0.0214s/iter; left time: 429.8824s
+Epoch: 8 cost time: 4.933505296707153
+Epoch: 8, Steps: 218 Train Loss: 0.6540 (Forecasting Loss:0.3697 + XiCon Loss:2.8437 x Lambda(0.1)), Vali MSE Loss: 0.2233 Test MSE Loss: 0.4399
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6885269
+	speed: 0.0231s/iter; left time: 460.8360s
+	iters: 200, epoch: 9 | loss: 0.6712549
+	speed: 0.0212s/iter; left time: 421.5294s
+Epoch: 9 cost time: 4.844468832015991
+Epoch: 9, Steps: 218 Train Loss: 0.6532 (Forecasting Loss:0.3692 + XiCon Loss:2.8408 x Lambda(0.1)), Vali MSE Loss: 0.2240 Test MSE Loss: 0.4397
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6788771
+	speed: 0.0244s/iter; left time: 482.1436s
+	iters: 200, epoch: 10 | loss: 0.6600190
+	speed: 0.0213s/iter; left time: 417.9260s
+Epoch: 10 cost time: 4.987216949462891
+Epoch: 10, Steps: 218 Train Loss: 0.6534 (Forecasting Loss:0.3693 + XiCon Loss:2.8404 x Lambda(0.1)), Vali MSE Loss: 0.2235 Test MSE Loss: 0.4395
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6250093
+	speed: 0.0235s/iter; left time: 458.2734s
+	iters: 200, epoch: 11 | loss: 0.6864102
+	speed: 0.0211s/iter; left time: 410.6580s
+Epoch: 11 cost time: 4.879334449768066
+Epoch: 11, Steps: 218 Train Loss: 0.6527 (Forecasting Loss:0.3687 + XiCon Loss:2.8392 x Lambda(0.1)), Vali MSE Loss: 0.2239 Test MSE Loss: 0.4392
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6866497
+	speed: 0.0236s/iter; left time: 456.3983s
+	iters: 200, epoch: 12 | loss: 0.6695774
+	speed: 0.0208s/iter; left time: 400.0060s
+Epoch: 12 cost time: 4.866479396820068
+Epoch: 12, Steps: 218 Train Loss: 0.6538 (Forecasting Loss:0.3697 + XiCon Loss:2.8407 x Lambda(0.1)), Vali MSE Loss: 0.2238 Test MSE Loss: 0.4396
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 4.8828125e-07
+	iters: 100, epoch: 13 | loss: 0.6706789
+	speed: 0.0229s/iter; left time: 436.5962s
+	iters: 200, epoch: 13 | loss: 0.6674166
+	speed: 0.0210s/iter; left time: 398.7394s
+Epoch: 13 cost time: 4.794895887374878
+Epoch: 13, Steps: 218 Train Loss: 0.6535 (Forecasting Loss:0.3693 + XiCon Loss:2.8418 x Lambda(0.1)), Vali MSE Loss: 0.2236 Test MSE Loss: 0.4392
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3821
+test shape: (59, 64, 1440, 1) (59, 64, 1440, 1)
+test shape: (3776, 1440, 1) (3776, 1440, 1)
+mse:0.43476253747940063, mae:0.4999832212924957, mape:6.2525105476379395, mspe:104323.3515625 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:975937
+train 14007
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99981463] ~ [0.00025037 0.00012523]
+Xi-correlation values:[0.99980992 0.99577667] ~ [0. 1.]
+Autocorrelation calculation time: 5.0155
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_4>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 14007
+val 3823
+test 3821
+	iters: 100, epoch: 1 | loss: 1.1554816
+	speed: 0.0234s/iter; left time: 508.3331s
+	iters: 200, epoch: 1 | loss: 1.0722547
+	speed: 0.0207s/iter; left time: 446.5940s
+Epoch: 1 cost time: 4.814992666244507
+Epoch: 1, Steps: 218 Train Loss: 1.1318 (Forecasting Loss:0.8358 + XiCon Loss:2.9601 x Lambda(0.1)), Vali MSE Loss: 0.3343 Test MSE Loss: 0.6642
+Validation loss decreased (inf --> 0.334305).  Saving model ...
+Updating learning rate to 0.001
+	iters: 100, epoch: 2 | loss: 0.7221625
+	speed: 0.0236s/iter; left time: 505.9562s
+	iters: 200, epoch: 2 | loss: 0.7292715
+	speed: 0.0234s/iter; left time: 499.9829s
+Epoch: 2 cost time: 5.133488178253174
+Epoch: 2, Steps: 218 Train Loss: 0.7686 (Forecasting Loss:0.4813 + XiCon Loss:2.8731 x Lambda(0.1)), Vali MSE Loss: 0.3285 Test MSE Loss: 0.6121
+Validation loss decreased (0.334305 --> 0.328489).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 3 | loss: 0.6656581
+	speed: 0.0254s/iter; left time: 541.1292s
+	iters: 200, epoch: 3 | loss: 0.6539078
+	speed: 0.0224s/iter; left time: 473.8402s
+Epoch: 3 cost time: 5.181820869445801
+Epoch: 3, Steps: 218 Train Loss: 0.6597 (Forecasting Loss:0.3778 + XiCon Loss:2.8196 x Lambda(0.1)), Vali MSE Loss: 0.3349 Test MSE Loss: 0.5211
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.00025
+	iters: 100, epoch: 4 | loss: 0.6291678
+	speed: 0.0248s/iter; left time: 522.0229s
+	iters: 200, epoch: 4 | loss: 0.6064930
+	speed: 0.0217s/iter; left time: 454.8344s
+Epoch: 4 cost time: 5.080602645874023
+Epoch: 4, Steps: 218 Train Loss: 0.6373 (Forecasting Loss:0.3550 + XiCon Loss:2.8226 x Lambda(0.1)), Vali MSE Loss: 0.3712 Test MSE Loss: 0.5592
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.000125
+	iters: 100, epoch: 5 | loss: 0.6382133
+	speed: 0.0244s/iter; left time: 507.4336s
+	iters: 200, epoch: 5 | loss: 0.6347014
+	speed: 0.0215s/iter; left time: 446.0020s
+Epoch: 5 cost time: 5.017538547515869
+Epoch: 5, Steps: 218 Train Loss: 0.6318 (Forecasting Loss:0.3491 + XiCon Loss:2.8270 x Lambda(0.1)), Vali MSE Loss: 0.3716 Test MSE Loss: 0.5874
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 6 | loss: 0.6049765
+	speed: 0.0244s/iter; left time: 502.2989s
+	iters: 200, epoch: 6 | loss: 0.6391592
+	speed: 0.0223s/iter; left time: 458.0078s
+Epoch: 6 cost time: 5.099393367767334
+Epoch: 6, Steps: 218 Train Loss: 0.6294 (Forecasting Loss:0.3458 + XiCon Loss:2.8359 x Lambda(0.1)), Vali MSE Loss: 0.3802 Test MSE Loss: 0.6650
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 7 | loss: 0.6121663
+	speed: 0.0245s/iter; left time: 499.9334s
+	iters: 200, epoch: 7 | loss: 0.6626611
+	speed: 0.0220s/iter; left time: 446.3500s
+Epoch: 7 cost time: 5.075231075286865
+Epoch: 7, Steps: 218 Train Loss: 0.6282 (Forecasting Loss:0.3441 + XiCon Loss:2.8407 x Lambda(0.1)), Vali MSE Loss: 0.3993 Test MSE Loss: 0.6498
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 8 | loss: 0.6075897
+	speed: 0.0255s/iter; left time: 514.1238s
+	iters: 200, epoch: 8 | loss: 0.6242993
+	speed: 0.0220s/iter; left time: 440.9653s
+Epoch: 8 cost time: 5.1704466342926025
+Epoch: 8, Steps: 218 Train Loss: 0.6271 (Forecasting Loss:0.3433 + XiCon Loss:2.8375 x Lambda(0.1)), Vali MSE Loss: 0.3846 Test MSE Loss: 0.6448
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 9 | loss: 0.6409516
+	speed: 0.0244s/iter; left time: 486.6503s
+	iters: 200, epoch: 9 | loss: 0.6314631
+	speed: 0.0227s/iter; left time: 451.2153s
+Epoch: 9 cost time: 5.155932426452637
+Epoch: 9, Steps: 218 Train Loss: 0.6267 (Forecasting Loss:0.3428 + XiCon Loss:2.8392 x Lambda(0.1)), Vali MSE Loss: 0.3908 Test MSE Loss: 0.6525
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 10 | loss: 0.6245498
+	speed: 0.0238s/iter; left time: 469.3153s
+	iters: 200, epoch: 10 | loss: 0.6396846
+	speed: 0.0225s/iter; left time: 441.2640s
+Epoch: 10 cost time: 5.052522659301758
+Epoch: 10, Steps: 218 Train Loss: 0.6264 (Forecasting Loss:0.3425 + XiCon Loss:2.8384 x Lambda(0.1)), Vali MSE Loss: 0.3876 Test MSE Loss: 0.6453
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 11 | loss: 0.6001009
+	speed: 0.0242s/iter; left time: 471.7205s
+	iters: 200, epoch: 11 | loss: 0.6052862
+	speed: 0.0222s/iter; left time: 430.6997s
+Epoch: 11 cost time: 5.034418344497681
+Epoch: 11, Steps: 218 Train Loss: 0.6266 (Forecasting Loss:0.3427 + XiCon Loss:2.8396 x Lambda(0.1)), Vali MSE Loss: 0.3901 Test MSE Loss: 0.6535
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 9.765625e-07
+	iters: 100, epoch: 12 | loss: 0.6244209
+	speed: 0.0244s/iter; left time: 471.1371s
+	iters: 200, epoch: 12 | loss: 0.6598822
+	speed: 0.0230s/iter; left time: 440.9708s
+Epoch: 12 cost time: 5.200764417648315
+Epoch: 12, Steps: 218 Train Loss: 0.6265 (Forecasting Loss:0.3425 + XiCon Loss:2.8397 x Lambda(0.1)), Vali MSE Loss: 0.3891 Test MSE Loss: 0.6524
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl336_ll48_pl1440_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_4<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3821
+test shape: (59, 64, 1440, 1) (59, 64, 1440, 1)
+test shape: (3776, 1440, 1) (3776, 1440, 1)
+mse:0.6014512777328491, mae:0.6227690577507019, mape:3.7512686252593994, mspe:3498.495361328125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+MSE:0.4757+-0.12062, MAE:0.5330+-0.08038, MAPE:5.1273+-1.50525, MSPE:59387.2812+-60847.80243, SHAPEDTW:0.0000+-0.00000, TEMPDTW:0.0000+-0.00000
+Args in experiment:
+Namespace(wnorm='ReVIN', lambda=0.1, multiscales=[96], train_ratio=0.6, save=False, task_name='long_term_forecast', is_training=1, model_id='XiCon_exp', model='XiCon', data='electricity', root_path='./dataset/electricity', data_path='electricity.csv', features='S', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=168, label_len=48, pred_len=2160, seasonal_patterns='Monthly', mask_rate=0.25, anomaly_ratio=0.25, patch_len=16, stride=8, affine=0, subtract_last=0, mixer_kernel_size=8, head_dropout=0.0, top_k=5, num_kernels=6, enc_in=1, dec_in=7, c_out=1, d_model=16, n_heads=8, e_layers=2, d_layers=1, d_ff=16, moving_avg=25, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itr=5, train_epochs=100, batch_size=64, patience=10, learning_rate=0.005, des='Exp', loss='MSE', lradj='type1', pct_start=0.3, loss_flag=2, use_amp=False, cpu_worker=None, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, omega=0.5, XiCon=True, AutoCon=False)
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:735457
+train 13455
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99980268] ~ [1.83286448e-04 9.23152030e-05]
+Xi-correlation values:[0.99980992 0.99304875] ~ [0. 1.]
+Autocorrelation calculation time: 5.2975
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 13455
+val 3103
+test 3101
+	iters: 100, epoch: 1 | loss: 1.0681016
+	speed: 0.0207s/iter; left time: 433.4313s
+	iters: 200, epoch: 1 | loss: 0.8184085
+	speed: 0.0160s/iter; left time: 333.5512s
+Epoch: 1 cost time: 3.8596138954162598
+Epoch: 1, Steps: 210 Train Loss: 1.0217 (Forecasting Loss:0.7732 + XiCon Loss:2.4845 x Lambda(0.1)), Vali MSE Loss: 0.2705 Test MSE Loss: 0.6065
+Validation loss decreased (inf --> 0.270525).  Saving model ...
+Updating learning rate to 0.005
+	iters: 100, epoch: 2 | loss: 0.7904202
+	speed: 0.0183s/iter; left time: 378.4103s
+	iters: 200, epoch: 2 | loss: 0.6821952
+	speed: 0.0157s/iter; left time: 324.0302s
+Epoch: 2 cost time: 3.593489170074463
+Epoch: 2, Steps: 210 Train Loss: 0.7565 (Forecasting Loss:0.5177 + XiCon Loss:2.3878 x Lambda(0.1)), Vali MSE Loss: 0.2528 Test MSE Loss: 0.4755
+Validation loss decreased (0.270525 --> 0.252827).  Saving model ...
+Updating learning rate to 0.0025
+	iters: 100, epoch: 3 | loss: 0.7001746
+	speed: 0.0183s/iter; left time: 375.3029s
+	iters: 200, epoch: 3 | loss: 0.6815042
+	speed: 0.0154s/iter; left time: 314.7349s
+Epoch: 3 cost time: 3.561000108718872
+Epoch: 3, Steps: 210 Train Loss: 0.6908 (Forecasting Loss:0.4524 + XiCon Loss:2.3844 x Lambda(0.1)), Vali MSE Loss: 0.2999 Test MSE Loss: 0.5208
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.00125
+	iters: 100, epoch: 4 | loss: 0.6833171
+	speed: 0.0184s/iter; left time: 372.1580s
+	iters: 200, epoch: 4 | loss: 0.6406782
+	speed: 0.0154s/iter; left time: 310.4241s
+Epoch: 4 cost time: 3.5805013179779053
+Epoch: 4, Steps: 210 Train Loss: 0.6692 (Forecasting Loss:0.4278 + XiCon Loss:2.4134 x Lambda(0.1)), Vali MSE Loss: 0.2805 Test MSE Loss: 0.5990
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.000625
+	iters: 100, epoch: 5 | loss: 0.6250821
+	speed: 0.0180s/iter; left time: 361.9782s
+	iters: 200, epoch: 5 | loss: 0.6381507
+	speed: 0.0159s/iter; left time: 317.6102s
+Epoch: 5 cost time: 3.582554340362549
+Epoch: 5, Steps: 210 Train Loss: 0.6562 (Forecasting Loss:0.4144 + XiCon Loss:2.4181 x Lambda(0.1)), Vali MSE Loss: 0.2447 Test MSE Loss: 0.5917
+Validation loss decreased (0.252827 --> 0.244727).  Saving model ...
+Updating learning rate to 0.0003125
+	iters: 100, epoch: 6 | loss: 0.6877494
+	speed: 0.0182s/iter; left time: 361.6726s
+	iters: 200, epoch: 6 | loss: 0.6526675
+	speed: 0.0154s/iter; left time: 304.1902s
+Epoch: 6 cost time: 3.547926187515259
+Epoch: 6, Steps: 210 Train Loss: 0.6492 (Forecasting Loss:0.4081 + XiCon Loss:2.4109 x Lambda(0.1)), Vali MSE Loss: 0.2560 Test MSE Loss: 0.6289
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.00015625
+	iters: 100, epoch: 7 | loss: 0.6510559
+	speed: 0.0177s/iter; left time: 348.6065s
+	iters: 200, epoch: 7 | loss: 0.6403558
+	speed: 0.0163s/iter; left time: 319.1874s
+Epoch: 7 cost time: 3.603863477706909
+Epoch: 7, Steps: 210 Train Loss: 0.6461 (Forecasting Loss:0.4050 + XiCon Loss:2.4106 x Lambda(0.1)), Vali MSE Loss: 0.2372 Test MSE Loss: 0.6022
+Validation loss decreased (0.244727 --> 0.237203).  Saving model ...
+Updating learning rate to 7.8125e-05
+	iters: 100, epoch: 8 | loss: 0.6437386
+	speed: 0.0176s/iter; left time: 341.1475s
+	iters: 200, epoch: 8 | loss: 0.6527634
+	speed: 0.0155s/iter; left time: 300.5356s
+Epoch: 8 cost time: 3.487555980682373
+Epoch: 8, Steps: 210 Train Loss: 0.6436 (Forecasting Loss:0.4029 + XiCon Loss:2.4074 x Lambda(0.1)), Vali MSE Loss: 0.2357 Test MSE Loss: 0.6277
+Validation loss decreased (0.237203 --> 0.235746).  Saving model ...
+Updating learning rate to 3.90625e-05
+	iters: 100, epoch: 9 | loss: 0.6574601
+	speed: 0.0186s/iter; left time: 357.7109s
+	iters: 200, epoch: 9 | loss: 0.6261077
+	speed: 0.0158s/iter; left time: 301.3485s
+Epoch: 9 cost time: 3.617736577987671
+Epoch: 9, Steps: 210 Train Loss: 0.6431 (Forecasting Loss:0.4022 + XiCon Loss:2.4090 x Lambda(0.1)), Vali MSE Loss: 0.2341 Test MSE Loss: 0.6229
+Validation loss decreased (0.235746 --> 0.234119).  Saving model ...
+Updating learning rate to 1.953125e-05
+	iters: 100, epoch: 10 | loss: 0.6185459
+	speed: 0.0184s/iter; left time: 350.5705s
+	iters: 200, epoch: 10 | loss: 0.6451839
+	speed: 0.0163s/iter; left time: 307.8943s
+Epoch: 10 cost time: 3.669863700866699
+Epoch: 10, Steps: 210 Train Loss: 0.6426 (Forecasting Loss:0.4017 + XiCon Loss:2.4088 x Lambda(0.1)), Vali MSE Loss: 0.2314 Test MSE Loss: 0.6162
+Validation loss decreased (0.234119 --> 0.231449).  Saving model ...
+Updating learning rate to 9.765625e-06
+	iters: 100, epoch: 11 | loss: 0.6379567
+	speed: 0.0190s/iter; left time: 357.5197s
+	iters: 200, epoch: 11 | loss: 0.6481161
+	speed: 0.0152s/iter; left time: 284.9990s
+Epoch: 11 cost time: 3.641619920730591
+Epoch: 11, Steps: 210 Train Loss: 0.6420 (Forecasting Loss:0.4008 + XiCon Loss:2.4119 x Lambda(0.1)), Vali MSE Loss: 0.2332 Test MSE Loss: 0.6194
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 4.8828125e-06
+	iters: 100, epoch: 12 | loss: 0.6013088
+	speed: 0.0174s/iter; left time: 324.0928s
+	iters: 200, epoch: 12 | loss: 0.6345563
+	speed: 0.0161s/iter; left time: 297.3481s
+Epoch: 12 cost time: 3.535879373550415
+Epoch: 12, Steps: 210 Train Loss: 0.6423 (Forecasting Loss:0.4012 + XiCon Loss:2.4118 x Lambda(0.1)), Vali MSE Loss: 0.2336 Test MSE Loss: 0.6186
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 2.44140625e-06
+	iters: 100, epoch: 13 | loss: 0.6462544
+	speed: 0.0183s/iter; left time: 335.7347s
+	iters: 200, epoch: 13 | loss: 0.6568283
+	speed: 0.0151s/iter; left time: 275.5187s
+Epoch: 13 cost time: 3.5167431831359863
+Epoch: 13, Steps: 210 Train Loss: 0.6427 (Forecasting Loss:0.4014 + XiCon Loss:2.4123 x Lambda(0.1)), Vali MSE Loss: 0.2337 Test MSE Loss: 0.6183
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 1.220703125e-06
+	iters: 100, epoch: 14 | loss: 0.6655441
+	speed: 0.0179s/iter; left time: 325.3935s
+	iters: 200, epoch: 14 | loss: 0.6499531
+	speed: 0.0157s/iter; left time: 283.7921s
+Epoch: 14 cost time: 3.548999071121216
+Epoch: 14, Steps: 210 Train Loss: 0.6427 (Forecasting Loss:0.4014 + XiCon Loss:2.4126 x Lambda(0.1)), Vali MSE Loss: 0.2330 Test MSE Loss: 0.6164
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 6.103515625e-07
+	iters: 100, epoch: 15 | loss: 0.6282616
+	speed: 0.0178s/iter; left time: 320.0598s
+	iters: 200, epoch: 15 | loss: 0.6460268
+	speed: 0.0154s/iter; left time: 274.5129s
+Epoch: 15 cost time: 3.508448839187622
+Epoch: 15, Steps: 210 Train Loss: 0.6431 (Forecasting Loss:0.4017 + XiCon Loss:2.4147 x Lambda(0.1)), Vali MSE Loss: 0.2332 Test MSE Loss: 0.6159
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 3.0517578125e-07
+	iters: 100, epoch: 16 | loss: 0.6748711
+	speed: 0.0172s/iter; left time: 305.9283s
+	iters: 200, epoch: 16 | loss: 0.6467081
+	speed: 0.0152s/iter; left time: 267.4749s
+Epoch: 16 cost time: 3.4208779335021973
+Epoch: 16, Steps: 210 Train Loss: 0.6423 (Forecasting Loss:0.4014 + XiCon Loss:2.4091 x Lambda(0.1)), Vali MSE Loss: 0.2331 Test MSE Loss: 0.6161
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 1.52587890625e-07
+	iters: 100, epoch: 17 | loss: 0.6449301
+	speed: 0.0176s/iter; left time: 307.8612s
+	iters: 200, epoch: 17 | loss: 0.6465489
+	speed: 0.0315s/iter; left time: 549.7338s
+Epoch: 17 cost time: 5.605217218399048
+Epoch: 17, Steps: 210 Train Loss: 0.6425 (Forecasting Loss:0.4013 + XiCon Loss:2.4116 x Lambda(0.1)), Vali MSE Loss: 0.2331 Test MSE Loss: 0.6160
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 7.62939453125e-08
+	iters: 100, epoch: 18 | loss: 0.6688581
+	speed: 0.0636s/iter; left time: 1102.2881s
+	iters: 200, epoch: 18 | loss: 0.6522714
+	speed: 0.0535s/iter; left time: 921.7439s
+Epoch: 18 cost time: 12.26428508758545
+Epoch: 18, Steps: 210 Train Loss: 0.6420 (Forecasting Loss:0.4006 + XiCon Loss:2.4136 x Lambda(0.1)), Vali MSE Loss: 0.2332 Test MSE Loss: 0.6162
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 3.814697265625e-08
+	iters: 100, epoch: 19 | loss: 0.6567271
+	speed: 0.0716s/iter; left time: 1225.3192s
+	iters: 200, epoch: 19 | loss: 0.6392882
+	speed: 0.0676s/iter; left time: 1150.5776s
+Epoch: 19 cost time: 14.659993171691895
+Epoch: 19, Steps: 210 Train Loss: 0.6418 (Forecasting Loss:0.4010 + XiCon Loss:2.4076 x Lambda(0.1)), Vali MSE Loss: 0.2330 Test MSE Loss: 0.6163
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 1.9073486328125e-08
+	iters: 100, epoch: 20 | loss: 0.6362981
+	speed: 0.0621s/iter; left time: 1049.6094s
+	iters: 200, epoch: 20 | loss: 0.6198940
+	speed: 0.0534s/iter; left time: 897.2277s
+Epoch: 20 cost time: 12.099538087844849
+Epoch: 20, Steps: 210 Train Loss: 0.6421 (Forecasting Loss:0.4008 + XiCon Loss:2.4123 x Lambda(0.1)), Vali MSE Loss: 0.2333 Test MSE Loss: 0.6162
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3101
+test shape: (48, 64, 2160, 1) (48, 64, 2160, 1)
+test shape: (3072, 2160, 1) (3072, 2160, 1)
+mse:0.6206499934196472, mae:0.6117157936096191, mape:3.527120590209961, mspe:3385.758056640625 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:735457
+train 13455
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99980268] ~ [1.83286448e-04 9.23152030e-05]
+Xi-correlation values:[0.99980992 0.99304875] ~ [0. 1.]
+Autocorrelation calculation time: 7.6694
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_1>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 13455
+val 3103
+test 3101
+	iters: 100, epoch: 1 | loss: 1.0551091
+	speed: 0.0242s/iter; left time: 505.9378s
+	iters: 200, epoch: 1 | loss: 0.9531993
+	speed: 0.0197s/iter; left time: 409.1297s
+Epoch: 1 cost time: 4.598420858383179
+Epoch: 1, Steps: 210 Train Loss: 1.0833 (Forecasting Loss:0.8358 + XiCon Loss:2.4751 x Lambda(0.1)), Vali MSE Loss: 0.2783 Test MSE Loss: 0.6311
+Validation loss decreased (inf --> 0.278345).  Saving model ...
+Updating learning rate to 0.005
+	iters: 100, epoch: 2 | loss: 0.7345069
+	speed: 0.0229s/iter; left time: 473.4296s
+	iters: 200, epoch: 2 | loss: 0.6952627
+	speed: 0.0179s/iter; left time: 368.2403s
+Epoch: 2 cost time: 4.302889347076416
+Epoch: 2, Steps: 210 Train Loss: 0.7308 (Forecasting Loss:0.4880 + XiCon Loss:2.4279 x Lambda(0.1)), Vali MSE Loss: 0.3480 Test MSE Loss: 0.7735
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.0025
+	iters: 100, epoch: 3 | loss: 0.6628635
+	speed: 0.0202s/iter; left time: 413.9523s
+	iters: 200, epoch: 3 | loss: 0.6605442
+	speed: 0.0179s/iter; left time: 365.0239s
+Epoch: 3 cost time: 4.04470419883728
+Epoch: 3, Steps: 210 Train Loss: 0.6554 (Forecasting Loss:0.4140 + XiCon Loss:2.4136 x Lambda(0.1)), Vali MSE Loss: 0.3367 Test MSE Loss: 0.5932
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.00125
+	iters: 100, epoch: 4 | loss: 0.6320704
+	speed: 0.0204s/iter; left time: 413.2177s
+	iters: 200, epoch: 4 | loss: 0.6239581
+	speed: 0.0175s/iter; left time: 353.1104s
+Epoch: 4 cost time: 4.010510683059692
+Epoch: 4, Steps: 210 Train Loss: 0.6358 (Forecasting Loss:0.3949 + XiCon Loss:2.4097 x Lambda(0.1)), Vali MSE Loss: 0.3096 Test MSE Loss: 0.6096
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 0.000625
+	iters: 100, epoch: 5 | loss: 0.6295071
+	speed: 0.0203s/iter; left time: 406.4899s
+	iters: 200, epoch: 5 | loss: 0.6092145
+	speed: 0.0177s/iter; left time: 353.7878s
+Epoch: 5 cost time: 4.023696660995483
+Epoch: 5, Steps: 210 Train Loss: 0.6267 (Forecasting Loss:0.3861 + XiCon Loss:2.4059 x Lambda(0.1)), Vali MSE Loss: 0.3093 Test MSE Loss: 0.6306
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 0.0003125
+	iters: 100, epoch: 6 | loss: 0.5906199
+	speed: 0.0196s/iter; left time: 388.7711s
+	iters: 200, epoch: 6 | loss: 0.5929787
+	speed: 0.0171s/iter; left time: 337.9308s
+Epoch: 6 cost time: 3.8904762268066406
+Epoch: 6, Steps: 210 Train Loss: 0.6221 (Forecasting Loss:0.3821 + XiCon Loss:2.4001 x Lambda(0.1)), Vali MSE Loss: 0.3253 Test MSE Loss: 0.6457
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 0.00015625
+	iters: 100, epoch: 7 | loss: 0.6247736
+	speed: 0.0198s/iter; left time: 388.0359s
+	iters: 200, epoch: 7 | loss: 0.6206991
+	speed: 0.0172s/iter; left time: 335.2109s
+Epoch: 7 cost time: 3.8966455459594727
+Epoch: 7, Steps: 210 Train Loss: 0.6195 (Forecasting Loss:0.3797 + XiCon Loss:2.3982 x Lambda(0.1)), Vali MSE Loss: 0.3135 Test MSE Loss: 0.6231
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 7.8125e-05
+	iters: 100, epoch: 8 | loss: 0.6179349
+	speed: 0.0193s/iter; left time: 374.9418s
+	iters: 200, epoch: 8 | loss: 0.6068970
+	speed: 0.0168s/iter; left time: 324.5567s
+Epoch: 8 cost time: 3.8071439266204834
+Epoch: 8, Steps: 210 Train Loss: 0.6184 (Forecasting Loss:0.3784 + XiCon Loss:2.4000 x Lambda(0.1)), Vali MSE Loss: 0.3190 Test MSE Loss: 0.6765
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 3.90625e-05
+	iters: 100, epoch: 9 | loss: 0.6123284
+	speed: 0.0190s/iter; left time: 365.5799s
+	iters: 200, epoch: 9 | loss: 0.6402228
+	speed: 0.0166s/iter; left time: 318.2938s
+Epoch: 9 cost time: 3.7673003673553467
+Epoch: 9, Steps: 210 Train Loss: 0.6171 (Forecasting Loss:0.3775 + XiCon Loss:2.3960 x Lambda(0.1)), Vali MSE Loss: 0.3084 Test MSE Loss: 0.6838
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 1.953125e-05
+	iters: 100, epoch: 10 | loss: 0.6074263
+	speed: 0.0190s/iter; left time: 361.7452s
+	iters: 200, epoch: 10 | loss: 0.6366994
+	speed: 0.0169s/iter; left time: 320.3400s
+Epoch: 10 cost time: 3.79683518409729
+Epoch: 10, Steps: 210 Train Loss: 0.6170 (Forecasting Loss:0.3778 + XiCon Loss:2.3921 x Lambda(0.1)), Vali MSE Loss: 0.3134 Test MSE Loss: 0.6587
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 9.765625e-06
+	iters: 100, epoch: 11 | loss: 0.6004038
+	speed: 0.0188s/iter; left time: 354.0156s
+	iters: 200, epoch: 11 | loss: 0.6000968
+	speed: 0.0163s/iter; left time: 304.3938s
+Epoch: 11 cost time: 3.707146167755127
+Epoch: 11, Steps: 210 Train Loss: 0.6166 (Forecasting Loss:0.3774 + XiCon Loss:2.3921 x Lambda(0.1)), Vali MSE Loss: 0.3143 Test MSE Loss: 0.6619
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3101
+test shape: (48, 64, 2160, 1) (48, 64, 2160, 1)
+test shape: (3072, 2160, 1) (3072, 2160, 1)
+mse:0.6387866139411926, mae:0.6233188509941101, mape:5.735960006713867, mspe:71967.8828125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:735457
+train 13455
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99980268] ~ [1.83286448e-04 9.23152030e-05]
+Xi-correlation values:[0.99980992 0.99304875] ~ [0. 1.]
+Autocorrelation calculation time: 4.8425
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_2>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 13455
+val 3103
+test 3101
+	iters: 100, epoch: 1 | loss: 1.0878285
+	speed: 0.0183s/iter; left time: 381.9020s
+	iters: 200, epoch: 1 | loss: 0.9186108
+	speed: 0.0156s/iter; left time: 325.0632s
+Epoch: 1 cost time: 3.5703814029693604
+Epoch: 1, Steps: 210 Train Loss: 1.0668 (Forecasting Loss:0.8203 + XiCon Loss:2.4646 x Lambda(0.1)), Vali MSE Loss: 0.2696 Test MSE Loss: 0.5646
+Validation loss decreased (inf --> 0.269638).  Saving model ...
+Updating learning rate to 0.005
+	iters: 100, epoch: 2 | loss: 0.7054638
+	speed: 0.0210s/iter; left time: 434.8051s
+	iters: 200, epoch: 2 | loss: 0.6995635
+	speed: 0.0200s/iter; left time: 411.8223s
+Epoch: 2 cost time: 4.332986831665039
+Epoch: 2, Steps: 210 Train Loss: 0.7266 (Forecasting Loss:0.4856 + XiCon Loss:2.4093 x Lambda(0.1)), Vali MSE Loss: 0.2291 Test MSE Loss: 0.9682
+Validation loss decreased (0.269638 --> 0.229125).  Saving model ...
+Updating learning rate to 0.0025
+	iters: 100, epoch: 3 | loss: 0.6965204
+	speed: 0.0228s/iter; left time: 466.6020s
+	iters: 200, epoch: 3 | loss: 0.6519303
+	speed: 0.0198s/iter; left time: 404.2937s
+Epoch: 3 cost time: 4.4816155433654785
+Epoch: 3, Steps: 210 Train Loss: 0.6538 (Forecasting Loss:0.4222 + XiCon Loss:2.3156 x Lambda(0.1)), Vali MSE Loss: 0.2292 Test MSE Loss: 0.6802
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.00125
+	iters: 100, epoch: 4 | loss: 0.6315610
+	speed: 0.0224s/iter; left time: 454.7417s
+	iters: 200, epoch: 4 | loss: 0.6398292
+	speed: 0.0198s/iter; left time: 399.5925s
+Epoch: 4 cost time: 4.439162969589233
+Epoch: 4, Steps: 210 Train Loss: 0.6334 (Forecasting Loss:0.4050 + XiCon Loss:2.2849 x Lambda(0.1)), Vali MSE Loss: 0.2365 Test MSE Loss: 0.6270
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.000625
+	iters: 100, epoch: 5 | loss: 0.6168414
+	speed: 0.0223s/iter; left time: 448.2272s
+	iters: 200, epoch: 5 | loss: 0.6177014
+	speed: 0.0201s/iter; left time: 400.7157s
+Epoch: 5 cost time: 4.467921495437622
+Epoch: 5, Steps: 210 Train Loss: 0.6257 (Forecasting Loss:0.3981 + XiCon Loss:2.2762 x Lambda(0.1)), Vali MSE Loss: 0.2357 Test MSE Loss: 0.6562
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 0.0003125
+	iters: 100, epoch: 6 | loss: 0.6155641
+	speed: 0.0220s/iter; left time: 436.6621s
+	iters: 200, epoch: 6 | loss: 0.6066672
+	speed: 0.0196s/iter; left time: 387.1192s
+Epoch: 6 cost time: 4.393336296081543
+Epoch: 6, Steps: 210 Train Loss: 0.6197 (Forecasting Loss:0.3925 + XiCon Loss:2.2723 x Lambda(0.1)), Vali MSE Loss: 0.2238 Test MSE Loss: 0.6385
+Validation loss decreased (0.229125 --> 0.223788).  Saving model ...
+Updating learning rate to 0.00015625
+	iters: 100, epoch: 7 | loss: 0.6284733
+	speed: 0.0227s/iter; left time: 446.0580s
+	iters: 200, epoch: 7 | loss: 0.6461100
+	speed: 0.0200s/iter; left time: 390.8004s
+Epoch: 7 cost time: 4.474263429641724
+Epoch: 7, Steps: 210 Train Loss: 0.6175 (Forecasting Loss:0.3904 + XiCon Loss:2.2709 x Lambda(0.1)), Vali MSE Loss: 0.2308 Test MSE Loss: 0.6915
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 7.8125e-05
+	iters: 100, epoch: 8 | loss: 0.6321492
+	speed: 0.0217s/iter; left time: 421.0290s
+	iters: 200, epoch: 8 | loss: 0.6223279
+	speed: 0.0200s/iter; left time: 385.7516s
+Epoch: 8 cost time: 4.391224145889282
+Epoch: 8, Steps: 210 Train Loss: 0.6166 (Forecasting Loss:0.3888 + XiCon Loss:2.2776 x Lambda(0.1)), Vali MSE Loss: 0.2333 Test MSE Loss: 0.6635
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 3.90625e-05
+	iters: 100, epoch: 9 | loss: 0.6076403
+	speed: 0.0222s/iter; left time: 427.2588s
+	iters: 200, epoch: 9 | loss: 0.6391075
+	speed: 0.0194s/iter; left time: 370.3469s
+Epoch: 9 cost time: 4.402027368545532
+Epoch: 9, Steps: 210 Train Loss: 0.6155 (Forecasting Loss:0.3884 + XiCon Loss:2.2711 x Lambda(0.1)), Vali MSE Loss: 0.2267 Test MSE Loss: 0.6844
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 1.953125e-05
+	iters: 100, epoch: 10 | loss: 0.5940689
+	speed: 0.0220s/iter; left time: 418.1715s
+	iters: 200, epoch: 10 | loss: 0.6357114
+	speed: 0.0201s/iter; left time: 379.4447s
+Epoch: 10 cost time: 4.436215877532959
+Epoch: 10, Steps: 210 Train Loss: 0.6158 (Forecasting Loss:0.3881 + XiCon Loss:2.2776 x Lambda(0.1)), Vali MSE Loss: 0.2262 Test MSE Loss: 0.6696
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 9.765625e-06
+	iters: 100, epoch: 11 | loss: 0.6008155
+	speed: 0.0218s/iter; left time: 410.5802s
+	iters: 200, epoch: 11 | loss: 0.6366395
+	speed: 0.0196s/iter; left time: 366.3083s
+Epoch: 11 cost time: 4.350037336349487
+Epoch: 11, Steps: 210 Train Loss: 0.6150 (Forecasting Loss:0.3876 + XiCon Loss:2.2741 x Lambda(0.1)), Vali MSE Loss: 0.2271 Test MSE Loss: 0.6714
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 4.8828125e-06
+	iters: 100, epoch: 12 | loss: 0.6235346
+	speed: 0.0225s/iter; left time: 417.5975s
+	iters: 200, epoch: 12 | loss: 0.6075440
+	speed: 0.0202s/iter; left time: 372.9732s
+Epoch: 12 cost time: 4.480461120605469
+Epoch: 12, Steps: 210 Train Loss: 0.6149 (Forecasting Loss:0.3877 + XiCon Loss:2.2719 x Lambda(0.1)), Vali MSE Loss: 0.2272 Test MSE Loss: 0.6673
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 2.44140625e-06
+	iters: 100, epoch: 13 | loss: 0.6480384
+	speed: 0.0218s/iter; left time: 399.9112s
+	iters: 200, epoch: 13 | loss: 0.6174431
+	speed: 0.0203s/iter; left time: 370.2369s
+Epoch: 13 cost time: 4.4779582023620605
+Epoch: 13, Steps: 210 Train Loss: 0.6145 (Forecasting Loss:0.3872 + XiCon Loss:2.2729 x Lambda(0.1)), Vali MSE Loss: 0.2277 Test MSE Loss: 0.6667
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 1.220703125e-06
+	iters: 100, epoch: 14 | loss: 0.6496989
+	speed: 0.0217s/iter; left time: 395.1968s
+	iters: 200, epoch: 14 | loss: 0.6068061
+	speed: 0.0197s/iter; left time: 355.3762s
+Epoch: 14 cost time: 4.344233989715576
+Epoch: 14, Steps: 210 Train Loss: 0.6147 (Forecasting Loss:0.3875 + XiCon Loss:2.2712 x Lambda(0.1)), Vali MSE Loss: 0.2273 Test MSE Loss: 0.6678
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 6.103515625e-07
+	iters: 100, epoch: 15 | loss: 0.5967855
+	speed: 0.0219s/iter; left time: 393.3115s
+	iters: 200, epoch: 15 | loss: 0.6374903
+	speed: 0.0195s/iter; left time: 348.1084s
+Epoch: 15 cost time: 4.366982698440552
+Epoch: 15, Steps: 210 Train Loss: 0.6144 (Forecasting Loss:0.3873 + XiCon Loss:2.2715 x Lambda(0.1)), Vali MSE Loss: 0.2273 Test MSE Loss: 0.6675
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 3.0517578125e-07
+	iters: 100, epoch: 16 | loss: 0.6156967
+	speed: 0.0223s/iter; left time: 396.1151s
+	iters: 200, epoch: 16 | loss: 0.6358895
+	speed: 0.0200s/iter; left time: 353.0323s
+Epoch: 16 cost time: 4.45394492149353
+Epoch: 16, Steps: 210 Train Loss: 0.6155 (Forecasting Loss:0.3876 + XiCon Loss:2.2790 x Lambda(0.1)), Vali MSE Loss: 0.2275 Test MSE Loss: 0.6673
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3101
+test shape: (48, 64, 2160, 1) (48, 64, 2160, 1)
+test shape: (3072, 2160, 1) (3072, 2160, 1)
+mse:0.6502964496612549, mae:0.6266440749168396, mape:3.513808488845825, mspe:2913.6611328125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:735457
+train 13455
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99980268] ~ [1.83286448e-04 9.23152030e-05]
+Xi-correlation values:[0.99980992 0.99304875] ~ [0. 1.]
+Autocorrelation calculation time: 5.3273
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_3>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 13455
+val 3103
+test 3101
+	iters: 100, epoch: 1 | loss: 1.2482958
+	speed: 0.0182s/iter; left time: 379.7677s
+	iters: 200, epoch: 1 | loss: 0.9412816
+	speed: 0.0159s/iter; left time: 331.4566s
+Epoch: 1 cost time: 3.5984103679656982
+Epoch: 1, Steps: 210 Train Loss: 1.0737 (Forecasting Loss:0.8287 + XiCon Loss:2.4503 x Lambda(0.1)), Vali MSE Loss: 0.2714 Test MSE Loss: 0.5586
+Validation loss decreased (inf --> 0.271354).  Saving model ...
+Updating learning rate to 0.005
+	iters: 100, epoch: 2 | loss: 0.7396827
+	speed: 0.0188s/iter; left time: 389.4352s
+	iters: 200, epoch: 2 | loss: 0.6846142
+	speed: 0.0173s/iter; left time: 356.1457s
+Epoch: 2 cost time: 3.8089756965637207
+Epoch: 2, Steps: 210 Train Loss: 0.8525 (Forecasting Loss:0.6088 + XiCon Loss:2.4364 x Lambda(0.1)), Vali MSE Loss: 0.2570 Test MSE Loss: 0.6475
+Validation loss decreased (0.271354 --> 0.257012).  Saving model ...
+Updating learning rate to 0.0025
+	iters: 100, epoch: 3 | loss: 0.7623087
+	speed: 0.0199s/iter; left time: 406.7582s
+	iters: 200, epoch: 3 | loss: 0.6671363
+	speed: 0.0183s/iter; left time: 373.0361s
+Epoch: 3 cost time: 4.029898643493652
+Epoch: 3, Steps: 210 Train Loss: 0.7062 (Forecasting Loss:0.4654 + XiCon Loss:2.4078 x Lambda(0.1)), Vali MSE Loss: 0.2375 Test MSE Loss: 0.6527
+Validation loss decreased (0.257012 --> 0.237519).  Saving model ...
+Updating learning rate to 0.00125
+	iters: 100, epoch: 4 | loss: 0.7204905
+	speed: 0.0210s/iter; left time: 425.7356s
+	iters: 200, epoch: 4 | loss: 0.6948785
+	speed: 0.0173s/iter; left time: 347.9533s
+Epoch: 4 cost time: 4.013089418411255
+Epoch: 4, Steps: 210 Train Loss: 0.6876 (Forecasting Loss:0.4474 + XiCon Loss:2.4018 x Lambda(0.1)), Vali MSE Loss: 0.2452 Test MSE Loss: 0.6863
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.000625
+	iters: 100, epoch: 5 | loss: 0.6487558
+	speed: 0.0209s/iter; left time: 419.9097s
+	iters: 200, epoch: 5 | loss: 0.6677620
+	speed: 0.0184s/iter; left time: 367.9519s
+Epoch: 5 cost time: 4.150726795196533
+Epoch: 5, Steps: 210 Train Loss: 0.6785 (Forecasting Loss:0.4387 + XiCon Loss:2.3976 x Lambda(0.1)), Vali MSE Loss: 0.2330 Test MSE Loss: 0.6795
+Validation loss decreased (0.237519 --> 0.232991).  Saving model ...
+Updating learning rate to 0.0003125
+	iters: 100, epoch: 6 | loss: 0.6940820
+	speed: 0.0207s/iter; left time: 411.5703s
+	iters: 200, epoch: 6 | loss: 0.7047639
+	speed: 0.0185s/iter; left time: 365.5958s
+Epoch: 6 cost time: 4.132568359375
+Epoch: 6, Steps: 210 Train Loss: 0.6727 (Forecasting Loss:0.4331 + XiCon Loss:2.3961 x Lambda(0.1)), Vali MSE Loss: 0.2323 Test MSE Loss: 0.6831
+Validation loss decreased (0.232991 --> 0.232327).  Saving model ...
+Updating learning rate to 0.00015625
+	iters: 100, epoch: 7 | loss: 0.6672688
+	speed: 0.0208s/iter; left time: 408.6403s
+	iters: 200, epoch: 7 | loss: 0.6453701
+	speed: 0.0183s/iter; left time: 357.4550s
+Epoch: 7 cost time: 4.124566316604614
+Epoch: 7, Steps: 210 Train Loss: 0.6706 (Forecasting Loss:0.4312 + XiCon Loss:2.3947 x Lambda(0.1)), Vali MSE Loss: 0.2353 Test MSE Loss: 0.6901
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 7.8125e-05
+	iters: 100, epoch: 8 | loss: 0.6622066
+	speed: 0.0207s/iter; left time: 402.0030s
+	iters: 200, epoch: 8 | loss: 0.6594621
+	speed: 0.0189s/iter; left time: 365.4918s
+Epoch: 8 cost time: 4.194804668426514
+Epoch: 8, Steps: 210 Train Loss: 0.6689 (Forecasting Loss:0.4294 + XiCon Loss:2.3951 x Lambda(0.1)), Vali MSE Loss: 0.2349 Test MSE Loss: 0.6876
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 3.90625e-05
+	iters: 100, epoch: 9 | loss: 0.6956485
+	speed: 0.0210s/iter; left time: 403.7983s
+	iters: 200, epoch: 9 | loss: 0.6697770
+	speed: 0.0184s/iter; left time: 351.9007s
+Epoch: 9 cost time: 4.146404504776001
+Epoch: 9, Steps: 210 Train Loss: 0.6683 (Forecasting Loss:0.4287 + XiCon Loss:2.3958 x Lambda(0.1)), Vali MSE Loss: 0.2339 Test MSE Loss: 0.6877
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 1.953125e-05
+	iters: 100, epoch: 10 | loss: 0.6560329
+	speed: 0.0208s/iter; left time: 396.2824s
+	iters: 200, epoch: 10 | loss: 0.6573870
+	speed: 0.0186s/iter; left time: 351.0613s
+Epoch: 10 cost time: 4.16287088394165
+Epoch: 10, Steps: 210 Train Loss: 0.6674 (Forecasting Loss:0.4283 + XiCon Loss:2.3909 x Lambda(0.1)), Vali MSE Loss: 0.2343 Test MSE Loss: 0.6873
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 9.765625e-06
+	iters: 100, epoch: 11 | loss: 0.6954339
+	speed: 0.0208s/iter; left time: 391.5500s
+	iters: 200, epoch: 11 | loss: 0.6491135
+	speed: 0.0184s/iter; left time: 343.2655s
+Epoch: 11 cost time: 4.147950649261475
+Epoch: 11, Steps: 210 Train Loss: 0.6668 (Forecasting Loss:0.4280 + XiCon Loss:2.3887 x Lambda(0.1)), Vali MSE Loss: 0.2346 Test MSE Loss: 0.6867
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 4.8828125e-06
+	iters: 100, epoch: 12 | loss: 0.6555977
+	speed: 0.0210s/iter; left time: 389.9144s
+	iters: 200, epoch: 12 | loss: 0.6634250
+	speed: 0.0190s/iter; left time: 350.8010s
+Epoch: 12 cost time: 4.208271026611328
+Epoch: 12, Steps: 210 Train Loss: 0.6669 (Forecasting Loss:0.4281 + XiCon Loss:2.3879 x Lambda(0.1)), Vali MSE Loss: 0.2346 Test MSE Loss: 0.6873
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 2.44140625e-06
+	iters: 100, epoch: 13 | loss: 0.6828885
+	speed: 0.0209s/iter; left time: 383.4330s
+	iters: 200, epoch: 13 | loss: 0.6442187
+	speed: 0.0194s/iter; left time: 353.9616s
+Epoch: 13 cost time: 4.217466115951538
+Epoch: 13, Steps: 210 Train Loss: 0.6673 (Forecasting Loss:0.4277 + XiCon Loss:2.3960 x Lambda(0.1)), Vali MSE Loss: 0.2343 Test MSE Loss: 0.6870
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 1.220703125e-06
+	iters: 100, epoch: 14 | loss: 0.6574470
+	speed: 0.0210s/iter; left time: 381.5977s
+	iters: 200, epoch: 14 | loss: 0.7010601
+	speed: 0.0181s/iter; left time: 327.1157s
+Epoch: 14 cost time: 4.118182182312012
+Epoch: 14, Steps: 210 Train Loss: 0.6668 (Forecasting Loss:0.4278 + XiCon Loss:2.3898 x Lambda(0.1)), Vali MSE Loss: 0.2347 Test MSE Loss: 0.6870
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 6.103515625e-07
+	iters: 100, epoch: 15 | loss: 0.6309472
+	speed: 0.0211s/iter; left time: 379.3175s
+	iters: 200, epoch: 15 | loss: 0.7031719
+	speed: 0.0184s/iter; left time: 328.5781s
+Epoch: 15 cost time: 4.163576602935791
+Epoch: 15, Steps: 210 Train Loss: 0.6670 (Forecasting Loss:0.4275 + XiCon Loss:2.3948 x Lambda(0.1)), Vali MSE Loss: 0.2345 Test MSE Loss: 0.6871
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 3.0517578125e-07
+	iters: 100, epoch: 16 | loss: 0.6533146
+	speed: 0.0205s/iter; left time: 363.4996s
+	iters: 200, epoch: 16 | loss: 0.6584650
+	speed: 0.0188s/iter; left time: 331.0786s
+Epoch: 16 cost time: 4.125303030014038
+Epoch: 16, Steps: 210 Train Loss: 0.6668 (Forecasting Loss:0.4278 + XiCon Loss:2.3907 x Lambda(0.1)), Vali MSE Loss: 0.2345 Test MSE Loss: 0.6871
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3101
+test shape: (48, 64, 2160, 1) (48, 64, 2160, 1)
+test shape: (3072, 2160, 1) (3072, 2160, 1)
+mse:0.6951810121536255, mae:0.6711165308952332, mape:4.611471176147461, mspe:20628.935546875 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:735457
+train 13455
+number of available CPU:  16
+Auto-correlation values(abs):[1.         0.99980268] ~ [1.83286448e-04 9.23152030e-05]
+Xi-correlation values:[0.99980992 0.99304875] ~ [0. 1.]
+Autocorrelation calculation time: 5.3843
+>>>>>>>start training : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_4>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 13455
+val 3103
+test 3101
+	iters: 100, epoch: 1 | loss: 1.0808895
+	speed: 0.0185s/iter; left time: 386.2541s
+	iters: 200, epoch: 1 | loss: 0.8279536
+	speed: 0.0153s/iter; left time: 318.5336s
+Epoch: 1 cost time: 3.5904085636138916
+Epoch: 1, Steps: 210 Train Loss: 1.0102 (Forecasting Loss:0.7617 + XiCon Loss:2.4850 x Lambda(0.1)), Vali MSE Loss: 0.2932 Test MSE Loss: 0.7210
+Validation loss decreased (inf --> 0.293197).  Saving model ...
+Updating learning rate to 0.005
+	iters: 100, epoch: 2 | loss: 0.8014393
+	speed: 0.0184s/iter; left time: 379.7790s
+	iters: 200, epoch: 2 | loss: 0.7443445
+	speed: 0.0155s/iter; left time: 319.8601s
+Epoch: 2 cost time: 3.5935475826263428
+Epoch: 2, Steps: 210 Train Loss: 0.7669 (Forecasting Loss:0.5242 + XiCon Loss:2.4272 x Lambda(0.1)), Vali MSE Loss: 0.2560 Test MSE Loss: 0.5760
+Validation loss decreased (0.293197 --> 0.255998).  Saving model ...
+Updating learning rate to 0.0025
+	iters: 100, epoch: 3 | loss: 0.6989264
+	speed: 0.0179s/iter; left time: 366.7184s
+	iters: 200, epoch: 3 | loss: 0.6697990
+	speed: 0.0160s/iter; left time: 326.8758s
+Epoch: 3 cost time: 3.601327419281006
+Epoch: 3, Steps: 210 Train Loss: 0.6974 (Forecasting Loss:0.4603 + XiCon Loss:2.3712 x Lambda(0.1)), Vali MSE Loss: 0.2432 Test MSE Loss: 0.4955
+Validation loss decreased (0.255998 --> 0.243246).  Saving model ...
+Updating learning rate to 0.00125
+	iters: 100, epoch: 4 | loss: 0.6586576
+	speed: 0.0187s/iter; left time: 379.3077s
+	iters: 200, epoch: 4 | loss: 0.7170066
+	speed: 0.0161s/iter; left time: 324.5488s
+Epoch: 4 cost time: 3.684171676635742
+Epoch: 4, Steps: 210 Train Loss: 0.6706 (Forecasting Loss:0.4364 + XiCon Loss:2.3415 x Lambda(0.1)), Vali MSE Loss: 0.2945 Test MSE Loss: 0.5389
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.000625
+	iters: 100, epoch: 5 | loss: 0.6756105
+	speed: 0.0197s/iter; left time: 395.6876s
+	iters: 200, epoch: 5 | loss: 0.6016859
+	speed: 0.0156s/iter; left time: 310.5384s
+Epoch: 5 cost time: 3.714423656463623
+Epoch: 5, Steps: 210 Train Loss: 0.6558 (Forecasting Loss:0.4230 + XiCon Loss:2.3281 x Lambda(0.1)), Vali MSE Loss: 0.2731 Test MSE Loss: 0.5197
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.0003125
+	iters: 100, epoch: 6 | loss: 0.6492769
+	speed: 0.0188s/iter; left time: 372.5747s
+	iters: 200, epoch: 6 | loss: 0.6526442
+	speed: 0.0165s/iter; left time: 325.3403s
+Epoch: 6 cost time: 3.7229061126708984
+Epoch: 6, Steps: 210 Train Loss: 0.6481 (Forecasting Loss:0.4159 + XiCon Loss:2.3218 x Lambda(0.1)), Vali MSE Loss: 0.2771 Test MSE Loss: 0.4960
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 0.00015625
+	iters: 100, epoch: 7 | loss: 0.6303963
+	speed: 0.0184s/iter; left time: 361.8628s
+	iters: 200, epoch: 7 | loss: 0.6151647
+	speed: 0.0157s/iter; left time: 306.0064s
+Epoch: 7 cost time: 3.6064820289611816
+Epoch: 7, Steps: 210 Train Loss: 0.6454 (Forecasting Loss:0.4134 + XiCon Loss:2.3197 x Lambda(0.1)), Vali MSE Loss: 0.2804 Test MSE Loss: 0.4871
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 7.8125e-05
+	iters: 100, epoch: 8 | loss: 0.6453955
+	speed: 0.0180s/iter; left time: 349.5380s
+	iters: 200, epoch: 8 | loss: 0.6588114
+	speed: 0.0160s/iter; left time: 310.2424s
+Epoch: 8 cost time: 3.6027870178222656
+Epoch: 8, Steps: 210 Train Loss: 0.6426 (Forecasting Loss:0.4114 + XiCon Loss:2.3123 x Lambda(0.1)), Vali MSE Loss: 0.2849 Test MSE Loss: 0.4852
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 3.90625e-05
+	iters: 100, epoch: 9 | loss: 0.6364586
+	speed: 0.0188s/iter; left time: 361.4522s
+	iters: 200, epoch: 9 | loss: 0.6351381
+	speed: 0.0155s/iter; left time: 295.4874s
+Epoch: 9 cost time: 3.6019287109375
+Epoch: 9, Steps: 210 Train Loss: 0.6417 (Forecasting Loss:0.4105 + XiCon Loss:2.3119 x Lambda(0.1)), Vali MSE Loss: 0.2828 Test MSE Loss: 0.4920
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 1.953125e-05
+	iters: 100, epoch: 10 | loss: 0.6350618
+	speed: 0.0184s/iter; left time: 350.2034s
+	iters: 200, epoch: 10 | loss: 0.6450564
+	speed: 0.0163s/iter; left time: 308.9868s
+Epoch: 10 cost time: 3.6688668727874756
+Epoch: 10, Steps: 210 Train Loss: 0.6414 (Forecasting Loss:0.4101 + XiCon Loss:2.3134 x Lambda(0.1)), Vali MSE Loss: 0.2761 Test MSE Loss: 0.4785
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 9.765625e-06
+	iters: 100, epoch: 11 | loss: 0.6554084
+	speed: 0.0165s/iter; left time: 310.1311s
+	iters: 200, epoch: 11 | loss: 0.6414949
+	speed: 0.0167s/iter; left time: 312.8948s
+Epoch: 11 cost time: 3.524610996246338
+Epoch: 11, Steps: 210 Train Loss: 0.6411 (Forecasting Loss:0.4098 + XiCon Loss:2.3127 x Lambda(0.1)), Vali MSE Loss: 0.2769 Test MSE Loss: 0.4781
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 4.8828125e-06
+	iters: 100, epoch: 12 | loss: 0.6370584
+	speed: 0.0190s/iter; left time: 352.7224s
+	iters: 200, epoch: 12 | loss: 0.6446664
+	speed: 0.0170s/iter; left time: 314.9010s
+Epoch: 12 cost time: 3.813387870788574
+Epoch: 12, Steps: 210 Train Loss: 0.6409 (Forecasting Loss:0.4096 + XiCon Loss:2.3122 x Lambda(0.1)), Vali MSE Loss: 0.2796 Test MSE Loss: 0.4806
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 2.44140625e-06
+	iters: 100, epoch: 13 | loss: 0.6270000
+	speed: 0.0187s/iter; left time: 343.2475s
+	iters: 200, epoch: 13 | loss: 0.6387849
+	speed: 0.0166s/iter; left time: 303.4294s
+Epoch: 13 cost time: 3.708997964859009
+Epoch: 13, Steps: 210 Train Loss: 0.6410 (Forecasting Loss:0.4098 + XiCon Loss:2.3119 x Lambda(0.1)), Vali MSE Loss: 0.2786 Test MSE Loss: 0.4810
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : long_term_forecast_XiCon_exp_XiCon_electricity_ftS_sl168_ll48_pl2160_dm16_nh8_el2_dl1_df16_fc1_ebtimeF_dtTrue_Exp_4<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3101
+test shape: (48, 64, 2160, 1) (48, 64, 2160, 1)
+test shape: (3072, 2160, 1) (3072, 2160, 1)
+mse:0.46657681465148926, mae:0.5243973135948181, mape:4.280628681182861, mspe:31008.29296875 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+MSE:0.6143+-0.10807, MAE:0.6114+-0.06661, MAPE:4.3338+-1.13954, MSPE:25980.9062+-35181.83640, SHAPEDTW:0.0000+-0.00000, TEMPDTW:0.0000+-0.00000
