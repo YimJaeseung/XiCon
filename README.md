@@ -45,41 +45,30 @@ Loss = MSE + lambda × XiCon
 
 Validated on **9 benchmark datasets × 4 prediction horizons (36 intervals)**:
 ETTm1, ETTm2, ETTh1, ETTh2, Traffic, Illness, Electricity, Weather, Exchange.
+*The thesis (Aug 2024) reports results for six of these; Electricity, Weather, and Exchange were
+added in follow-up experiments.*
 Baselines: AutoCon, PatchTST, TimesNet, DLinear, Crossformer.
 
-| Baseline  | Avg. MSE improvement |
-|-----------|----------------------|
-| AutoCon   | **5.81%**            |
-| PatchTST  | **8.52%**            |
+| Baseline | Avg. MSE improvement |
+| -------- | -------------------- |
+| AutoCon  | **5.81%**            |
+| PatchTST | **8.52%**            |
 
 The gain is **not uniform**, and where it appears is consistent with what the method does:
 
 - **Gains grow with the strength of ξ-correlation in the data.** ETTm2 and ETTh2, whose variables
-  retain high (auto) ξ-correlation even at long lags, showed the largest improvement — over 10%
-  MSE reduction against AutoCon at some horizons.
+retain high (auto) ξ-correlation even at long lags, showed the largest improvement — over 10%
+MSE reduction against AutoCon at some horizons.
 - **Gains grow with prediction length.** The longer the horizon, the more the loss must rely on
-  dependence reaching beyond the look-back window.
+dependence reaching beyond the look-back window.
 - **No gain where ξ-correlation is absent.** On Illness, most variables fall below 0.2
-  ξ-correlation at long lags. XiCon gave almost no improvement there and TimesNet was the strongest
-  model overall. This is expected — if a series carries little non-linear lag dependence, the ξ term
-  has nothing to exploit.
+ξ-correlation at long lags. XiCon gave almost no improvement there and TimesNet was the strongest
+model overall. This is expected — if a series carries little non-linear lag dependence, the ξ term
+has nothing to exploit.
 
 **4 of 36 intervals underperform the baseline.** They are reported as-is rather than filtered out:
 the method is a conditional improvement, not a universal one, and the condition is measurable in
 advance by computing ξ-correlation on the target series before training.
-
-### Extended benchmark (9 datasets × 4 horizons = 36 intervals)
-
-Follow-up experiments extended the evaluation to Electricity, Weather, and Exchange.
-
-| Baseline  | Avg. MSE improvement |
-|-----------|----------------------|
-| AutoCon   | **5.81%**            |
-| PatchTST  | **8.52%**            |
-
-**4 of 36 intervals underperform the baseline.** They are reported as-is rather than filtered out —
-the method is a conditional improvement, not a universal one, and the condition is measurable in
-advance by computing ξ-correlation on the target series.
 
 ## Environment setup
 
@@ -129,7 +118,7 @@ $ sh ./scripts/XiCon_Traffic.sh 0 5
 Script naming convention:
 
 | Suffix | Meaning |
-|---|---|
+| ------ | ------- |
 | trailing number (e.g. `XiCon_Elec_s_revin_e-3`) | `lambda` tuning |
 | `aa` (omega = 0.99) | almost AutoCon |
 | `half` (omega = 0.5) | equal weight |
